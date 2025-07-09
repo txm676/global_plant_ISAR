@@ -10,15 +10,15 @@ Authors: Thomas J. Matthews, Julian Schrader, François Rigal, Kostas A. Trianti
 Data were derived from Schrader et al. (2024), which is based on the Global Inventory of Flora and Traits (GIFT) database. Native species richness reflects the total number of species compiled from all available sources for each island.	
 
 ### data_global_SAR
-island_name	Name of islands as given in GIFT
-entity_class	binary indicating whether geographic entity is an island or continent
-area	islan darea in km2
-native_count	 richness of species native to the archipelago
-endemic_count	number of species endemic to the island (Single Island Endemics, SIE)
-category	oceanic (i.e. volcanic oceanic islands and atolls), continental (continental shelf), continental fragment
-dist	distance of islabd from nearest mainland in km
-longitude	centroid longitude of entity
-latitude	centroid latitude of entity
+* island_name	Name of islands as given in GIFT
+* entity_class	binary indicating whether geographic entity is an island or continent
+* area	islan darea in km2
+* native_count	 richness of species native to the archipelago
+* endemic_count	number of species endemic to the island (Single Island Endemics, SIE)
+* category	oceanic (i.e. volcanic oceanic islands and atolls), continental (continental shelf), continental fragment
+* dist	distance of islabd from nearest mainland in km
+* longitude	centroid longitude of entity
+* latitude	centroid latitude of entity
 
 ### data_archipelago
 +archipelago_name	name of archipelgo as supplied in Schrader et al 2024
