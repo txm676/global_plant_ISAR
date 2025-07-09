@@ -1,0 +1,1263 @@
+entity_class,area,geo_entity,native_count,endemic_count,category,dist,longitude,latitude
+Island,0.049938,Cartier Island,1,0,oceanic,290.436,123.554088,-12.531172
+Island,139.609934,Christmas Island,216,16,oceanic,1309.619,105.636553,-10.485344
+Island,5.97636,West Wallabi Island,62,0,continental,59.105,113.694171,-28.464248
+Island,0.005624,Wann Island,7,0,continental,56.214,113.763706,-28.470537
+Island,0.012973,Turnstone Island,15,0,continental,58.513,113.717687,-28.451788
+Island,1.80E-05,Traitor Islet 6,1,0,continental,55.312,113.787341,-28.485405
+Island,0.000295,Traitor Islet 5,1,0,continental,55.288,113.787359,-28.485331
+Island,4.70E-05,Traitor Islet 4,2,0,continental,55.337,113.786921,-28.485318
+Island,0.000102,Traitor Islet 3,3,0,continental,55.424,113.786338,-28.485995
+Island,5.90E-05,Traitor Islet 2,4,0,continental,55.433,113.786475,-28.486229
+Island,0.000219,Traitor Islet 1,4,0,continental,55.426,113.786616,-28.486392
+Island,0.000606,Traitors Island,5,0,continental,55.317,113.78562,-28.48378
+Island,0.002538,Third Sister,4,0,continental,59.499,113.742133,-28.494995
+Island,0.000399,Tectus Island,7,0,continental,58.067,113.744028,-28.474116
+Island,0.007131,Tattler Island,24,0,continental,60.504,113.707448,-28.46836
+Island,0.00146,Short Island,3,0,continental,54.962,113.773453,-28.462988
+Island,6.50E-05,Shag Rock 1,1,0,continental,61.216,113.591516,-28.305205
+Island,0.001569,Shag Rock 2,3,0,continental,60.504,113.713775,-28.474651
+Island,0.010912,Seal Island,9,0,continental,53.775,113.80411,-28.483529
+Island,0.078997,Seagull Island,28,0,continental,58.587,113.716336,-28.459127
+Island,0.021856,Saville-Kent Island,9,0,continental,51.702,113.814113,-28.464547
+Island,0.002661,Plover Island,3,0,continental,59.986,113.713586,-28.467441
+Island,0.039923,Pigeon Island,35,0,continental,57.859,113.727412,-28.454358
+Island,0.04621,Oystercatcher Island,24,0,continental,59.346,113.715176,-28.462696
+Island,1.874968,"North Island, Houtman Abrolhos",45,0,continental,59.863,113.595505,-28.299328
+Island,0.000294,Naturalist Island,5,0,continental,58.127,113.744337,-28.475513
+Island,0.002114,Marinula Island,13,0,continental,61.439,113.700852,-28.474481
+Island,0.114724,"Long Island, Houtman Abrolhos",19,0,continental,55.068,113.774265,-28.47227
+Island,0.015871,Little Pigeon Island,16,0,continental,58.706,113.724211,-28.462052
+Island,0.003961,Hall Island,3,0,continental,52.741,113.810041,-28.473953
+Island,0.000222,G Island,4,0,continental,53.714,113.804411,-28.481565
+Island,8.40E-05,First Sister Islet,5,0,continental,58.173,113.744421,-28.476239
+Island,0.004589,First Sister,9,0,continental,58.131,113.744464,-28.476752
+Island,0.000676,Far Island,1,0,continental,52.062,113.807449,-28.460536
+Island,3.384709,East Wallabi Island,80,0,continental,54.765,113.72812,-28.436651
+Island,0.000236,East Mangrove Island,7,0,continental,61.385,113.701588,-28.474214
+Island,0.00086,Eagle Point Islet,13,0,continental,57.287,113.728998,-28.445656
+Island,0.032897,Dick Island,13,0,continental,57.457,113.767732,-28.49663
+Island,0.007761,Dakin Island,10,0,continental,52.866,113.809106,-28.475898
+Island,0.027167,Beacon Island,11,0,continental,54.661,113.785944,-28.475364
+Island,0.001337,Barge Rock,8,0,continental,58.149,113.722049,-28.450629
+Island,0.000652,Alcatraz Island,7,0,continental,58.804,113.723447,-28.46105
+Island,0.013202,Akerstorm Island,17,0,continental,61.508,113.699376,-28.474552
+Island,0.203426,Wooded Island,12,0,continental,72.476,113.806094,-28.750768
+Island,0.066293,White Island,18,0,continental,62.291,113.877352,-28.670937
+Island,0.004756,White Bank,2,0,continental,72.285,113.780208,-28.700808
+Island,0.007464,Tapani Island,6,0,continental,64.371,113.85617,-28.674144
+Island,0.213754,Suomi Island,12,0,continental,67.22,113.838666,-28.713455
+Island,0.04267,Stokes Island,5,0,continental,64.453,113.852647,-28.673719
+Island,0.00188,Shearwater Islet,1,0,continental,70.641,113.824653,-28.738142
+Island,0.003831,Shearwater Island,3,0,continental,70.097,113.82658,-28.731746
+Island,0.136741,Serventy Island,15,0,continental,66.593,113.833422,-28.682709
+Island,0.024673,"Sandy Island, Easter Group",4,0,continental,75.759,113.787127,-28.774012
+Island,0.004388,Roma Island,8,0,continental,73.414,113.787183,-28.732225
+Island,0.652188,Rat Island,30,0,continental,72.248,113.784625,-28.714288
+Island,0.000507,Nitraria Island,5,0,continental,64.267,113.857724,-28.674101
+Island,0.124189,Morley Island,14,0,continental,71.515,113.814294,-28.74534
+Island,0.002219,Little Stokes Island,2,0,continental,64.318,113.854799,-28.671236
+Island,0.078657,Little Rat Island,14,0,continental,72.99,113.78717,-28.727121
+Island,0.041068,Little North Island,11,0,continental,59.538,113.884157,-28.630024
+Island,0.0012,Leo Islet 2,1,0,continental,63.604,113.872711,-28.685602
+Island,0.000243,Leo Islet 1,2,0,continental,64.652,113.861929,-28.687737
+Island,0.248111,Leo Island,17,0,continental,63.911,113.862787,-28.688815
+Island,0.00126,Landscope Island,4,0,continental,64.129,113.858398,-28.672869
+Island,0.042731,Keru Island,15,0,continental,68.829,113.834686,-28.725034
+Island,0.002215,Joe Smith Island,5,0,continental,64.47,113.85936,-28.68083
+Island,0.003599,Helms Islet 2,1,0,continental,63.93,113.859382,-28.671245
+Island,0.013514,Helms Island,46,0,continental,64.5,113.852452,-28.673772
+Island,0.023024,Gilbert Island,9,0,continental,66.389,113.828145,-28.667456
+Island,0.012935,Dry Island,2,0,continental,74.287,113.780547,-28.738754
+Island,0.00549,Crake Island,6,0,continental,71.378,113.817825,-28.741313
+Island,0.091435,"Campbell Island, Houtman",19,0,continental,67.076,113.836158,-28.694555
+Island,0.034359,Bynoe Island,16,0,continental,61.876,113.876871,-28.664075
+Island,0.005008,Bushby Island,6,0,continental,72.905,113.787341,-28.723301
+Island,0.125317,Alexander Island,16,0,continental,66.346,113.830993,-28.673311
+Island,0.013166,Uncle Margie Island,9,0,continental,59.154,113.976698,-28.864678
+Island,0.00354,Two Island,3,0,continental,69.463,113.879606,-28.90882
+Island,0.002242,Travia island,6,0,continental,58.153,113.988712,-28.863581
+Island,0.015738,Three Island,7,0,continental,70.02,113.872775,-28.906193
+Island,0.020759,Sweet Island,5,0,continental,70.231,113.873365,-28.91654
+Island,0.024144,Stick Island,7,0,continental,65.035,113.921737,-28.888966
+Island,0.008175,Square Island,7,0,continental,62.967,113.945988,-28.900721
+Island,0.008134,Sid Liddon Island,1,0,continental,70.868,113.865397,-28.910627
+Island,0.000445,Seven Islet,1,0,continental,71.637,113.856793,-28.904895
+Island,0.004305,Seven Island,2,0,continental,71.546,113.857638,-28.905698
+Island,0.001598,"Sandy Island, Pelsaert Group",1,0,continental,68.984,113.87794,-28.87208
+Island,0.00093,Rotondella Island,7,0,continental,57.426,113.997834,-28.871296
+Island,0.003875,Robertson Island,1,0,continental,56.924,114.005194,-28.881998
+Island,0.065748,Post office Island,13,0,continental,59.197,113.977114,-28.864643
+Island,1.777224,Pelsaert Island,25,0,continental,57.105,113.972258,-28.945626
+Island,0.018597,One Island,2,0,continental,68.963,113.883716,-28.908678
+Island,0.002035,Nook Island,4,0,continental,56.97,114.0013,-28.865141
+Island,0.059489,Newman Island,11,0,continental,56.951,113.996967,-28.863192
+Island,0.042356,Murray Island,8,0,continental,67.358,113.898108,-28.897241
+Island,0.218639,Middle Island,24,0,continental,66.205,113.912474,-28.908644
+Island,0.010404,Little Jackson Island,12,0,continental,56.785,114.004155,-28.872314
+Island,0.006251,Lagoon Island,8,0,continental,57.533,113.996125,-28.871732
+Island,0.003587,Jon Jim Island,6,0,continental,64.164,113.961565,-28.986744
+Island,0.01713,Jackson Island,11,0,continental,56.964,114.00158,-28.870545
+Island,0.000854,Iris Refuge Island,2,0,continental,56.998,114.004033,-28.879356
+Island,0.037884,Hummock Island,5,0,continental,52.123,114.039772,-28.800761
+Island,0.00044,Gun Islet,3,0,continental,70.875,113.86173,-28.890235
+Island,0.173426,Gun Island,11,0,continental,70.795,113.859678,-28.886573
+Island,0.00759,Gregory Island,2,0,continental,57.128,114.006328,-28.897779
+Island,0.001617,Gaze Islet 1,2,0,continental,57.973,113.990628,-28.863873
+Island,0.005641,Gaze Island,5,0,continental,57.836,113.991367,-28.863016
+Island,0.005852,Eight Island,5,0,continental,70.997,113.861864,-28.898496
+Island,0.020452,Davis Island,4,0,continental,69.709,113.877853,-28.913683
+Island,0.028414,Coronation Island,11,0,continental,58.327,113.987405,-28.869767
+Island,0.017008,Burton Island,14,0,continental,58.317,113.986864,-28.865494
+Island,0.00104,Burnett Rock,12,0,continental,60.528,113.965379,-28.870416
+Island,0.009907,Basile Island,14,0,continental,60.802,113.962766,-28.874977
+Island,0.005497,Arthur Island,5,0,continental,57.296,114.004808,-28.897179
+Island,3.358914,Cocos (Keeling) North Keeling Island,31,0,oceanic,1624.882,96.824122,-11.832576
+Island,17.465795,Lord Howe Island,265,96,oceanic,570.358,159.07716,-31.553015
+Island,37.87656,Norfolk Island,168,31,oceanic,1393.065,167.952266,-29.032579
+Island,134.305203,Macquarie Island,47,6,oceanic,1947.991,158.863935,-54.628404
+Island,17.115304,Corvo,151,0,oceanic,1853.135,-31.105223,39.699105
+Island,140.982426,Flores,199,0,oceanic,1865.365,-31.20249,39.44195
+Island,173.090853,Faial,214,0,oceanic,1658.813,-28.701332,38.578217
+Island,444.974158,Pico,212,0,oceanic,1611.87,-28.333573,38.469473
+Island,60.691525,Graciosa,127,0,oceanic,1597.823,-28.011327,39.052294
+Island,243.780705,São Jorge,201,0,oceanic,1586.21,-28.029236,38.637234
+Island,400.562027,Terceira,224,1,oceanic,1522.601,-27.2123,38.723901
+Island,744.721487,São Miguel,239,1,oceanic,1370.035,-25.481891,37.7954
+Island,96.891833,Santa Maria,181,1,oceanic,1378.31,-25.099823,36.971334
+Island,39.7367,San Miguel,178,1,oceanic,41.191,-120.37358,34.038405
+Island,217.89456,Santa Rosa,334,3,oceanic,43.672,-120.105655,33.966694
+Island,254.695757,"Santa Cruz, Channel Islands",412,17,oceanic,30.445,-119.745423,34.014027
+Island,3.083399,Anacapa,160,1,oceanic,21.395,-119.415439,34.009166
+Island,3.381057,"Santa Barbara, Channel Islands",75,1,oceanic,60.276,-119.036834,33.476717
+Island,273.523575,El Hierro,542,19,oceanic,383.073,-18.006624,27.746526
+Island,716.459265,La Palma,672,58,oceanic,416.923,-17.858329,28.68988
+Island,372.206221,La Gomera,681,51,oceanic,335.136,-17.232609,28.117411
+Island,2040.135344,Tenerife,1045,137,oceanic,288.476,-16.55631,28.291062
+Island,1571.354319,Gran Canaria,911,94,oceanic,196.361,-15.593194,27.954821
+Island,1669.884763,Fuerteventura,579,12,oceanic,96.535,-14.036486,28.406106
+Island,818.571266,Lanzarote,549,21,oceanic,126.425,-13.641825,29.024478
+Island,4595.077815,West Falkland,145,2,oceanic,498.423,-60.111132,-51.750925
+Island,6590.034125,East Falkland,142,0,oceanic,588.905,-58.75274,-51.740234
+Island,0.672148,Darwin,13,0,oceanic,1147.837,-92.00305,1.678067
+Island,64.114232,Española,91,0,oceanic,961.519,-89.678704,-1.378399
+Island,649.105928,Fernandina,159,1,oceanic,1167.044,-91.512937,-0.385734
+Island,178.028984,Floreana,221,6,oceanic,1044.002,-90.435291,-1.293603
+Island,15.38316,Genovesa,46,0,oceanic,1015.832,-89.956761,0.325229
+Island,4726.573482,Isabela,337,5,oceanic,1098.298,-91.184344,-0.559293
+Island,131.92636,Marchena,46,0,oceanic,1067.098,-90.475747,0.332085
+Island,60.330784,Pinta,164,0,oceanic,1105.929,-90.757025,0.586845
+Island,18.069175,Pinzón,103,1,oceanic,1084.075,-90.665791,-0.610811
+Island,559.977664,San Cristóbal,271,9,oceanic,927.687,-89.43056,-0.826798
+Island,987.094158,"Santa Cruz, Galapagos",375,13,oceanic,1031.632,-90.358406,-0.627248
+Island,25.151602,Santa Fé,69,0,oceanic,1014.28,-90.058774,-0.818429
+Island,577.099751,"Santiago, Galapagos",271,3,oceanic,1075.448,-90.712546,-0.266245
+Island,2.202581,Wolf,23,0,oceanic,1161.127,-91.8191,1.382373
+Island,0.027257,Gardner Pinnacles,1,0,oceanic,3341.02,-168.95998,25.000016
+Island,10457.21621,Hawai'i Island,512,82,oceanic,3674.689,-155.518375,19.598084
+Island,1442.951503,Kaua'i Island,583,197,oceanic,3629.559,-159.524241,22.058363
+Island,116.658525,Kaho'olawe Island,56,2,oceanic,3736.853,-156.609341,20.547612
+Island,0.747766,Ka'ula Island,13,0,oceanic,3744.841,-160.541487,21.654144
+Island,0.852211,Kure Atoll (incl. Sand and Green Islands),15,0,oceanic,3170.37,-178.293975,28.392821
+Island,366.604164,Lana'i Island,341,8,oceanic,3740.263,-156.927066,20.834995
+Island,2.920949,Laysan Island,22,0,oceanic,3295.189,-171.734888,25.768689
+Island,1.282188,Lehua Island,19,0,oceanic,3647.799,-160.095765,22.0201
+Island,1.593545,Lisianski Island,12,0,oceanic,3306.617,-173.965922,26.063953
+Island,1894.105903,Maui Island,586,85,oceanic,3678.732,-156.336777,20.790415
+Island,680.421602,Moloka'i Island,449,34,oceanic,3709.532,-157.014518,21.133173
+Island,0.652311,Nihoa Island,14,2,oceanic,3540.516,-161.922525,23.060456
+Island,0.370184,Necker Island,4,0,oceanic,3467.951,-164.700265,23.575664
+Island,197.312532,Ni'ihau Island,85,2,oceanic,3650.298,-160.151831,21.896643
+Island,1560.184472,O'ahu Island (incl. Mokoli'i Islet),548,134,oceanic,3699.816,-157.973393,21.458674
+Island,102387.1132,Iceland,430,5,oceanic,971.826,-18.59407,64.990673
+Island,40.289097,Flinders Island,114,0,continental,28.07,134.493992,-33.719394
+Island,3.858165,East Waldegrave Island,24,0,continental,2.386,134.796031,-33.598401
+Island,0.479481,West Waldegrave Island,11,0,continental,6.475,134.759258,-33.594051
+Island,0.301351,Topgallant Island,17,0,continental,21.996,134.612376,-33.714644
+Island,0.395532,Ward Island,11,0,continental,51.767,134.283695,-33.741291
+Island,0.074629,South Ward Island,4,0,continental,50.549,134.305309,-33.757447
+Island,2.732752,Pearson Island,68,0,continental,62.109,134.267736,-33.950068
+Island,0.16384,North Veteran Island,21,0,continental,64.885,134.265276,-33.975751
+Island,0.774624,Dorothee Island,39,0,continental,67.928,134.244732,-34.003034
+Island,84037.84487,Ireland incl. North Ireland,888,3,continental,412.73,-7.895663,53.426558
+Island,4417.68103,Kangaroo Island,799,0,continental,13.113,137.240283,-35.827998
+Island,2512.652312,La Réunion,1140,298,oceanic,1664.739,55.532685,-21.133348
+Island,41.064933,Eiao,47,0,oceanic,4762.04,-140.687406,-7.996287
+Island,95.287835,Fatu Hiva,197,12,oceanic,4828.162,-138.639836,-10.471635
+Island,8.410081,Hatutaa,31,0,oceanic,4750.986,-140.569691,-7.917641
+Island,319.393502,Hiva Oa,239,20,oceanic,4783.626,-139.013922,-9.774777
+Island,20.103648,Mohotani,44,0,oceanic,4803.109,-138.829615,-9.985292
+Island,346.619429,Nuku Hiva,256,33,oceanic,4789.953,-140.139323,-8.866239
+Island,71.906803,Tahuata,171,8,oceanic,4815.018,-139.088564,-9.944988
+Island,91.63114,Ua Huka,173,8,oceanic,4762.984,-139.551964,-8.909323
+Island,108.789259,Ua Pou,175,6,oceanic,4838.959,-140.073942,-9.397857
+Island,4.917533,Pitcairn,94,14,oceanic,5339.859,-130.106263,-25.069647
+Island,44.552778,Henderson,75,14,oceanic,5252.133,-128.322888,-24.376726
+Island,1.819902,Ducie,4,0,oceanic,4967.995,-124.783074,-24.680617
+Island,4.673857,Takeshima,213,0,oceanic,475.149,130.424318,30.81028
+Island,12.239166,Ioujima,213,0,oceanic,472.386,130.294169,30.790435
+Island,16.286187,Kuroshima,520,0,oceanic,455.962,129.934198,30.830824
+Island,448.996527,Tanegashima,1007,3,oceanic,499.74,130.975089,30.580814
+Island,508.037635,Yakushima,1340,36,oceanic,514.014,130.522252,30.339135
+Island,37.135804,Kuchinoerabujima,515,0,oceanic,500.414,130.209712,30.455885
+Island,14.325372,Kuchinoshima,519,0,oceanic,545.412,129.922578,29.972314
+Island,35.686935,Nakanoshima,626,0,oceanic,557.249,129.871098,29.848849
+Island,4.835971,Gajajima,370,0,oceanic,543.131,129.541012,29.903181
+Island,2.544134,Tairajima,404,0,oceanic,565.649,129.533032,29.687286
+Island,29.816037,Suwanosejima,327,0,oceanic,574.931,129.712841,29.641179
+Island,8.005161,Akusekijima,449,0,oceanic,590.693,129.602299,29.459413
+Island,1.087171,Kodakarajima,355,0,oceanic,608.044,129.325522,29.223776
+Island,7.405603,Takarajima,519,0,oceanic,611.772,129.207673,29.146641
+Island,3.03887,Yokoatejima,240,0,oceanic,644.321,128.990909,28.798824
+Island,722.952607,Amamioshima,1060,18,oceanic,692.601,129.426562,28.311807
+Island,59.494672,Kikaijima,541,0,oceanic,718.997,129.97242,28.323027
+Island,253.091809,Tokunoshima,846,6,oceanic,691.269,128.948928,27.773461
+Island,94.976395,Okinoerabujima,728,0,oceanic,672.509,128.597494,27.380304
+Island,20.889774,Yoronjima,483,0,oceanic,674.429,128.430591,27.042778
+Island,1233.909736,Okinawajima,1207,14,oceanic,633.742,127.959792,26.493709
+Island,60.606054,Kumejima,694,0,oceanic,544.303,126.773293,26.349982
+Island,164.785947,Miyakojima,608,1,oceanic,518.486,125.332376,24.774041
+Island,229.982513,Ishigakijima,1016,0,oceanic,457.599,124.205545,24.433381
+Island,291.459834,Iriomotejima,1056,8,oceanic,421.329,123.814688,24.335813
+Island,29.883966,Yonagunijima,669,1,oceanic,346.155,122.988732,24.455253
+Island,185.193923,Bjornoya,44,0,oceanic,416.623,19.050445,74.449517
+Island,8.542666,Sorkappoya,9,0,oceanic,659.064,16.584412,76.492072
+Island,54.219556,Hopen,15,0,oceanic,597.54,25.234942,76.575342
+Island,5072.524422,Edgeoya,53,0,oceanic,697.679,22.502971,77.800844
+Island,1326.5624,Barentsoya,44,0,oceanic,811.623,21.342302,78.419609
+Island,118.245933,Svenskoya,24,0,oceanic,837.234,26.651649,78.721415
+Island,645.907542,Prins Karls Forland,59,0,oceanic,881.622,11.221621,78.574133
+Island,200.277216,Kongeoya,26,0,oceanic,855.481,28.69143,78.898104
+Island,38.718399,Danskoya,26,0,oceanic,1034.445,10.907215,79.684302
+Island,21.039319,Amsterdamoya,16,0,oceanic,1041.834,10.830441,79.756441
+Island,5.47389,Moffen,6,0,oceanic,1042.27,14.493405,80.029171
+Island,38363.53193,Spitsbergen,115,0,oceanic,667.373,15.878883,78.609873
+Island,148.182234,Storoya,2,0,oceanic,994.615,28.016891,80.126861
+Island,0.649347,Island in Lady Franklinfjord,7,0,oceanic,1041.546,18.826778,80.236281
+Island,174.029339,Kvitoya,6,0,oceanic,1002.809,32.566905,80.150121
+Island,98.964085,Lagoya,4,0,oceanic,1045.307,18.356749,80.31458
+Island,14307.81804,Nordaustlandet,61,0,oceanic,909.289,22.756877,79.853093
+Island,20.581455,Sjuoyane South Island,4,0,oceanic,1072.779,20.663848,80.648181
+Island,1.700923,Karl XII-oya,3,0,oceanic,1064.366,25.011832,80.661897
+Island,27.080923,Sjuoyane North Island,9,0,oceanic,1079.285,20.788023,80.717271
+Island,12.077091,Assumption,104,0,oceanic,649.418,46.511512,-9.730865
+Island,10.95707,Astove,102,1,oceanic,778.004,47.741723,-10.086604
+Island,1.877706,St Pierre,26,0,oceanic,1115.141,50.727514,-9.331684
+Island,0.069895,African Banks,17,0,oceanic,1150.794,53.386793,-4.880127
+Island,0.314566,Remire,47,0,oceanic,1163.661,53.312336,-5.116641
+Island,4.362499,Desroches,50,0,oceanic,1236.049,53.66904,-5.689396
+Island,9.98386,Coetivy,70,0,oceanic,1550.8,56.279994,-7.129637
+Island,1.755549,Darros,60,0,oceanic,1186.417,53.298464,-5.415731
+Island,40.242908,Anegada,150,2,oceanic,884.343,-64.337381,18.726917
+Island,74.928018,Anguilla,209,1,oceanic,819.509,-63.054398,18.214736
+Island,280.170367,Antigua,518,0,oceanic,691.405,-61.798388,17.077293
+Island,434.639683,Barbados,463,2,oceanic,355.48,-59.55639,13.172262
+Island,144.414311,Barbuda,159,1,oceanic,751.818,-61.793378,17.631531
+Island,41.881308,Beata,150,17,oceanic,562.539,-71.516024,17.575458
+Island,1.701367,Caja de Muertos,89,0,oceanic,730.084,-66.519398,17.894559
+Island,0.233221,Cayo Santiago,104,0,oceanic,800.765,-65.732611,18.156648
+Island,110730.9083,Cuba,5521,2679,fragment,197.348,-79.029797,21.625477
+Island,28.508922,Culebra,166,0,oceanic,839.645,-65.289418,18.315046
+Island,1.460272,Desecheo,118,0,oceanic,735.418,-67.480755,18.383775
+Island,754.214181,Dominica,961,11,oceanic,496.176,-61.349988,15.434552
+Island,686.552104,Gonave,599,90,oceanic,700.926,-73.046362,18.842899
+Island,316.62446,Grenada,573,3,oceanic,137.403,-61.683776,12.113748
+Island,1450.485728,Guadeloupe,984,22,oceanic,575.258,-61.575939,16.228266
+Island,3.530632,Guana Island,206,1,oceanic,861.97,-64.570619,18.476401
+Island,0.897827,Icacos,106,0,oceanic,830.395,-65.586861,18.386119
+Island,10992.97895,Jamaica,2855,795,fragment,622.567,-77.310484,18.157071
+Island,9.205924,Jost van Dyke,54,0,oceanic,860.679,-64.746853,18.446506
+Island,0.121214,Magueyes,37,0,oceanic,711.792,-67.03664,17.961664
+Island,159.860409,Maria Galante,225,0,oceanic,569.689,-61.268569,15.932114
+Island,1114.856317,Martinique,1195,30,oceanic,417.453,-61.018115,14.652747
+Island,57.671347,Mona,272,4,oceanic,686.174,-67.892539,18.089245
+Island,0.214184,Monito,26,0,oceanic,695.324,-67.949201,18.159445
+Island,100.645737,"Monserrat, Lesser Antilles",590,3,oceanic,656.186,-62.189685,16.739452
+Island,5.172647,Navassa,72,4,oceanic,746.825,-75.013618,18.403235
+Island,95.360608,Nevis,195,1,oceanic,700.172,-62.58646,17.150396
+Island,0.488451,Palomino,16,0,oceanic,828.091,-65.56837,18.348647
+Island,14.353305,Saba,494,4,oceanic,759.705,-63.237528,17.631469
+Island,21.904476,St. Barthelemy,277,0,oceanic,786.911,-62.829698,17.901978
+Island,219.681368,St. Croix,542,1,oceanic,778.369,-64.768456,17.73286
+Island,23.436902,St. Eustatius,432,2,oceanic,741.527,-62.976283,17.490842
+Island,52.073416,St. John,479,0,oceanic,845.214,-64.736758,18.338353
+Island,171.759944,St. Kitts,474,1,oceanic,713.225,-62.765059,17.339227
+Island,614.172141,St. Lucia,1259,19,oceanic,341.907,-60.966774,13.898433
+Island,92.137438,St. Martin,464,2,oceanic,801.671,-63.062734,18.061742
+Island,76.20681,St. Thomas,586,4,oceanic,847.485,-64.928694,18.343528
+Island,348.619379,St. Vincent,835,12,oceanic,272.431,-61.188975,13.251309
+Island,65.171014,Tortola,464,0,oceanic,854.03,-64.620064,18.424074
+Island,182.49475,Tortue,499,33,oceanic,840.063,-72.789124,20.044923
+Island,136.712979,Vieques,473,5,oceanic,805.337,-65.441002,18.123319
+Island,23.904986,Virgin Gorda,297,0,oceanic,856.502,-64.399216,18.475855
+Island,34042.9039,Hainan,4317,630,continental,18.396,109.745579,19.195738
+Island,36222.3046,Taiwan,4500,1047,continental,128.375,120.968348,23.747603
+Island,135.995698,Socorro,111,29,oceanic,455.897,-110.975066,18.791751
+Island,9.475586,San Benedicto,7,0,oceanic,400.934,-110.803436,19.310001
+Island,20.767683,Clarion,37,3,oceanic,699.026,-114.724312,18.356756
+Island,250.71892,Guadalupe Island (Mexico),133,28,oceanic,251.611,-118.285169,29.039758
+Island,22.922938,Antipodes Islands,64,3,oceanic,2661.732,178.773925,-49.686249
+Island,31.190757,Tabueran,24,2,oceanic,5235.293,-159.296777,3.851106
+Island,72.105696,Gough Island,76,4,oceanic,2581.65,-9.942323,-40.318811
+Island,3794.087688,Soqotra,749,286,fragment,94.839,53.800553,12.491917
+Island,266.670086,Niue,218,4,oceanic,3839.991,-169.858549,-19.052414
+Island,24.904956,Cocos Island (Costa Rica),192,33,oceanic,490.924,-87.061948,5.528856
+Island,143.162236,Principe,461,35,oceanic,214.851,7.397049,1.615394
+Island,854.79711,Sao Tomé,884,122,oceanic,269.258,6.602256,0.238989
+Island,30.514673,Annobon,323,24,oceanic,357.898,5.629833,-1.435717
+Island,46.460788,Prince Edward Island,19,0,oceanic,1715.537,37.940784,-46.635774
+Island,297.544458,Marion Island,22,0,oceanic,1726.178,37.740395,-46.907004
+Island,69.107189,Rarotonga,287,23,oceanic,4741.414,-159.777546,-21.234623
+Island,123.210455,St. Helena,108,51,oceanic,1858.869,-5.707819,-15.965177
+Island,99.3573,Ascension,43,12,oceanic,1536.579,-14.367031,-7.943513
+Island,8.536991,Wake Island,28,1,oceanic,3608.372,166.634983,19.292057
+Island,181.938366,Aruba,331,5,oceanic,27.038,-69.970276,12.509315
+Island,278.633783,Bonaire,330,1,oceanic,87.35,-68.289634,12.184523
+Island,436.127702,Curacao,451,1,oceanic,64.95,-68.972625,12.194064
+Island,20.427572,Aitutaki,82,0,oceanic,4831.908,-159.7765,-18.866839
+Island,29.475766,Atiu,133,6,oceanic,4953.834,-158.114432,-19.995684
+Island,48.540866,Mangaia,167,1,oceanic,4898.338,-157.919429,-21.928127
+Island,20.419504,Mauke,116,0,oceanic,5023.579,-157.341429,-20.16117
+Island,24.695738,Mitiaro,115,3,oceanic,4999.529,-157.702198,-19.867127
+Island,1.161537,Nassau,28,0,oceanic,4620.826,-165.414581,-11.560594
+Island,4.858074,Rakahanga,33,0,oceanic,5118.757,-161.092266,-10.017356
+Island,1.121335,Takutea,72,0,oceanic,4946.091,-158.289026,-19.812513
+Island,98.058691,Tristan da Cunha,84,3,oceanic,2770.364,-12.285103,-37.112443
+Island,14.704315,Inaccessible Island,76,2,oceanic,2808.443,-12.678065,-37.300503
+Island,3.463039,Nightingale,46,1,oceanic,2793.33,-12.48388,-37.424535
+Island,3804.0127,South Georgia,20,1,fragment,1960.822,-36.692768,-54.375076
+Island,7353.447746,Iles Kerguelen,27,1,oceanic,3761.006,69.484905,-49.301263
+Island,2.495681,McDonald Islands,4,0,oceanic,3923.598,72.596296,-53.042584
+Island,359.956615,Heard Island,8,0,oceanic,3843.932,73.51685,-53.093181
+Island,385.987572,Jan Mayen,80,6,oceanic,953.287,-8.386437,71.014732
+Island,11.803566,Trindade and Martin Vaz,46,12,oceanic,1075.743,-29.303267,-20.508209
+Island,1423.21509,Urup,255,1,oceanic,683.739,149.949229,45.905675
+Island,339.363793,Shimushir,199,0,oceanic,522.091,151.995743,46.94803
+Island,71.440724,Ketoi,187,0,oceanic,492.506,152.477761,47.336991
+Island,62.809978,Rashuwa,180,0,oceanic,429.952,153.01309,47.746004
+Island,52.008339,Matuwa,111,0,oceanic,394.425,153.216014,48.080521
+Island,287.817861,Great Barrier Island,512,3,oceanic,2129.714,175.42322,-36.199885
+Island,20.460639,Chirpoi,87,0,oceanic,640.077,150.869478,46.520874
+Island,740.937731,Madeira,685,74,oceanic,641.173,-16.99913,32.746337
+Island,40.331477,Porto Santo,329,4,oceanic,635.393,-16.342174,33.06918
+Island,791.795345,Santo Antao,148,5,oceanic,836.939,-25.170055,17.056544
+Island,226.303463,Sao Vicente,102,0,oceanic,818.299,-24.967814,16.84552
+Island,349.640149,Sao Nicolau,110,5,oceanic,723.112,-24.256203,16.598519
+Island,223.345183,Sal,59,0,oceanic,609.398,-22.931423,16.737222
+Island,628.740908,Boavista,75,0,oceanic,570.692,-22.813981,16.098296
+Island,272.129573,Maio,67,0,oceanic,599.567,-23.160626,15.217963
+Island,1009.57488,"Santiago, Cape Verde",125,1,oceanic,635.307,-23.624804,15.083736
+Island,474.623449,Fogo,116,5,oceanic,726.37,-24.384327,14.928326
+Island,65.144434,Brava,80,0,oceanic,768.001,-24.705479,14.851555
+Island,34.694795,Santa Luzia,37,0,oceanic,797.899,-24.745034,16.76649
+Island,2.935905,Branco,31,0,oceanic,792.071,-24.670425,16.658448
+Island,6.087089,Raso,39,0,oceanic,782.808,-24.587776,16.618156
+Island,31.787768,Sable Island,121,0,continental,156.998,-59.906823,43.945378
+Island,111489.6498,Newfoundland,822,3,continental,17.288,-56.038449,48.726561
+Island,0.037085,Guarita,2,0,continental,55.636,-38.692751,-17.960623
+Island,0.56909,"Santa Barbara, Abrolhos",27,0,continental,54.564,-38.698964,-17.963584
+Island,0.151011,Sueste,6,0,continental,56.102,-38.699091,-17.980654
+Island,0.183615,Redonda,19,0,continental,54.212,-38.710186,-17.965564
+Island,0.134817,Siriba,10,0,continental,54.605,-38.709795,-17.970861
+Island,13.090723,Maiao,24,0,oceanic,5782.606,-150.628687,-17.657071
+Island,2.519044,Mehetia,59,0,oceanic,6025.204,-148.067523,-17.87527
+Island,134.37869,Moorea,306,6,oceanic,5861.031,-149.833709,-17.529055
+Island,3.886649,Nukutipipi,7,0,oceanic,6009.614,-143.053368,-20.70085
+Island,173.617486,Raiatea,348,42,oceanic,5735.518,-151.436886,-16.822012
+Island,94.904961,Tahaa,179,0,oceanic,5739.196,-151.493671,-16.622985
+Island,1053.129908,Tahiti,577,113,oceanic,5884.288,-149.400753,-17.677486
+Island,18.91421,Takapoto,29,0,oceanic,5637.604,-145.206439,-14.628736
+Island,11.40666,Candlemas,1,0,oceanic,2690.353,-26.682234,-57.077849
+Island,12.320415,Cabrera,302,0,oceanic,236.447,2.943801,39.14508
+Island,3.106944,Dragonera,92,0,fragment,173.905,2.319841,39.584266
+Island,87.319741,Formentera,457,0,fragment,99.565,1.458441,38.692306
+Island,576.672723,Ibiza,619,2,fragment,86.702,1.41095,38.983251
+Island,3637.753677,Mallorca,1111,30,fragment,167.804,2.956607,39.613452
+Island,702.195185,Menorca,867,9,fragment,198.022,4.07369,39.960245
+Island,599.919353,Auckland Islands,197,8,oceanic,1929.244,166.097263,-50.736484
+Island,2.995494,Kent Island,95,0,continental,27.663,-66.760324,44.584271
+Island,2753.073858,Unalaska,255,0,continental,209.115,-166.894851,53.666354
+Island,52.19348,Magnetic Island,540,1,continental,4.364,146.833329,-19.138653
+Island,52.79007,Masatierra,129,47,oceanic,601.632,-78.848984,-33.647829
+Island,56.722751,Masafuera,104,30,oceanic,746.797,-80.79197,-33.767484
+Island,2.650026,Santa Clara,9,0,oceanic,612.973,-78.942363,-33.706456
+Island,1.266968,Nuutele,142,2,oceanic,3912.977,-171.422746,-14.063602
+Island,0.371421,Nuulua,72,0,oceanic,3913.97,-171.410056,-14.073274
+Island,0.255667,Namua,120,0,oceanic,3916.014,-171.415599,-14.022259
+Island,0.120254,Fanuatapu,51,0,oceanic,3918.008,-171.399702,-14.013923
+Island,142.877457,Tutuila,376,21,oceanic,3957.935,-170.717618,-14.300334
+Island,1.743404,Aunuu,88,0,oceanic,3987.557,-170.553464,-14.284039
+Island,7.734291,Ofu,206,0,oceanic,4079.235,-169.663731,-14.172184
+Island,7.270119,Olosega,209,1,oceanic,4081.128,-169.620375,-14.178551
+Island,59.616339,Tau,339,10,oceanic,4089.434,-169.468214,-14.242045
+Island,3.710503,Swains,32,0,oceanic,4096.719,-171.078439,-11.055876
+Island,10.097241,Clipperton Island,12,0,oceanic,1079.57,-109.21686,10.302856
+Island,37.317798,Diego Garcia,35,0,oceanic,1781.799,72.434263,-7.339329
+Island,5.979015,Chirinkotan,26,0,oceanic,308.21,153.485986,48.980476
+Island,2.351929,Anuchina,74,0,continental,697.975,146.003121,43.369245
+Island,10.512388,Iuriy,180,0,continental,697.764,146.063616,43.422179
+Island,10.499402,Polonskogo,120,0,continental,701.006,146.323889,43.630924
+Island,13.200737,Tanfilyeva,169,1,continental,684.307,145.916815,43.438713
+Island,58.606302,Zelenyj,210,0,continental,693.846,146.136128,43.50796
+Island,0.601676,Demina,53,0,continental,706.693,146.16207,43.4173
+Island,0.119705,Storozhevoy,10,0,continental,690.438,145.892794,43.38347
+Island,68277.87147,Tasmania,2214,496,continental,73.168,146.59427,-41.936208
+Island,77.811751,Kharimkotan,150,0,oceanic,243.18,154.525753,49.120714
+Island,468.965917,Kiritimati,26,0,oceanic,5238.657,-157.353406,1.850737
+Island,1488.290324,Kunashir,782,1,continental,630.443,145.94709,44.173277
+Island,250.323585,Shikotan,567,0,continental,709.265,146.738906,43.800861
+Island,3175.905824,Iturup,646,1,oceanic,666.063,147.877231,45.07598
+Island,2035.095097,Paramushir,269,0,continental,38.096,155.722644,50.372947
+Island,385.23474,Shumushu,212,0,continental,11.124,156.355594,50.739688
+Island,153.76185,Atlasov,114,0,oceanic,68.685,155.570201,50.862406
+Island,22.150939,Nauru,66,0,oceanic,2857.116,166.934484,-0.52847
+Island,4.146327,Raikoke,53,0,oceanic,376.46,153.251154,48.292319
+Island,47.209676,Rotuma,247,0,oceanic,2892.267,177.080375,-12.503165
+Island,1.034969,Bird,58,0,oceanic,1204.85,55.205487,-3.720209
+Island,0.70365,Conception,38,0,oceanic,1289.517,55.365992,-4.663767
+Island,0.433996,Cousin,58,0,oceanic,1288.789,55.662858,-4.331231
+Island,3.349345,Curieuse,101,0,oceanic,1288.931,55.725234,-4.282818
+Island,1.673813,Denis,61,0,oceanic,1248.281,55.666641,-3.805835
+Island,2.88403,Felicite,97,0,fragment,1304.36,55.874865,-4.328061
+Island,0.889438,Grande Soeur,48,0,fragment,1301.506,55.869106,-4.289915
+Island,1.072542,Marianne,56,0,fragment,1309.827,55.9211,-4.341997
+Island,2.124342,"North Island, Seychelles",77,0,oceanic,1259.043,55.244573,-4.392996
+Island,0.863156,Therese,73,0,oceanic,1293.027,55.401325,-4.674044
+Island,8.050361,St Francis Island,69,0,continental,31.085,133.290732,-32.50935
+Island,0.148461,Smooth Island,29,0,continental,30.548,133.309426,-32.485178
+Island,0.368319,Egg Island,35,0,continental,29.189,133.316833,-32.47392
+Island,0.63806,Dog Island,37,0,continental,31.035,133.334184,-32.487809
+Island,0.183943,Freeling Island,21,0,continental,30.862,133.345365,-32.481183
+Island,0.403466,West Island,23,0,continental,32.624,133.251833,-32.509647
+Island,1.843029,Masillon Island,41,0,continental,37.974,133.28616,-32.561723
+Island,1.1182,Fenelon Island,50,0,continental,40.763,133.282333,-32.583978
+Island,0.125204,Hart Island,1,0,continental,48.034,133.137474,-32.644342
+Island,20.787164,Signy,2,0,oceanic,1664.375,-45.632478,-60.710018
+Island,819.510817,Chatham Islands,430,56,oceanic,2864.142,-176.525216,-43.938485
+Island,0.097959,Great Gull Island,64,0,continental,10.527,-72.118744,41.202484
+Island,20.197222,South Stradbroke Island,140,1,continental,0.3,153.424159,-27.839475
+Island,0.318731,Cousine,13,0,oceanic,1288.985,55.647724,-4.350736
+Island,0.099183,Prasonisi,11,0,oceanic,18.191,23.094333,36.264389
+Island,0.340359,Antidragonera,68,0,oceanic,21.104,23.114431,36.235365
+Island,0.615035,Megali Dragonera,90,1,oceanic,22.39,23.110364,36.2229
+Island,0.376283,Avgo,13,0,oceanic,38.359,22.997455,36.094954
+Island,0.103312,Lidia,11,0,oceanic,31.781,22.900346,36.192664
+Island,0.01851,Motumahanga,19,0,oceanic,2069.735,174.015475,-39.04553
+Island,0.047278,Moturoa,33,0,oceanic,2070.78,174.027012,-39.049954
+Island,0.023769,Motuotamatea,35,0,oceanic,2070.352,174.017476,-39.061624
+Island,0.032075,Pararaki,12,0,oceanic,2070.458,174.019903,-39.059797
+Island,1.354339,Aorangi,205,0,oceanic,2069.251,174.739648,-35.482102
+Island,1.153208,Huggins Island,146,0,continental,0.191,-77.119154,34.673494
+Island,62.007572,Assateague Island,319,0,continental,0.95,-75.263263,38.026388
+Island,3954.373184,Espiritu Santo,664,18,oceanic,1795.147,166.872853,-15.241205
+Island,26.902673,Fire Island,217,0,continental,45.039,-73.025887,40.686262
+Island,0.130101,Eagle Island,58,0,continental,21.501,145.377989,-14.69688
+Island,0.043372,Lizard Island,17,0,oceanic,2109.009,175.114386,-35.912039
+Island,1.117236,Fanal Island,59,0,oceanic,2111.852,175.148087,-35.94026
+Island,1.874223,Robins Island,117,0,continental,30.672,-72.462072,40.969205
+Island,4.812601,Gyali Island,194,2,oceanic,19.502,27.121471,36.664275
+Island,231158.6738,Great Britain,1416,58,continental,32.194,-2.664145,54.129793
+Island,19.338232,Buldir,114,0,oceanic,908.346,175.918903,52.355789
+Island,48.036884,Pagan,117,0,oceanic,2495.119,145.766701,18.116355
+Island,35.805418,Little Cayman,214,4,oceanic,598.951,-80.04026,19.684628
+Island,0.187185,Lady Musgrave Island,24,0,continental,57.6,152.392716,-23.907108
+Island,0.070752,Bushy Island,24,0,continental,85.762,150.072439,-20.953709
+Island,4.291607,Palmyra,21,0,oceanic,5295.73,-162.074218,5.881682
+Island,14.702604,Teraina,24,0,oceanic,5258.942,-160.379609,4.683798
+Island,0.823854,Nasoata,83,0,oceanic,2753.142,178.587082,-18.145689
+Island,76.69867,Thera,494,0,oceanic,169.994,25.436079,36.398299
+Island,68.338291,Guernsey,468,2,continental,44.421,-2.579465,49.456382
+Island,9.81845,Alderney,356,3,continental,14.96,-2.198949,49.715831
+Island,6.401369,Sark,278,0,continental,34.549,-2.363383,49.428979
+Island,1.525102,Herm,183,0,continental,40.545,-2.449571,49.472576
+Island,0.245119,Jethou,134,0,continental,42.029,-2.462454,49.458536
+Island,0.43356,Lihou,76,0,continental,56.646,-2.667861,49.461279
+Island,0.055315,Crevichon,39,0,continental,42.272,-2.464535,49.462694
+Island,0.465878,Burhou,17,0,continental,21.496,-2.254324,49.730208
+Island,124.763125,Jersey,499,1,continental,21.908,-2.132722,49.213826
+Island,387.760077,Isle of Wight,614,0,continental,96.774,-1.298564,50.674952
+Island,721.723932,Anglesey,600,0,continental,412.933,-4.375183,53.287562
+Island,576.922686,Isle of Man,456,0,continental,515.475,-4.537848,54.228407
+Island,8739.211185,Corsica,2090,50,fragment,82.363,9.105559,42.151732
+Island,25453.62531,Sicily,2208,182,fragment,3.08,14.155497,37.587635
+Island,23784.2013,Sardinia,1995,145,fragment,184.247,9.036224,40.090224
+Island,46.902291,Agrihan,98,1,oceanic,2431.68,145.668424,18.772208
+Island,7.55292,Aguijan,49,0,oceanic,2779.421,145.558807,14.852452
+Island,13.859801,Alamagan,107,0,oceanic,2546.712,145.832867,17.599608
+Island,35.13115,Anatahan,90,0,oceanic,2646.464,145.676876,16.352246
+Island,18.845563,Asuncion Island,57,0,oceanic,2337.929,145.419245,19.683117
+Island,2.788606,Farallon de Pajaros,15,0,oceanic,2232.072,144.893795,20.544912
+Island,549.410644,Guam,393,12,oceanic,2657.711,144.777038,13.443537
+Island,4.581413,Guguan,46,0,oceanic,2573.889,145.841331,17.309782
+Island,89.688123,Rota,251,0,oceanic,2757.828,145.214092,14.157435
+Island,122.542461,Saipan,216,0,oceanic,2755.26,145.753963,15.189129
+Island,5.108647,Sarigan,83,0,oceanic,2623.903,145.779159,16.70451
+Island,103.632955,Tinian,153,0,oceanic,2762.67,145.631566,15.013351
+Island,13.297418,Agathonisi,313,0,continental,15.569,26.966664,37.462103
+Island,0.134799,Pitta,39,0,continental,18.74,26.95208,37.4839
+Island,0.097922,Strongyli,54,0,continental,17.362,26.979746,37.485719
+Island,0.441091,Neronisi,22,0,continental,15.36,26.994897,37.476605
+Island,0.086015,Katsagani,55,0,continental,15.162,27.006971,37.466491
+Island,0.22425,Kounelonisi,47,0,continental,18.014,26.979346,37.428201
+Island,3.850092,Pharmakonisi,166,0,continental,9.962,27.089375,37.288675
+Island,0.074296,Agia Kiriaki,46,0,continental,31.415,26.886363,37.143805
+Island,0.307277,Peganousa,84,0,continental,28.733,26.906138,37.116786
+Island,0.056407,Belona,49,0,continental,29.691,26.891773,37.096087
+Island,13.848684,Oinousa,125,0,continental,8.689,26.228081,38.523561
+Island,2.289664,Pasas,101,0,continental,7.336,26.284145,38.505471
+Island,0.088686,Pontikonisos,14,0,continental,8.743,26.27399,38.505977
+Island,0.335429,Vatos,71,0,continental,8.326,26.286216,38.48901
+Island,12.283076,Canton,21,0,oceanic,4530.563,-171.673014,-2.812641
+Island,4.997995,Gardner,18,0,oceanic,4156.422,-174.522236,-4.67478
+Island,8.09945,Hull,20,0,oceanic,4374.469,-172.183039,-4.514771
+Island,0.588712,Birnie,4,0,oceanic,4498.321,-171.516982,-3.584529
+Island,0.661269,McKean,7,0,oceanic,4264.965,-174.122741,-3.595219
+Island,6.563242,Enderbury,16,0,oceanic,4565.396,-171.085398,-3.127492
+Island,0.935803,Phoenix,6,0,oceanic,4562.32,-170.711948,-3.721246
+Island,9.031618,Sydney,15,0,oceanic,4466.042,-171.24444,-4.455401
+Island,21.095972,Fernando de Noronha,136,13,oceanic,356.222,-32.425866,-3.856477
+Island,254.964595,Ikaria,851,9,oceanic,49.921,26.15185,37.595995
+Island,40.986823,Nisyros,464,4,oceanic,16.953,27.168329,36.588037
+Island,11.018397,Yioura,374,4,oceanic,59.53,24.166649,39.391115
+Island,37.282095,San Lorenzo,76,0,oceanic,16.298,-112.82983,28.637236
+Island,40.567521,San Estéban,111,0,oceanic,34.648,-112.577719,28.701964
+Island,2.882674,San Pedro Mártir,23,0,oceanic,49.807,-112.3072,28.381396
+Island,3.480279,San Pedro Nolasco,45,2,oceanic,14.856,-111.379026,27.968392
+Island,11.421698,Tortuga,68,0,oceanic,35.566,-111.880296,27.441629
+Island,29.59845,San Marcos,123,0,continental,4.824,-112.074207,27.218583
+Island,1.017933,San Ildefonso,32,0,oceanic,10.04,-111.429672,26.63194
+Island,7.580726,Coronado,107,0,continental,2.644,-111.273868,26.119901
+Island,147.792038,Carmen,163,1,oceanic,7.876,-111.153964,25.964707
+Island,4.180209,Danzante,113,0,continental,2.66,-111.251841,25.787374
+Island,18.980131,Monserrat (Sea of Cortés),105,0,continental,13.665,-111.035107,25.683273
+Island,40.389079,Santa Catalina,103,1,oceanic,25.115,-110.779583,25.650896
+Island,13.548427,Santa Cruz,85,0,oceanic,19.854,-110.715872,25.285308
+Island,0.644444,San Diego,63,0,oceanic,18.995,-110.699124,25.199186
+Island,183.710474,San José,190,0,continental,4.753,-110.621904,24.980577
+Island,4.268652,San Francisco,94,0,continental,7.473,-110.573185,24.829748
+Island,104.828604,Espíritu Santo,202,0,continental,6.239,-110.350691,24.488616
+Island,139.14443,Cerralvo,209,0,oceanic,8.642,-109.874134,24.233087
+Island,0.453927,Alcatraz,35,0,continental,1.543,-111.967814,28.811278
+Island,0.075411,Cholludo,25,0,continental,28.403,-112.30557,28.73751
+Island,1.472069,Datíl,89,0,continental,28.401,-112.290641,28.721227
+Island,0.272398,Granito,3,0,oceanic,27.957,-113.539487,29.564357
+Island,0.140525,Las Ánimas,10,0,oceanic,26.977,-110.510447,25.112882
+Island,2.510664,Mejía,28,0,oceanic,24.311,-113.570312,29.556631
+Island,1.03678,Partida Norte,14,0,oceanic,17.824,-113.040126,28.891593
+Island,0.48287,Patos,9,0,continental,8.825,-112.459867,29.270494
+Island,0.640662,Rasa,17,0,oceanic,20.766,-112.980277,28.823965
+Island,1.239321,Salsipuedes,15,0,oceanic,19.197,-112.956152,28.727266
+Island,0.382549,San Luis,9,0,continental,6.821,-114.476005,30.018485
+Island,0.276777,Santa Ines,5,0,continental,4.705,-111.911774,27.037628
+Island,8.830483,Smith,66,1,continental,2.174,-113.5099,29.071212
+Island,1.305544,Ventana,60,0,continental,3.143,-113.510182,28.996111
+Island,0.731567,Cabeza de Caballo,32,0,continental,2.008,-113.479472,28.972369
+Island,0.697964,Piojo,22,0,oceanic,6.27,-113.465221,29.017921
+Island,0.176856,Mitlan,33,0,continental,2.016,-113.518268,29.0672
+Island,0.151995,Pata,34,0,continental,2.58,-113.513949,29.01457
+Island,0.136871,Flecha,15,0,continental,2.866,-113.52278,29.005173
+Island,0.102667,Bota,27,0,continental,2.951,-113.513495,29.011024
+Island,0.066583,Coronadito,19,0,continental,3.036,-113.529155,29.09776
+Island,0.080637,Gemelito East,10,0,continental,0.775,-113.475557,28.956229
+Island,0.042641,Jorobado,6,0,continental,2.261,-113.524526,29.012202
+Island,0.057769,Gemelito West,10,0,continental,0.773,-113.481895,28.955863
+Island,70.222934,Ile aux Cochons,16,0,oceanic,2378.514,50.234649,-46.098112
+Island,156.733004,Ile de la Possession,17,0,oceanic,2493.365,51.759105,-46.411781
+Island,55.027106,Ile Amsterdam,27,1,oceanic,3372.64,77.556596,-37.836307
+Island,9.292278,St. Paul,9,0,oceanic,3370.497,77.523034,-38.72216
+Island,113.265955,Campbell Island,120,2,oceanic,2231.241,169.162031,-52.54359
+Island,5.429957,Snares Islands,21,3,oceanic,1782.587,166.592748,-48.031541
+Island,432.582937,Onekotan,113,1,oceanic,187.093,154.758716,49.423503
+Island,119.568043,Shiashkotan,99,0,oceanic,281.066,154.108711,48.821929
+Island,18825.61661,New Caledonia,3343,2493,fragment,814.764,165.700102,-21.306615
+Island,1401.123937,Rhodos,1080,7,oceanic,17.577,27.9527,36.184622
+Island,163.012831,Mahe,307,8,fragment,1288.291,55.46728,-4.676443
+Island,1.461074,Ile St Anne,37,0,oceanic,1296.469,55.501058,-4.607185
+Island,1.131995,Ile au Cerf,21,0,oceanic,1298.439,55.50045,-4.634783
+Island,0.245212,Ile Longue,36,0,oceanic,1298.778,55.508217,-4.626599
+Island,0.095114,Ile Moyenne,3,0,oceanic,1298.596,55.508278,-4.619597
+Island,2.140095,Ile Anonyme,23,0,oceanic,1302.286,55.52594,-4.659656
+Island,0.045754,Ile aux Vaches Marines,11,0,oceanic,1297.304,55.433581,-4.685866
+Island,39.321466,Praslin,162,0,fragment,1287.551,55.730145,-4.32388
+Island,10.573691,La Digue,60,0,fragment,1302.941,55.837878,-4.360895
+Island,0.061404,Booby Island,8,0,oceanic,1284.167,55.673357,-4.258608
+Island,0.158668,"Ile Ronde, Praslin",6,0,oceanic,1299.724,55.790149,-4.340986
+Island,0.037075,Cocos,4,0,oceanic,1303.633,55.865363,-4.312197
+Island,0.516156,Petit Soeur,12,0,oceanic,1300.392,55.855516,-4.288182
+Island,0.098454,Mamelles,5,0,oceanic,1291.264,55.540212,-4.484201
+Island,0.296166,Recifs,9,0,oceanic,1316.319,55.763609,-4.582283
+Island,2.299607,Fregate,91,0,oceanic,1329.886,55.941317,-4.586333
+Island,0.100045,Ilot Fregates,7,0,oceanic,1329.158,55.90733,-4.601562
+Island,0.833868,Aride,44,0,oceanic,1279.53,55.666569,-4.212571
+Island,0.564177,Platte,28,0,oceanic,1382.827,55.384663,-5.863691
+Island,1.581777,St Joseph,28,0,oceanic,1191.649,53.358119,-5.437121
+Island,0.694767,Marie-Louise,24,0,oceanic,1238.322,53.143897,-6.179233
+Island,0.499327,Desnoefs,14,0,oceanic,1236.095,53.043422,-6.234876
+Island,1.929664,Alphonse,35,0,oceanic,1281.626,52.726477,-7.006184
+Island,0.042468,Bijoutier,11,0,oceanic,1288.536,52.734522,-7.067754
+Island,0.721649,St Francois,14,0,oceanic,1296.106,52.738134,-7.156718
+Island,0.240015,Fouquet,10,0,oceanic,1190.542,53.34122,-5.423494
+Island,20.550943,Silhouette,242,5,fragment,1262.925,55.230665,-4.487211
+Island,740635.1139,Borneo,12014,5765,continental,164.724,114.192417,0.870059
+Island,132699.3073,Java,6168,1156,continental,765.797,110.094062,-7.28518
+Island,1868.439353,Mauritius,917,287,oceanic,1853.012,57.571984,-20.283626
+Island,590547.3795,Madagascar,11149,9318,fragment,415.024,46.696664,-19.381883
+Island,816017.9409,New Guinea,12647,8793,continental,125.388,140.835176,-5.34743
+Island,111.619226,Rodrigues,225,47,oceanic,2450.521,63.421348,-19.716703
+Island,65836.79536,Sri Lanka,3418,889,continental,53.82,80.697879,7.621655
+Island,186375.4728,Sulawesi,5090,1317,fragment,837.186,121.291679,-2.124234
+Island,472695.9041,Sumatra,7378,1858,continental,16.26,101.655053,-0.484994
+Island,5143.996375,Trinidad and Tobago,2419,90,continental,14.559,-61.258587,10.47303
+Island,371.42362,Mayotte,624,76,oceanic,478.8,45.143921,-12.823991
+Island,77616.69689,Hokkaido,1813,81,fragment,282.821,142.562424,43.381279
+Island,227522.7326,Honshu,3230,361,fragment,178.758,137.977928,36.652266
+Island,36934.91911,Kyushu,2444,64,fragment,182.429,130.867657,32.64945
+Island,18313.92797,Shikoku,2181,55,fragment,328.11,133.465979,33.662249
+Island,74084.54032,Sakhalin,1159,72,continental,7.495,142.702744,50.334829
+Island,114622.3453,"North Island, New Zealand",1354,443,fragment,1820.859,175.727218,-38.577561
+Island,2.532839,Round Island (Mauritius),35,0,oceanic,1883.503,57.788232,-19.85034
+Island,0.319195,Ile aux Aigrettes,52,1,oceanic,1894.255,57.733108,-20.419895
+Island,17.167216,Fulanga,95,3,oceanic,2989.402,-178.583249,-19.141113
+Island,66.253413,Moala,100,1,oceanic,2856.832,179.888375,-18.599928
+Island,103.90854,Ovalau,337,4,oceanic,2788.57,178.789052,-17.679396
+Island,5596.04679,Vanua Levu,703,97,oceanic,2804.615,179.245343,-16.601168
+Island,49.964642,Vanua Mbalavu,136,0,oceanic,3024.979,-178.969329,-17.231404
+Island,3.382474,Vatu Vara,6,0,oceanic,2967.617,-179.529025,-17.428426
+Island,10543.68581,Viti Levu,965,240,oceanic,2630.836,177.964564,-17.837692
+Island,0.814553,Warraber Island,107,0,continental,61.316,142.823876,-10.208035
+Island,104.113037,Saibai Island,217,1,continental,139.883,142.689944,-9.396094
+Island,0.434889,Poruma Island,91,0,continental,91.614,143.073178,-10.049424
+Island,179.114471,Mua Island,483,4,continental,52.412,142.264088,-10.183556
+Island,1.792572,Masig Island,116,0,continental,139.302,143.407849,-9.754167
+Island,0.050525,Mabuiag Island,240,0,continental,87.565,142.170746,-9.961278
+Island,1.714095,Iama Island,163,1,continental,90.343,142.774978,-9.901221
+Island,6.260062,Erub Island,149,2,continental,178.996,143.769902,-9.589089
+Island,3.622919,Dauan Island,262,1,continental,138.363,142.535998,-9.421426
+Island,71.383411,Boigu Island,140,0,continental,157.137,142.216374,-9.265517
+Island,101.899184,Badu Island,401,1,continental,65.639,142.145221,-10.117587
+Island,0.485732,Ugar Island,89,0,continental,170.471,143.545463,-9.509521
+Island,4.505853,Mer Island,159,0,continental,181.394,144.051546,-9.916641
+Island,0.150955,"Otok Zecevo, Croatia",177,3,continental,24.336,16.694229,43.190211
+Island,168.546846,"Isla de Pascua, Chile",55,8,oceanic,3512.743,-109.354806,-27.119758
+Island,387.583253,Andros,815,1,oceanic,54.103,24.848918,37.857307
+Island,198.075743,Tinos,709,1,oceanic,78.925,25.131794,37.603989
+Island,86.302174,Mikonos,508,0,oceanic,110.938,25.374546,37.453845
+Island,14.026595,Rinia,349,0,oceanic,103.253,25.228336,37.404588
+Island,85.075666,Siros,598,0,oceanic,73.484,24.914691,37.432399
+Island,17.645039,Giaros,197,0,oceanic,51.623,24.712345,37.610797
+Island,131.675306,Kea,549,0,oceanic,18.97,24.331137,37.612824
+Island,99.02922,Kithnos,524,0,oceanic,37.732,24.416882,37.391927
+Island,72.831925,Serifos,514,0,oceanic,62.462,24.481867,37.160512
+Island,76.466832,Sifnos,590,0,oceanic,86.141,24.702244,36.971833
+Island,158.183705,Milos,651,0,oceanic,102.439,24.435375,36.703919
+Island,37.703788,Kimolos,440,0,oceanic,100.361,24.558544,36.808305
+Island,17.819341,Polyaigos,227,0,oceanic,108.515,24.636488,36.766606
+Island,32.072503,Folegandros,406,1,oceanic,131.09,24.901644,36.627552
+Island,41.307383,Sikinos,430,0,oceanic,141.987,25.120565,36.679295
+Island,112.381896,Ios,517,0,oceanic,145.476,25.32645,36.721498
+Island,38.443014,Anafi,476,0,oceanic,139.64,25.781713,36.367376
+Island,96.701831,Astipalea,489,0,oceanic,80.226,26.351027,36.571959
+Island,1.292576,Zafora,145,1,oceanic,109.156,26.399884,36.073647
+Island,8.273712,Sirina,228,0,oceanic,70.646,26.676359,36.344626
+Island,119.879564,Amorgos,664,0,oceanic,102.992,25.901903,36.846435
+Island,13.548591,Denousa,320,0,oceanic,118.836,25.813395,37.108775
+Island,15.195471,Keros,258,0,oceanic,138.59,25.647453,36.889702
+Island,8.082115,Schinoussa,346,0,oceanic,151.076,25.521446,36.873109
+Island,18.023811,Iraklia,316,0,oceanic,151.85,25.453755,36.840074
+Island,34.561794,Andiparos,364,0,oceanic,112.192,25.053863,36.999977
+Island,195.800387,Paros,665,0,oceanic,114.042,25.192108,37.059296
+Island,436.107385,Naxos,904,2,oceanic,130.12,25.484058,37.061562
+Island,4.377499,Kinaros,134,0,oceanic,81.802,26.289407,36.979924
+Island,8.98142,Levitha,157,0,oceanic,65.112,26.458455,37.003922
+Island,476.913275,Limnos,575,1,continental,56.769,25.225599,39.913783
+Island,41.785093,Agios Evstratios,377,0,continental,82.217,25.006347,39.517498
+Island,1632.741351,Lesbos,1172,2,continental,8.799,26.243215,39.169436
+Island,841.387444,Chios,978,0,continental,6.714,26.016573,38.402038
+Island,38.599385,Psara,298,0,oceanic,60.668,25.582791,38.572571
+Island,476.239241,Samos,1123,7,continental,1.595,26.810595,37.733641
+Island,30.289751,Fournoi,371,0,continental,40.481,26.50687,37.595507
+Island,15.819986,Lipsi,441,0,continental,35.907,26.75222,37.302573
+Island,33.292276,Patmos,345,0,continental,48.434,26.558079,37.331233
+Island,110.022424,Kalimnos,637,0,continental,16.426,26.974019,36.991201
+Island,14.707928,Pserimos,238,0,continental,7.788,27.141795,36.941888
+Island,287.293282,Kos,861,0,continental,4.702,27.134032,36.818366
+Island,61.397829,Tilos,448,0,oceanic,20.379,27.363135,36.428932
+Island,57.648425,Simi,490,1,oceanic,6.76,27.833745,36.592611
+Island,27.456872,Chalki,374,0,oceanic,45.265,27.570787,36.229002
+Island,7.582606,Alimia,124,0,oceanic,37.759,27.705948,36.269661
+Island,65.854506,Kasos,487,0,oceanic,140.851,26.921322,35.390762
+Island,300.345227,Karpathos,833,5,oceanic,93.362,27.15641,35.594786
+Island,20.591567,Saria,395,0,oceanic,85.218,27.220289,35.864343
+Island,8263.440974,Crete,1419,135,fragment,95.291,24.84525,35.230426
+Island,1.773883,Gavdopoula,177,0,oceanic,180.599,24.002678,34.929721
+Island,33.020098,Gavdos,409,1,oceanic,190.382,24.088614,34.841047
+Island,4.947956,Chrisi,244,0,oceanic,248.639,25.703897,34.872705
+Island,5.847716,Koufonisi,220,0,oceanic,142.764,25.60708,36.941415
+Island,2.816554,Dragonada,268,0,oceanic,181.65,26.177958,35.345288
+Island,18.002889,Elafonisos,500,0,continental,0.653,22.960855,36.485202
+Island,277.209987,Kithira,671,0,oceanic,13.394,22.983792,36.247596
+Island,20.29952,Antikithira,281,0,oceanic,58.998,23.302896,35.865417
+Island,95.911284,Salamina,523,0,continental,0.461,23.480266,37.938282
+Island,83.241386,Aegina,710,0,continental,7.14,23.490646,37.73419
+Island,49.210102,Idra,365,0,continental,6.131,23.467827,37.333598
+Island,20.485813,Spetses,246,0,continental,2.152,23.134047,37.259154
+Island,3656.455543,Evvia,1421,33,continental,0.087,23.791289,38.556352
+Island,47.320855,Skiathos,573,1,continental,3.9,23.455312,39.169302
+Island,95.445737,Skopelos,554,0,continental,20.603,23.690235,39.128745
+Island,64.149165,Alonnisos,484,0,continental,41.367,23.910849,39.209268
+Island,25.01627,Kyra Panagia,367,0,oceanic,61.319,24.071344,39.329656
+Island,6.214493,Skatzoura,236,0,oceanic,65.528,24.112158,39.07947
+Island,209.506172,Skyros,706,2,oceanic,74.843,24.553541,38.865502
+Island,383.895256,Thasos,1051,4,continental,6.619,24.653151,40.685131
+Island,180.645247,Samothraki,1067,10,continental,35.93,25.584957,40.454324
+Island,9.281688,Kastelorizo,393,1,continental,1.936,29.582873,36.143237
+Island,0.000805,Tourleta,2,0,oceanic,57.206,24.732692,37.8463
+Island,0.002434,Plati,16,0,oceanic,57.909,24.739172,37.858641
+Island,0.011773,Makedhona,84,0,oceanic,58.356,24.745512,37.852733
+Island,0.028515,Akramatis,102,0,oceanic,58.45,24.746524,37.856237
+Island,0.005599,Stakala Vrakhos,16,0,oceanic,77.378,24.956939,37.892872
+Island,0.002735,Kilandra Vrakhos,8,0,oceanic,77.343,24.957496,37.887702
+Island,0.00928,Theotokos Vrakhos East,35,0,oceanic,77.162,24.957479,37.876065
+Island,0.001612,Theotokos Vrakhos West,48,0,oceanic,77.11,24.956334,37.876023
+Island,0.01742,Thalia,56,0,oceanic,77.205,24.474747,38.849066
+Island,0.003248,St. Phokas East,11,0,oceanic,78.114,24.470693,38.861051
+Island,0.002432,St. Phokas West,9,0,oceanic,77.882,24.464365,38.861983
+Island,0.006715,North East Skiropoula,8,0,oceanic,71.617,24.369653,38.842787
+Island,0.009745,Vrikolakonisi,37,0,oceanic,89.567,24.583644,38.92455
+Island,0.004058,Ormos Akhili West,30,0,oceanic,84.436,24.576027,38.8695
+Island,0.319233,Prassou,70,0,oceanic,50.94,23.246616,35.974585
+Island,0.018584,Prasonisi,14,0,oceanic,18.309,23.094431,36.264573
+Island,0.166488,Antidragonera,64,0,oceanic,21.173,23.114068,36.235545
+Island,0.39129,Megali Dragonera,86,0,oceanic,22.453,23.110146,36.223205
+Island,0.051486,"Lidia, Makronisi",13,0,oceanic,31.793,22.900662,36.192782
+Island,0.016647,Megalo Strongilo,11,0,oceanic,33.118,22.913321,36.174176
+Island,0.177016,Greece Islet 28,23,0,oceanic,124.015,25.290238,37.125065
+Island,0.383078,Greece Islet 60,26,0,oceanic,128.341,25.240634,36.992365
+Island,0.472602,Greece Islet 66,23,0,oceanic,121.022,25.118606,36.971217
+Island,0.217292,Greece Islet 67,67,0,oceanic,120.096,25.109809,36.979222
+Island,7.689931,Greece Islet 93,80,0,oceanic,112.347,25.002283,36.96247
+Island,1.673995,Greece Islet 95,63,0,oceanic,112.397,24.961527,36.950167
+Island,0.04146,Aegean Islet 1,17,0,continental,15.3,26.431765,39.293756
+Island,0.123764,Aegean Islet 2,65,0,continental,14.325,26.446244,39.31376
+Island,0.556225,Aegean Islet 3,57,0,continental,14.794,26.435918,39.309633
+Island,0.143155,Aegean Islet 4,47,0,continental,14.825,26.435542,39.297792
+Island,0.003245,Aegean Islet 7,44,0,continental,9.293,26.277549,38.489459
+Island,0.022118,Aegean Islet 10,9,0,continental,9.788,26.262029,38.507556
+Island,0.109736,Aegean Islet 11,63,0,continental,12.515,26.970824,37.794484
+Island,0.025172,Aegean Islet 12,12,0,continental,12.407,26.998397,37.799119
+Island,0.008098,Aegean Islet 13,10,0,continental,13.17,26.962557,37.796524
+Island,0.007791,Aegean Islet 17,10,0,continental,16.678,26.990419,37.4826
+Island,0.002588,Aegean Islet 20,14,0,continental,15.965,27.000728,37.465606
+Island,6.530107,Aegean Islet 23,215,0,continental,36.842,26.733879,37.386482
+Island,0.054829,Aegean Islet 24,35,0,continental,36.955,26.724354,37.405005
+Island,1.209895,Aegean Islet 25,74,0,continental,40.923,26.704597,37.364425
+Island,0.205737,Aegean Islet 26,57,0,continental,39.823,26.716273,37.372804
+Island,0.340731,Aegean Islet 27,69,0,continental,39.754,26.724688,37.368605
+Island,0.025099,Aegean Islet 28,33,0,continental,39.764,26.742091,37.357963
+Island,0.045617,Aegean Islet 29,51,0,continental,38.994,26.747776,37.365534
+Island,0.033339,Aegean Islet 30,70,0,continental,39.125,26.749089,37.358972
+Island,0.00595,Aegean Islet 31,61,0,continental,39.37,26.746833,37.359916
+Island,0.260897,Aegean Islet 32,68,0,continental,38.4,26.753493,37.36108
+Island,0.28832,Aegean Islet 33,61,0,continental,37.342,26.76581,37.355366
+Island,0.054446,Aegean Islet 34,57,0,continental,38.434,26.756439,37.350794
+Island,0.139312,Aegean Islet 36,37,0,continental,42.217,26.712313,37.332246
+Island,0.022403,Aegean Islet 37,24,0,continental,41.858,26.718738,37.337925
+Island,0.036797,Aegean Islet 38,27,0,continental,41.453,26.723112,37.342535
+Island,0.023983,Aegean Islet 39,39,0,continental,41.076,26.727674,37.337465
+Island,0.007407,Aegean Islet 40,22,0,continental,36.7,26.780837,37.309356
+Island,0.048936,Aegean Islet 41,39,0,continental,34.408,26.804863,37.317144
+Island,0.002306,Aegean Islet 42,2,0,continental,34.131,26.809185,37.315639
+Island,0.030083,Aegean Islet 44,27,0,continental,34.384,26.806708,37.30632
+Island,0.039117,Aegean Islet 45,37,0,continental,34.679,26.802743,37.307545
+Island,0.074159,Aegean Islet 46,55,0,continental,35.55,26.798682,37.28343
+Island,0.017673,Aegean Islet 47,37,0,continental,36.157,26.792409,37.283173
+Island,0.043697,Aegean Islet 48,44,0,continental,38.176,26.770167,37.277354
+Island,0.071976,Aegean Islet 49,51,0,continental,39.55,26.757219,37.267482
+Island,0.06942,Aegean Islet 50,72,0,continental,40.069,26.751538,37.266248
+Island,0.028585,Aegean Islet 51,10,0,continental,39.962,26.751411,37.271958
+Island,0.046215,Aegean Islet 52,50,0,continental,40.441,26.74536,37.273129
+Island,0.000703,Aegean Islet 53,1,0,continental,40.31,26.747569,37.275092
+Island,0.206185,Aegean Islet 54,46,0,continental,40.763,26.7361,37.273169
+Island,0.071274,Aegean Islet 55,43,0,continental,40.282,26.746534,37.269764
+Island,0.255428,Aegean Islet 56,80,0,continental,43.111,26.718293,37.255782
+Island,0.019405,Aegean Islet 57,12,0,continental,45.693,26.700033,37.228381
+Island,0.040668,Aegean Islet 58,40,0,continental,35.188,26.812297,37.255335
+Island,0.005968,Aegean Islet 59,13,0,continental,35.714,26.807585,37.254768
+Island,0.008819,Aegean Islet 61,33,0,continental,36.901,26.814805,37.210532
+Island,0.040034,Aegean Islet 67,48,0,continental,30.282,26.886144,37.090305
+Island,0.107228,Aegean Islet 68,63,0,continental,29.861,26.88875,37.085087
+Island,0.039253,Aegean Islet 69,16,0,continental,14.126,27.067012,37.082945
+Island,1.912402,Aegean Islet 70,128,0,continental,10.494,27.087755,37.061132
+Island,0.015264,Aegean Islet 71,28,0,continental,12.771,27.081041,37.052792
+Island,0.018921,Aegean Islet 72,13,0,continental,6.671,27.149964,37.049818
+Island,0.026491,Aegean Islet 73,16,0,continental,7.117,27.14539,37.047708
+Island,0.09732,Aegean Islet 74,29,0,oceanic,75.002,26.382155,36.99533
+Island,0.089748,Aegean Islet 75,23,0,oceanic,75.907,26.368641,36.994608
+Island,0.429185,Pulau Babi Tengah,188,0,continental,12.578,103.96059,2.476385
+Island,21.708409,Deokjeokdo,387,1,continental,28.022,126.120359,37.23608
+Island,3.713166,Mungapdo,197,0,continental,26.627,126.098969,37.17614
+Island,3.339366,Soyado,274,0,continental,24.383,126.174369,37.213454
+Island,23.782463,"Chichi-jima, Bonin",256,0,oceanic,1523.998,142.209269,27.069974
+Island,9258.822949,Cyprus,1483,98,oceanic,69.859,33.218678,35.043003
+Island,6.701068,Marcus I.,10,0,oceanic,2659.842,153.952679,24.307233
+Island,5995.179114,Prince Edward I.,643,0,continental,14.769,-63.244936,46.396204
+Island,226.657267,St. Pierre and Miquelon,398,0,continental,389.745,-56.305845,46.929849
+Island,1.421106,"Fenua Tapu, Nui Atoll",36,0,oceanic,3258.725,177.154003,-7.247673
+Island,0.027776,"Motipuakaka, Nui Atoll",22,0,oceanic,3260.751,177.164237,-7.240299
+Island,0.298109,"Pongalei, Nui Atoll",29,0,oceanic,3260.707,177.163495,-7.236576
+Island,0.001313,"Kokole, Nui Atoll",8,0,oceanic,3261.25,177.161021,-7.231097
+Island,0.054776,"Unimai, Nui Atoll",23,0,oceanic,3261.318,177.162894,-7.22908
+Island,0.000144,"Unimai 2, Nui Atoll",7,0,oceanic,3261.655,177.164531,-7.229797
+Island,0.006198,"Tenamoitoka, Nui Atoll",16,0,oceanic,3261.91,177.164214,-7.225324
+Island,0.054736,"Piliaieve, Nui Atoll",21,0,oceanic,3261.679,177.16254,-7.224586
+Island,0.064852,"Pakantou, Nui Atoll",24,0,oceanic,3261.958,177.162642,-7.221152
+Island,0.000488,"Sikiana, Nui Atoll",9,0,oceanic,3262.177,177.16217,-7.219629
+Island,0.009637,"Motuliki, Nui Atoll",18,0,oceanic,3262.098,177.161915,-7.21903
+Island,0.000558,"Motuliki 2, Nui Atoll",8,0,oceanic,3262.351,177.163294,-7.218555
+Island,0.010382,"Motulikiliki, Nui Atoll",16,0,oceanic,3262.162,177.16159,-7.218217
+Island,0.172616,"Talalolae, Nui Atoll",24,0,oceanic,3262.325,177.161863,-7.213783
+Island,0.003023,"Teitai, Nui Atoll",13,0,oceanic,3262.869,177.162319,-7.209802
+Island,0.636061,"Tokinivae, Nui Atoll",28,0,oceanic,3262.381,177.155677,-7.202953
+Island,0.938951,"Meang, Nui Atoll",30,0,oceanic,3261.935,177.147843,-7.197344
+Island,0.000628,"Nusafe, Nui Atoll",9,0,oceanic,3263.321,177.149487,-7.188987
+Island,0.003873,"Tokinivae 2, Nui Atoll",16,0,oceanic,3262.812,177.156461,-7.20391
+Island,0.000361,"Tokinivae3, Nui Atoll",8,0,oceanic,3262.761,177.156085,-7.204483
+Island,5.715759,"Chanaral, Humboldt Current System",35,0,continental,5.609,-71.577669,-29.033693
+Island,0.726389,"Damas, Humboldt Current System",43,0,continental,4.447,-71.527036,-29.235496
+Island,3.48612,"Choros, Humboldt Current System",25,0,continental,6.294,-71.542224,-29.267562
+Island,0.223247,"Chungungo, Humboldt Current System",6,0,continental,1.649,-71.356978,-29.412191
+Island,0.705639,"Tilgo, Humboldt Current System",16,0,continental,0.296,-71.337114,-29.543852
+Island,0.297494,"Pajaros 1, Humboldt Current System",3,0,oceanic,20.459,-71.549033,-29.551862
+Island,0.01839,"Gin, Hawaii Sandy Islands",1,0,oceanic,3456.855,-166.165804,23.735159
+Island,0.029427,"Little Gin, Hawaii Sandy Islands",3,0,oceanic,3457.453,-166.163544,23.72873
+Island,0.004386,"Round, Hawaii Sandy Islands",3,0,oceanic,3447.081,-166.229192,23.827211
+Island,0.005726,"Shark, Hawaii Sandy Islands",1,0,oceanic,3444.712,-166.323726,23.853438
+Island,0.024944,"Trig, Hawaii Sandy Islands",7,0,oceanic,3442.114,-166.245835,23.872825
+Island,0.024432,"Whale-Skate, Hawaii Sandy Islands",7,0,oceanic,3443.111,-166.217719,23.861118
+Island,0.033093,"Grass, Hawaii Sandy Islands",7,0,oceanic,3169.494,-175.907706,27.77361
+Island,0.017682,"Little North, Hawaii Sandy Islands",4,0,oceanic,3150.431,-175.744063,27.911747
+Island,0.07144,"North, Hawaii Sandy Islands",8,0,oceanic,3148.688,-175.737593,27.925441
+Island,0.007448,"Seal, Hawaii Sandy Islands",7,0,oceanic,3171.745,-175.940785,27.760888
+Island,3.10E-05,Islets near Perth 13,1,0,continental,19.467,115.525119,-32.025392
+Island,3.10E-05,Islets near Perth 15,3,0,continental,19.798,115.521725,-32.024564
+Island,5.60E-05,Islets near Perth 18,5,0,continental,21.765,115.502858,-32.013798
+Island,0.001991,Islets near Perth 19,13,0,continental,22.005,115.499203,-32.016848
+Island,0.000204,Islets near Perth 20,8,0,continental,22.177,115.497562,-32.017393
+Island,3.40E-05,Islets near Perth 23,3,0,continental,24.633,115.470715,-32.020169
+Island,2.50E-05,Islets near Perth 24,2,0,continental,24.586,115.471115,-32.020803
+Island,0.001345,Islets near Perth 26,5,0,continental,26.529,115.450163,-32.018976
+Island,0.000836,Islets near Perth 27,5,0,continental,26.341,115.452557,-32.01872
+Island,2.00E-05,Islets near Perth 28,4,0,continental,25.662,115.460903,-32.013751
+Island,0.000108,Islets near Perth 29,3,0,continental,25.645,115.461073,-32.013714
+Island,3.90E-05,Islets near Perth 30,1,0,continental,24.755,115.470434,-32.014796
+Island,0.000292,Islets near Perth 33,1,0,continental,23.566,115.484785,-32.007945
+Island,0.000426,Islets near Perth 34,2,0,continental,23.522,115.487241,-32.000813
+Island,1.80E-05,Islets near Perth 35,2,0,continental,22.753,115.497974,-31.99417
+Island,0.00028,Islets near Perth 36,6,0,continental,21.88,115.509959,-31.987969
+Island,0.000933,Islets near Perth 37,11,0,continental,21.51,115.514259,-31.987459
+Island,0.000164,Islets near Perth 38,12,0,continental,20.82,115.520315,-31.991798
+Island,0.000102,Islets near Perth 39,7,0,continental,20.671,115.522925,-31.989573
+Island,5.60E-05,Islets near Perth 39a,5,0,continental,20.679,115.522826,-31.98961
+Island,0.000118,Islets near Perth 40,3,0,continental,20.624,115.523439,-31.989485
+Island,0.000141,Islets near Perth 41,1,0,continental,20.67,115.523244,-31.988882
+Island,0.000207,Islets near Perth 43,4,0,continental,20.456,115.526487,-31.98697
+Island,4.00E-05,Islets near Perth 47,1,0,continental,18.842,115.542565,-31.992012
+Island,0.170549,Islets near Perth 60,39,0,continental,7.306,115.662743,-32.12133
+Island,5.90E-05,Islets near Perth 65,12,0,continental,7.458,115.664964,-32.119592
+Island,0.001509,Islets near Perth 72,8,0,continental,7.835,115.659857,-32.122875
+Island,0.000285,Islets near Perth 87,2,0,continental,0.334,115.691333,-32.275405
+Island,0.0065,Islets near Perth 88,17,0,continental,0.495,115.690143,-32.277551
+Island,0.000308,Islets near Perth 92,4,0,continental,0.525,115.692341,-32.279316
+Island,0.013611,Islets near Perth 93,20,0,continental,0.921,115.690387,-32.292672
+Island,0.000295,Islets near Perth 94,2,0,continental,0.752,115.692761,-32.293064
+Island,0.000874,Islets near Perth 95,6,0,continental,1.014,115.689876,-32.295
+Island,0.00012,Islets near Perth 96,2,0,continental,0.957,115.690842,-32.295256
+Island,0.00403,Islets near Perth 97,12,0,continental,0.857,115.691651,-32.295676
+Island,4.20E-05,Islets near Perth 98,3,0,continental,0.884,115.691745,-32.295438
+Island,0.000884,Islets near Perth 99,5,0,continental,0.98,115.690403,-32.295343
+Island,0.000216,Islets near Perth 103,5,0,continental,1.012,115.690898,-32.301962
+Island,0.115099,Islets near Perth 104,49,0,continental,0.728,115.690668,-32.305487
+Island,0.000947,Islets near Perth 105,3,0,continental,1.302,115.689794,-32.312133
+Island,0.000739,Islets near Perth 109,2,0,continental,2.051,115.692492,-32.32214
+Island,0.000128,Islets near Perth 110,2,0,continental,2.093,115.692133,-32.322329
+Island,0.000515,Islets near Perth 111,2,0,continental,2.109,115.692153,-32.322577
+Island,0.000825,Islets near Perth 114,1,0,continental,2.929,115.692083,-32.330441
+Island,0.000143,Islets near Perth 115,3,0,continental,3.043,115.689639,-32.353601
+Island,0.000109,Islets near Perth 118,1,0,continental,2.969,115.690097,-32.354218
+Island,9.90E-05,Islets near Perth 119,1,0,continental,2.958,115.690236,-32.354255
+Island,0.000245,Islets near Perth 120,2,0,continental,2.932,115.690781,-32.354
+Island,0.001431,Islets near Perth 121,6,0,continental,0.01,115.750993,-31.875848
+Island,0.073637,"Goljak, Adria",63,0,continental,0.904,17.457481,42.953955
+Island,0.041451,"Srednjak, Adria",56,0,continental,0.215,17.448873,42.951185
+Island,0.047688,"Gospin Skolj, Adria",36,0,continental,0.097,17.448411,42.94676
+Island,3.432267,"Kakan, Adria",170,1,continental,6.064,15.667852,43.690957
+Island,0.097338,"Mali Borovnjak, Adria",60,0,continental,7.081,15.669669,43.698731
+Island,0.236716,"Veliki Borovnjak, Adria",52,0,continental,6.615,15.662672,43.70149
+Island,2.908549,"Tijat, Adria",123,0,continental,1.962,15.764502,43.721013
+Island,3.479394,"Zmajan, Adria",128,0,continental,4.651,15.755901,43.692667
+Island,0.383595,"Logorun, Adria",100,0,continental,0.249,15.751286,43.742741
+Island,0.040413,"Kamenica, Adria",51,0,continental,4.025,15.779719,43.707495
+Island,0.018327,"Sovljak, Adria",53,0,continental,0.324,15.719876,43.758849
+Island,0.023465,"Prinjak, Adria",59,0,continental,0.701,15.7245,43.751947
+Island,0.05566,"Lukovnik, Adria",81,0,continental,0.072,15.741074,43.751436
+Island,0.012944,"Burna Sestrica, Adria",83,0,continental,1.259,15.532283,43.867405
+Island,0.02922,"Dona Sestrica, Adria",89,0,continental,1.569,15.527697,43.865943
+Island,1.28502,"Velika Jarta, Adria",99,0,continental,0.695,15.543058,43.857323
+Island,0.381143,"Jartica, Adria",78,0,continental,0.332,15.56033,43.853292
+Island,0.005448,"Mali Gubavac, Adria",40,0,continental,1.192,15.55521,43.848676
+Island,0.027056,"Veliki Gubavac, Adria",40,0,continental,1.229,15.55231,43.848567
+Island,0.002433,"Prisnak Gorni, Adria",74,0,continental,6.332,15.60805,43.715863
+Island,0.017169,"Maslinak, Adria",61,0,continental,0.763,15.555654,43.83682
+Island,0.018492,"Visovac, Adria",57,0,continental,1.931,15.53889,43.828471
+Island,0.06758,"Prisnak, Adria",143,0,continental,0.169,15.560475,43.826381
+Island,0.539006,"Radej, Adria",63,0,continental,0.677,15.567071,43.843977
+Island,0.241936,"Zminak, Adria",104,0,continental,0.355,15.57809,43.840419
+Island,0.095844,"Tegina, Adria",151,0,continental,0.337,15.588486,43.835355
+Island,0.198255,"Veliki Vinik, Adria",182,0,continental,0.177,15.581311,43.834448
+Island,0.069346,"Mali Vinik, Adria",166,0,continental,0.256,15.584931,43.830875
+Island,0.011391,"Mostir, Adria",100,0,continental,0.405,15.633161,43.829458
+Island,0.01809,"Skojic u Kosirini, Adria",53,0,continental,0.239,15.610311,43.789348
+Island,0.090507,"Lutac, Adria",55,0,continental,0.352,15.659116,43.789329
+Island,0.05174,"Bronik, Adria",63,0,continental,0.478,15.66515,43.785538
+Island,0.013137,"Skolic, Adria",52,0,continental,0.185,15.653383,43.783757
+Island,0.024886,"Mimonak, Adria",87,0,continental,0.1,15.682066,43.778011
+Island,0.092199,"Bisaga, Adria",73,0,continental,0.273,15.675988,43.778672
+Island,0.052896,"Frbosnak, Adria",66,0,continental,0.173,15.665079,43.775949
+Island,0.048822,"Maslinak, Adria",105,0,continental,0.595,15.680561,43.768408
+Island,0.031428,"Mali Drazimeski, Adria",65,0,continental,0.559,15.674931,43.761358
+Island,0.136445,"Veliki Drazimeski, Adria",93,0,continental,0.978,15.676632,43.756539
+Island,0.003198,"Kamicic, Adria",6,0,continental,0.999,15.634282,43.759886
+Island,0.026274,"Babulak, Adria",99,0,continental,1.015,15.630272,43.760441
+Island,0.045495,"Vodenak, Adria",80,0,continental,1.139,15.624498,43.761648
+Island,0.022131,"Cerigul, Adria",32,0,continental,5,15.611109,43.727358
+Island,0.079603,"Duzac, Adria",58,0,continental,5.148,15.617243,43.723367
+Island,0.116324,"Cavlin, Adria",60,0,continental,5.283,15.581854,43.734903
+Island,0.382192,"Veliki Tetevisnak, Adria",59,0,continental,5.828,15.594262,43.722785
+Island,0.098755,"Mali Tetevisnak, Adria",53,0,continental,6.147,15.603235,43.718023
+Island,15.324331,"Zirje, Adria",351,0,continental,10.346,15.660516,43.651729
+Island,0.012999,"Koromasna, Adria",54,0,continental,11.549,15.684956,43.656412
+Island,0.024693,"Gusteranski, Adria",54,0,continental,11.877,15.713694,43.645502
+Island,0.020725,"Hrbosnjak, Adria",36,0,continental,11.544,15.738348,43.645932
+Island,0.269204,"Mazirina, Adria",110,0,continental,12.946,15.740487,43.627017
+Island,0.012575,"Bakul, Adria",6,0,continental,14.513,15.713604,43.621414
+Island,0.062577,"Skrvada, Adria",54,0,continental,14.708,15.680415,43.626482
+Island,0.008116,"Mikavica, Adria",26,0,continental,9.922,15.614959,43.678883
+Island,0.02642,"Kosmerka, Adria",17,0,continental,14.931,15.603366,43.633704
+Island,0.005686,"Proklandica, Adria",4,0,continental,15.079,15.60777,43.632259
+Island,0.013005,"Vrtlac, Adria",9,0,continental,15.937,15.609026,43.623978
+Island,0.005278,"Babuljak, Adria",3,0,continental,16.063,15.613819,43.62229
+Island,0.013005,"Blitvenica, Adria",11,0,continental,16.652,15.57462,43.624958
+Island,0.001627,"Nozdra, Adria",2,0,continental,11.551,15.592959,43.669302
+Island,0.034164,"Raparaznjak, Adria",30,0,continental,10.448,15.586616,43.681615
+Island,0.015031,"Sedlo, Adria",11,0,continental,13.85,15.557565,43.658024
+Island,0.013177,"Vrtlic, Adria",13,0,continental,10.895,15.546175,43.6927
+Island,0.062351,"Samograd, Adria",56,0,continental,10.847,15.557185,43.687947
+Island,0.008053,"Babuljaš, Adria",77,0,continental,0.178,15.498952,43.904635
+Island,0.055181,"Veliki Školj, Adria",134,0,continental,0.221,15.503201,43.902465
+Island,0.011829,"St. Justina, Adria",92,0,continental,0.138,15.508294,43.903508
+Island,0.012147,"Žavinac Mali, Adria",84,0,continental,0.569,15.519099,43.893743
+Island,0.029342,"Žavinac Veliki, Adria",94,0,continental,0.341,15.523259,43.89194
+Island,0.006353,"Vrtlic, Adria",22,0,continental,4.066,15.513652,43.823287
+Island,0.031144,"Veliki Skoljic, Adria",79,0,continental,4.18,15.512378,43.841827
+Island,0.012965,"Mali Skoljic, Adria",67,0,continental,3.806,15.517996,43.839536
+Island,0.056048,"Gira, Adria",104,0,continental,4.898,15.501637,43.827708
+Island,0.000943,"Kamicic, Adria",6,0,continental,4.83,15.501761,43.843877
+Island,0.001155,"Kamicic, Adria",12,0,continental,3.573,15.491574,43.867716
+Island,0.059573,"Kozina, Adria",82,0,continental,3.72,15.486622,43.868346
+Island,0.605974,"Murvenjak, Adria",49,0,continental,3.141,15.516044,43.830953
+Island,0.0389,"Obrovanj, Adria",71,0,continental,5.073,15.498285,43.841691
+Island,0.003611,"Rakita, Adria",44,0,continental,5.112,15.495629,43.843626
+Island,0.082306,"Sipnata, Adria",73,0,continental,5.289,15.484675,43.846426
+Island,0.075443,"Oblik, Adria",55,0,continental,4.63,15.505939,43.837791
+Island,0.030641,"Artina, Adria",72,0,continental,3.089,15.50249,43.86325
+Island,0.014048,"Mali Lagan, Adria",20,0,continental,26.535,14.80508,44.166324
+Island,0.029597,"Veliki Lagan, Adira",29,0,continental,26.266,14.808871,44.164652
+Island,1.459547,"Naqelelevu, Ringgold Islands, Fiji",86,0,oceanic,3064.853,-179.161006,-16.089894
+Island,0.035035,"Tauraria, Ringgold Islands, Fiji",37,0,oceanic,3065.131,-179.167575,-16.083741
+Island,0.14032,"Tainibeka, Ringgold Islands, Fiji",37,0,oceanic,3063.644,-179.180423,-16.082438
+Island,0.416246,"Vetau'ua, Ringgold Islands, Fiji",25,0,oceanic,3047.605,-179.408384,-15.952392
+Island,0.214993,"Nukubasaga, Ringgold Islands, Fiji",31,0,oceanic,3046.394,-179.252118,-16.302487
+Island,0.040899,"Nukupureti, Ringgold Islands, Fiji",19,0,oceanic,3044.609,-179.268728,-16.310181
+Island,0.021105,"Nukusemanu, Ringgold Islands, Fiji",14,0,oceanic,3029.119,-179.417587,-16.334279
+Island,17.298616,"Late, Tonga",136,0,oceanic,3393.326,-174.645497,-18.804655
+Island,0.696279,"Yadua Taba, Fiji",98,0,oceanic,2782.98,178.278905,-16.833701
+Island,857.664402,Sadoga-shima,773,0,oceanic,633.649,138.390158,38.044467
+Island,22.493446,Haha-jima,244,4,oceanic,1547.144,142.157199,26.667203
+Island,1701.129078,Stewart Island,401,3,fragment,1782.096,167.857856,-46.987336
+Island,0.25311,"Ruamahua-nui, New Zealand",36,0,oceanic,2208.814,176.094969,-36.953285
+Island,0.198085,"Ruamahua-iti, New Zealand",45,0,oceanic,2207.939,176.081395,-36.974917
+Island,0.144474,"Hongiora, New Zealand",29,0,oceanic,2205.66,176.057518,-36.955615
+Island,0.188124,"Middle Island, New Zealand",62,0,oceanic,2207.596,176.08151,-36.957768
+Island,0.013237,"Half Island, New Zealand",20,0,oceanic,2207.605,176.075741,-36.96894
+Island,0.040203,"Hernia, New Zealand",17,0,oceanic,2207.6,176.077243,-36.965902
+Island,0.027987,"Green, New Zealand",35,0,oceanic,2183.727,175.848825,-36.643605
+Island,0.035168,"Flat, New Zealand",14,0,oceanic,2186.109,175.867698,-36.710358
+Island,0.016184,"Otawhanga, New Zealand",45,0,oceanic,2042.685,174.444996,-35.435997
+Island,0.0148,"Black Rocks, New Zealand",28,0,oceanic,2185.866,175.865842,-36.697727
+Island,0.007859,"Old Man Rock, New Zealand",31,0,oceanic,2184.356,175.846703,-36.709911
+Island,0.006481,"Motuwharariki, New Zealand",36,0,oceanic,2042.969,174.449263,-35.422658
+Island,0.00141,"Little Otawhanga, New Zealand",19,0,oceanic,2042.822,174.445938,-35.43443
+Island,0.001756,"Stack W of Green Is, New Zealand",13,0,oceanic,2183.452,175.844387,-36.642752
+Island,1.422812,"Lady Alice, New Zealand",191,0,oceanic,2073.126,174.728074,-35.889896
+Island,0.903677,"Whatupuke, New Zealand",143,0,oceanic,2075.619,174.754029,-35.88954
+Island,0.75775,"Coppermine, New Zealand",157,0,oceanic,2077.338,174.772127,-35.888616
+Island,19.978643,"Great Mercury Island, New Zealand",228,0,oceanic,2174.609,175.795788,-36.616104
+Island,2.397833,"Red Mercury Island, New Zealand",104,1,oceanic,2190.214,175.935271,-36.624145
+Island,0.001715,"Sentinel Rock, New zealand",29,0,oceanic,2065.848,174.602671,-36.082099
+Island,0.028553,"Tatapihi Island, New Zealand",18,0,oceanic,2103.633,175.056115,-35.90005
+Island,0.019651,"Matapia Island, New Zealand",10,0,oceanic,1884.073,172.798536,-34.606247
+Island,0.00529,"Kauwahaia Island, New Zealand",43,0,oceanic,2061.573,174.43699,-36.886709
+Island,0.015111,"Needle Rock, New Zealand",30,0,oceanic,2184.401,175.844509,-36.733859
+Island,0.500843,"Burgess, New Zealand",88,0,oceanic,2108.282,175.11337,-35.904623
+Island,0.097187,"Hokoromea, New Zealand",65,0,oceanic,2107.972,175.10401,-35.911355
+Island,0.141545,"Atihau, New Zealand",62,0,oceanic,2107.46,175.098906,-35.913038
+Island,0.012289,"Lizard, New Zealand",19,0,oceanic,2108.96,175.113969,-35.909419
+Island,0.076607,"Tarahiki, New Zealand",82,0,oceanic,2130.129,175.227173,-36.790518
+Island,0.880553,"Rotoroa, New Zealand",154,0,oceanic,2127.403,175.198275,-36.816422
+Island,0.009989,"Ruthe, New Zealand",63,0,oceanic,2128.832,175.206503,-36.828977
+Island,18.12944,"Ponui, New Zealand",255,3,oceanic,2124.69,175.186964,-36.867002
+Island,1.120706,"Pakihi, New Zealand",110,0,oceanic,2125.171,175.161035,-36.910272
+Island,0.084693,"Karamuramu Islands, New Zealand",29,0,oceanic,2125.623,175.156861,-36.924208
+Island,0.620452,"Goat Island, New Zealand",111,0,oceanic,2144.741,175.40285,-36.741849
+Island,0.206028,"Happy Jack Island, New Zealand",23,0,oceanic,2141.368,175.37307,-36.656411
+Island,0.278771,"Rabbit Island, New Zealand",19,0,oceanic,2143.562,175.393419,-36.697394
+Island,0.122738,"Bush Island, New Zealand",45,0,oceanic,2143.41,175.393422,-36.679719
+Island,0.012232,"Pauls Island, New Zealand",26,0,oceanic,2146.429,175.416264,-36.740423
+Island,0.046835,"Rat Island, New Zealand",21,0,oceanic,2149.71,175.451819,-36.758702
+Island,0.001139,"Tern Islet, New Zealand",3,0,oceanic,2042.809,174.446708,-35.427492
+Island,9.90E-05,"Mid Stack, New Zealand",2,0,oceanic,2042.804,174.446455,-35.427751
+Island,0.000362,"Tall Stack, New Zealand",4,0,oceanic,2042.763,174.445977,-35.427996
+Island,0.000378,"East Pillar, New Zealand",1,0,oceanic,2042.693,174.445257,-35.427707
+Island,0.000171,"West Pillar, New Zealand",1,0,oceanic,2042.688,174.445129,-35.427854
+Island,0.000411,"East Stack, New Zealand",4,0,oceanic,2042.873,174.446396,-35.433946
+Island,0.000122,"Second Stack, New Zealand",1,0,oceanic,2042.854,174.446132,-35.434061
+Island,0.001661,"Holey Stack, New Zealand",6,0,oceanic,2042.85,174.445901,-35.436219
+Island,0.055248,"Unclassified Islet, Cape Brett, New Zealand",61,0,oceanic,2030.039,174.339661,-35.164782
+Island,0.941199,"Stanley Island, New Zealand",124,2,oceanic,2186.621,175.88652,-36.640052
+Island,0.00382,"Inner Stack, New Zealand",49,0,oceanic,2186.453,175.879157,-36.634202
+Island,0.006334,"Outer Stack, New Zealand",32,0,oceanic,2186.185,175.877076,-36.630602
+Island,0.023978,"Sail rock, New Zealand",36,0,oceanic,2073.031,174.697945,-36.001875
+Island,0.00787,"Northern Island, New Zealand",7,0,oceanic,2259.502,176.560621,-37.660798
+Island,0.028762,"Southern Island, New Zealand",11,0,oceanic,2259.398,176.560196,-37.662271
+Island,0.000147,"A, New Zealand",2,0,oceanic,2259.605,176.561641,-37.65874
+Island,0.000369,"B, New Zealand",2,0,oceanic,2259.586,176.561392,-37.659047
+Island,0.002302,"C, New Zealand",5,0,oceanic,2259.432,176.559675,-37.659734
+Island,0.000362,"D, New Zealand",2,0,oceanic,2259.435,176.559382,-37.660904
+Island,0.000151,"E, New Zealand",3,0,oceanic,2259.438,176.558982,-37.663307
+Island,0.00051,"F, New Zealand",2,0,oceanic,2259.453,176.55914,-37.663695
+Island,0.368604,"Maskan, Kuwait",42,0,continental,7.749,48.2519,29.486058
+Island,0.11029,"Awhah, Kuwait",51,0,continental,29.869,48.440192,29.378094
+Island,0.135569,"Kubbar, Kuwait",41,0,continental,28.764,48.492775,29.071872
+Island,0.158418,"Umm Al-Maradem, Kuwait",7,0,continental,24.894,48.65192,28.679936
+Island,2.311209,"Bikini, Bikini Atoll",26,0,oceanic,3543.243,165.545937,11.627151
+Island,1.226267,"Eneu, Bikini Atoll",22,0,oceanic,3536.65,165.565329,11.524611
+Island,1.05673,"Bwikor, Bikini Atoll",8,0,oceanic,3294.56,162.240339,11.663338
+Island,0.582711,"Nam, Bikini Atoll",16,0,oceanic,3529.068,165.291565,11.702022
+Island,0.276805,"Lomilik, Bikini Atoll",6,0,oceanic,3537.771,165.411875,11.697336
+Island,0.118513,"Aomen, Bikini Atoll",2,0,oceanic,3539.463,165.427824,11.691665
+Island,0.072046,"Oroken, Bikini Atoll",12,0,oceanic,3514.375,165.235364,11.562376
+Island,0.512383,"Aerokojlol, Bikini Atoll",12,0,oceanic,3522.954,165.408873,11.508804
+Island,1.022972,"Enidrik, Bikini Atoll",13,0,oceanic,3517.78,165.345934,11.498646
+Island,0.17245,"Lukuoj, Bikini Atoll",1,0,oceanic,3515.823,165.293894,11.523016
+Island,0.155881,"Jalete, Bikini Atoll",5,0,oceanic,3515.474,165.28538,11.526092
+Island,0.036469,"Bokaetoktok, Bikini Atoll",8,0,oceanic,3514.239,165.226276,11.569294
+Island,0.039841,"Bokdrolul, Bikini Atoll",7,0,oceanic,3514.231,165.22012,11.576512
+Island,0.076963,"Bokantuak, Bikini Atoll",5,0,oceanic,3542.33,165.551566,11.603324
+Island,0.262351,"Enaelo, Bikini Atoll",5,0,oceanic,3540.59,165.559104,11.573644
+Island,0.004067,"Rojkora, Bikini Atoll",1,0,oceanic,3541.343,165.553649,11.58473
+Island,0.071855,"Bokonjebi, Bikini Atoll",6,0,oceanic,3539.673,165.560729,11.557641
+Island,0.157854,"Odrik, Bikini Atoll",4,0,oceanic,3536.359,165.38965,11.693397
+Island,0.048835,"East Marin, California",57,0,continental,0.92,-122.468111,37.964511
+Island,0.015301,"West Marin, California",23,0,continental,0.656,-122.472816,37.965901
+Island,0.028977,"North Reef, Capricornia Cays",11,0,continental,91.35,151.903174,-23.185169
+Island,0.135073,"Tryon, Capricornia Cays",20,0,continental,81.459,151.778642,-23.246837
+Island,1.310813,"North West, Capricornia Cays",27,0,continental,71.916,151.70788,-23.296332
+Island,0.061702,"Wilson, Capricornia Cays",14,0,continental,79.034,151.916187,-23.304455
+Island,0.075,"Wreck, Capricornia Cays",15,0,continental,76.964,151.957735,-23.33293
+Island,0.169133,"Heron, Capricornia Cays",20,0,continental,64.191,151.914977,-23.442345
+Island,0.043225,"Erskine, Capricornia Cays",17,0,continental,53.832,151.771845,-23.502741
+Island,0.429869,"Masthead, Capricornia Cays",31,0,continental,48.933,151.727329,-23.538398
+Island,0.052622,"One Tree, Capricornia Cays",19,0,continental,65.117,152.091459,-23.507482
+Island,0.078425,"Hoskyn West, Capricornia Cays",18,0,continental,55.524,152.290439,-23.807123
+Island,0.017606,"Hoskyn East, Capricornia Cays",13,0,continental,56.859,152.299951,-23.801277
+Island,0.057364,"Fairfax West, Capricornia Cays",16,0,continental,58.007,152.367956,-23.859182
+Island,0.185332,"Fairfax East, Capricornia Cays",10,0,continental,58.785,152.37666,-23.855079
+Island,0.006081,"Lady Elliot, Capricornia Cays",16,0,oceanic,6009.907,-144.326625,-27.651042
+Island,0.464052,"NE Herald Cay, Australia",13,0,oceanic,322.807,149.198769,-16.942896
+Island,0.180023,"SW Herald Cay, Australia",12,0,oceanic,315.199,149.134511,-16.985247
+Island,0.182346,"Chilcott Islet, Australia",12,0,oceanic,378.027,150.003653,-16.937127
+Island,0.139177,"SW Coringa Islet, Australia",11,0,oceanic,369.913,149.908195,-16.968499
+Island,0.341639,"SE Magdelaine Cay, Australia",16,0,oceanic,426.592,150.33587,-16.601653
+Island,0.092559,"Willis Island, Australia",21,0,oceanic,430.396,149.964675,-16.28719
+Island,0.048729,"Eagle Island, Australia",47,2,continental,21.547,145.377526,-14.697026
+Island,0.006119,"Redbill Island, Australia",10,0,continental,85.195,150.071036,-20.965711
+Island,9338.375126,"Chiloe, Chile",184,0,continental,2.141,-73.853652,-42.646646
+Island,151309.629,"South Island, New Zealand",825,98,fragment,1643.986,170.47699,-43.984424
+Island,4044.11573,Unimak,180,0,continental,0.507,-164.094812,54.737549
+Island,329.253755,Akutan,139,0,continental,167.412,-165.918263,54.127183
+Island,1766.499569,Umnak,105,0,continental,323.025,-168.355846,53.268761
+Island,720.452279,Adak Island,85,0,oceanic,929.158,-176.693949,51.789147
+Island,1046.036444,Atka Island,82,0,oceanic,754.493,-174.432579,52.18235
+Island,221.724473,Agattu Island,148,0,oceanic,773.354,173.589314,52.431024
+Island,885.331746,Attu Island,221,0,oceanic,689.726,172.928948,52.898354
+Island,6.857094,Alaid Island,59,0,oceanic,778.2,173.898608,52.760184
+Island,300.778005,Amchitka Island,170,0,oceanic,1056.181,179.022833,51.506208
+Island,278.919271,Kiska Island,126,0,oceanic,977.099,177.469097,51.979215
+Island,27.22356,Rat Island,61,0,oceanic,1025.385,178.300665,51.800616
+Island,1950.45664,Bioko,1782,61,continental,35.718,8.684245,3.495361
+Island,11.557065,Othonoi,262,0,continental,34.586,19.397796,39.853086
+Island,3.879941,Ereikoussa,271,0,continental,23.996,19.583206,39.88737
+Island,3.084006,Mathraki,193,0,continental,35.787,19.521313,39.76954
+Island,596.199896,Corfu,1140,0,continental,1.998,19.847571,39.633964
+Island,22.536343,Paxos,435,0,continental,15.031,20.163752,39.206052
+Island,4.025982,Antipaxos,179,0,continental,16.664,20.230211,39.149588
+Island,307.765537,Lefkada,905,1,continental,0.01,20.647712,38.707985
+Island,21.070844,Meganisi,340,0,continental,0.856,20.768493,38.647267
+Island,25.902822,Kalamos,475,0,continental,1.398,20.910116,38.624259
+Island,6.494777,Kastos,4,0,continental,6.071,20.913635,38.57288
+Island,4.749151,Atokos,183,0,oceanic,15.738,20.81211,38.487392
+Island,99.102783,Ithaca,668,0,oceanic,8.359,20.687974,38.395475
+Island,4.700438,Oxeia,207,0,continental,1.187,21.106966,38.302893
+Island,0.115966,Makropoula,60,0,continental,3.236,21.054586,38.350573
+Island,1.131295,Makri,110,0,continental,3.829,21.035315,38.360411
+Island,0.259413,Modi,69,0,continental,7.19,21.022433,38.423788
+Island,0.020558,Apasa,54,0,continental,6.685,21.024762,38.431433
+Island,0.046389,Soros,66,0,continental,6.488,21.024763,38.43458
+Island,0.009991,Gravaris,40,0,continental,6.11,21.026522,38.439881
+Island,0.28102,Kalogeros,75,0,continental,0.664,21.030176,38.490682
+Island,0.13617,Tsakalonisi,47,0,continental,3.687,21.03615,38.462165
+Island,0.05461,Filippos,63,0,continental,3.331,21.015477,38.471336
+Island,0.149452,Bistros,64,0,continental,3.925,21.016352,38.464036
+Island,0.806802,Pontikos,97,0,continental,1.726,21.066057,38.455149
+Island,0.399747,Lamprino,109,0,continental,3.487,21.004855,38.472229
+Island,0.206965,Sofia,83,0,continental,3.088,21.000976,38.480271
+Island,1.273772,Provati,116,0,continental,2.444,21.047211,38.462554
+Island,0.011331,Prasso,28,0,continental,5.437,20.969454,38.48266
+Island,0.727265,Karlonisi,119,0,continental,2.159,21.043187,38.475243
+Island,5.747529,Petalas,137,0,continental,0.632,21.093092,38.414565
+Island,2.653126,Dragonera,117,0,continental,1.442,21.020177,38.480991
+Island,789.514453,Cephalonia,1015,3,oceanic,9.529,20.574409,38.222972
+Island,410.344271,Zakynthos,877,2,oceanic,16.267,20.774553,37.785044
+Island,1.621354,Strofades,243,0,oceanic,49.05,21.010686,37.248004
+Island,202.62055,Grand Cayman,325,16,oceanic,491.7,-81.243946,19.318442
+Island,41.91514,Cayman Brac,190,2,oceanic,603.552,-79.798663,19.720189
+Island,1107.184031,King island,419,0,continental,86.943,143.984974,-39.86447
+Island,32.644534,Europa Island,40,0,oceanic,489.425,40.362295,-22.36694
+Island,5.279011,Juan de Nova,60,0,oceanic,285.489,42.725086,-17.055137
+Island,4.282278,Grande Glorieuse,63,0,oceanic,732.484,47.297872,-11.579248
+Island,0.002106,Ile aux Crabes,5,0,oceanic,742.004,47.381342,-11.514983
+Island,0.314696,Ile du Lys,19,0,oceanic,741.077,47.37688,-11.516361
+Island,0.012129,Ile aux Roches Vert,3,0,oceanic,737.337,47.331891,-11.571201
+Island,1.015937,Tromelin,5,0,oceanic,1473.601,54.523543,-15.892059
+Island,4929.368097,St Lawrence Island,211,0,continental,72.869,-170.342552,63.388598
+Island,0.315771,Hare,33,0,oceanic,1875.818,154.802356,1.038971
+Island,0.00925,Hepepa,6,0,oceanic,1878.608,154.808756,1.057495
+Island,0.026303,Herekoro,11,0,oceanic,1875.582,154.79499,1.032848
+Island,0.019949,Huhuhenua,9,0,oceanic,1878.777,154.809072,1.059713
+Island,0.003896,Hukuniu,6,0,oceanic,1880.701,154.804339,1.088642
+Island,0.002957,Matawhei,6,0,oceanic,1878.975,154.80948,1.060957
+Island,0.053629,Matiro,20,0,oceanic,1879.444,154.809362,1.068942
+Island,0.003621,Matukerekere,2,0,oceanic,1879.333,154.809647,1.065364
+Island,0.000659,Matuketuke,8,0,oceanic,1873.595,154.775006,1.026553
+Island,0.007528,Nukuhatu,6,0,oceanic,1878.082,154.807866,1.051433
+Island,0.049545,Nunakita,17,0,oceanic,1880.371,154.799194,1.091648
+Island,0.009498,Parakahi,7,0,oceanic,1880.412,154.802536,1.086886
+Island,0.000311,Pepeio,7,0,oceanic,1880.23,154.795438,1.091219
+Island,0.020363,Pumatahati,8,0,oceanic,1873.965,154.780011,1.026975
+Island,0.001503,Pungupungu,5,0,oceanic,1879.762,154.809608,1.070823
+Island,0.01398,Ramotu,7,0,oceanic,1879.138,154.809553,1.063687
+Island,0.003822,Rikumanu,6,0,oceanic,1880.271,154.788488,1.099574
+Island,0.112326,Ringutoru,20,0,oceanic,1879.772,154.784812,1.099902
+Island,0.006207,Sakenge,7,0,oceanic,1879.047,154.80929,1.062393
+Island,0.014471,Takairongo,13,0,oceanic,1877.961,154.807679,1.050244
+Island,0.027149,Tangawaka,17,0,oceanic,1877.719,154.807205,1.04837
+Island,0.007642,Tariha,8,0,oceanic,1874.984,154.788533,1.031166
+Island,0.047317,Taringa,15,0,oceanic,1879.858,154.809324,1.073842
+Island,0.026197,Tetau,9,0,oceanic,1878.232,154.808387,1.053656
+Island,0.002505,Tiahu,6,0,oceanic,1874.877,154.787222,1.030673
+Island,0.005743,Tipae,8,0,oceanic,1878.467,154.808282,1.055688
+Island,0.010845,Tirakau,6,0,oceanic,1875.454,154.793254,1.032279
+Island,0.005597,Tirakume,9,0,oceanic,1874.405,154.783316,1.028703
+Island,0.009091,Tokongo,7,0,oceanic,1874.65,154.78548,1.02984
+Island,0.073055,Toronhahai,24,0,oceanic,1879.592,154.780048,1.100852
+Island,0.04196,Touhou,11,0,oceanic,1880.091,154.807709,1.078324
+Island,0.002513,Turuaimu,7,0,oceanic,1880.174,154.793958,1.092247
+Island,0.176361,Werua,32,0,oceanic,1880.264,154.807095,1.082875
+Island,0.793393,Himaka-jima,270,0,oceanic,688.925,137.004165,34.704746
+Island,1.931391,Saku-shima,528,0,oceanic,691.392,137.044163,34.724947
+Island,1.031864,Shino-jima,336,0,oceanic,690.015,137.004876,34.676027
+Island,1.415547,Aino-shima,222,0,oceanic,186.184,130.367251,33.761532
+Island,145.909576,Okushiri-to,438,0,oceanic,367.392,139.473362,42.155913
+Island,82.664782,Rebun-to,430,1,continental,235.651,141.025188,45.375472
+Island,182.694482,Rishiri-to,438,2,continental,261.75,141.229709,45.177708
+Island,595.5585,Awaji-shima,1078,0,oceanic,494.098,134.838277,34.362961
+Island,6.020057,Ie-shima,329,0,oceanic,470.24,134.530811,34.672542
+Island,7.131896,"Nishi-jima, Hyogo",276,0,oceanic,466.495,134.479626,34.654291
+Island,2.998131,Nu-shima,220,0,oceanic,512.267,134.821451,34.166418
+Island,155.058916,Syodo-shima,830,0,oceanic,443.303,134.270328,34.499653
+Island,45.129575,Kamikoshiki-jima,567,0,oceanic,345.301,129.876943,31.845563
+Island,67.558241,Shimokoshiki-jima,756,1,oceanic,352.902,129.720072,31.688628
+Island,10.300009,Kinkasan,245,0,oceanic,790.057,141.568819,38.292899
+Island,168.133761,Hirado-jima,547,0,oceanic,181.34,129.465011,33.284708
+Island,444.170732,Tsushima-to,608,0,oceanic,51.889,129.370717,34.519569
+Island,8.323494,Aguni-jima,377,0,oceanic,581.387,127.22955,26.587392
+Island,4.164233,Aka-shima,267,0,oceanic,602.638,127.278968,26.198623
+Island,1.032099,Fukaji-shima,209,0,oceanic,606.087,127.29292,26.16758
+Island,1.33775,Geruma-jima,253,0,oceanic,604.947,127.289345,26.181625
+Island,2.312291,Hamahiga-jima,303,0,oceanic,660.548,127.958071,26.319881
+Island,13.284989,Hateruma-jima,354,0,oceanic,438.808,123.782183,24.05851
+Island,1.114401,Hatoma-jima,206,0,oceanic,431.282,123.820056,24.472522
+Island,23.357562,Iheya-jima,506,0,oceanic,632.945,127.969979,27.046358
+Island,3.162503,Ikema-jima,375,0,oceanic,514.501,125.243101,24.930295
+Island,2.493477,Ioutori-shima,90,0,oceanic,627.422,128.226803,27.872807
+Island,29.110178,Irabu-jima,408,0,oceanic,515.49,125.188293,24.833208
+Island,14.908324,Izena-jima,351,0,oceanic,635.431,127.936596,26.933249
+Island,12.312386,Kitadaito-jima,248,1,oceanic,986.611,131.307262,25.94437
+Island,8.197121,Kohama-jima,376,0,oceanic,448.875,123.98022,24.339305
+Island,3.336018,Kouri-jima,316,0,oceanic,651.874,128.018216,26.704945
+Island,1.971744,Kuba-shima,173,0,oceanic,600.695,127.237767,26.17072
+Island,1.846502,Kudaka-jima,416,0,oceanic,661.143,127.894221,26.161523
+Island,10.737922,Kuro-shima,441,0,oceanic,455.348,124.010534,24.237904
+Island,1.745339,Mae-shima,198,0,oceanic,618.35,127.4479,26.212126
+Island,31.607792,Minamidaito-jima,243,0,oceanic,984.959,131.242729,25.843178
+Island,0.523209,Minna-shima motobu,207,0,oceanic,635.219,127.816133,26.647408
+Island,0.378898,Ogami-jima,202,0,oceanic,521.039,125.307957,24.916335
+Island,3.207647,Sesoko-jima,170,0,oceanic,639.457,127.864001,26.643909
+Island,5.81341,Taketomi-jima,241,0,oceanic,461.298,124.088119,24.325062
+Island,20.481716,Tarama-jima,349,0,oceanic,500.639,124.699288,24.656982
+Island,16.733149,Tokashiki-jima,291,0,oceanic,609.451,127.356214,26.188553
+Island,3.95247,Tonaki-jima,415,0,oceanic,583.29,127.147575,26.364512
+Island,2.095592,Tsuken-jima,346,0,oceanic,661.936,127.941502,26.252339
+Island,8.27349,Yagaji-shima,205,0,oceanic,651.921,128.01317,26.663641
+Island,1.51427,Yakabi-jima,111,0,oceanic,599.354,127.244737,26.215964
+Island,7.31746,Zamami-jima,275,0,oceanic,602.571,127.30747,26.234327
+Island,13.287071,Chiburi-jima,162,0,oceanic,307.759,133.031037,36.014886
+Island,243.959256,Dogo,643,0,oceanic,324.13,133.279261,36.251121
+Island,33.442498,Nakano-shima,143,0,oceanic,313.458,133.098224,36.083692
+Island,58.007705,Nishino-shima,416,0,oceanic,302.836,133.015719,36.096525
+Island,0.670983,Hatsu-shima,358,0,oceanic,875.1,139.170259,35.040027
+Island,1.939808,I-shima,256,0,oceanic,522.732,134.811273,33.846876
+Island,2.144278,"O-shima, Tokushima",319,0,oceanic,505.532,134.4925,33.637219
+Island,7.879085,Ani-jima,285,0,oceanic,1521.669,142.209699,27.122429
+Island,71.167128,Hachijo-jima,487,2,oceanic,981.797,139.798228,33.106333
+Island,91.789752,Izu-O-shima,529,1,oceanic,897.154,139.398777,34.737398
+Island,0.13949,Kitano-shima,98,0,oceanic,1474.166,142.099794,27.718388
+Island,18.743544,Kouzu-shima,406,0,oceanic,891.955,139.147638,34.214633
+Island,21.275648,Mikura-jima,397,1,oceanic,942.502,139.603227,33.874735
+Island,56.636888,Miyake-jima,486,0,oceanic,926.964,139.521122,34.084866
+Island,2.557402,Muko-jima 1,71,0,oceanic,1478.695,142.138919,27.680958
+Island,1.634802,Muko-jima 2,105,0,oceanic,1554.747,142.129542,26.603303
+Island,23.112217,Nii-jima,399,0,oceanic,897.8,139.26642,34.377163
+Island,2.883807,Tobi-shima,407,0,oceanic,602.981,139.550469,39.195025
+Island,0.991866,Malpelo,1,0,oceanic,362.149,-81.608773,4.002379
+Island,35.655183,Borkum,506,0,continental,10.131,6.716373,53.593063
+Island,0.229712,Lütttje Hörn,46,0,continental,12.699,6.864346,53.591978
+Island,5.398513,Memmert,227,0,continental,13.509,6.887057,53.638998
+Island,12.7556,Juist,443,0,continental,7.167,6.963422,53.674053
+Island,21.275407,Norderney,465,0,continental,2.937,7.230524,53.711594
+Island,5.165105,Baltrum,349,0,continental,3.9,7.395868,53.726716
+Island,16.549589,Langeoog,409,0,continental,4.329,7.525115,53.745329
+Island,13.486284,Spiekeroog,350,0,continental,5.898,7.72772,53.768983
+Island,6.63599,Wangerooge,385,0,continental,6.496,7.898736,53.786352
+Island,5.293066,Minsener Oog,128,0,continental,3.796,8.011865,53.765485
+Island,3.485439,Mellum,213,0,continental,6.86,8.151246,53.721133
