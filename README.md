@@ -21,16 +21,14 @@ longitude	centroid longitude of entity
 latitude	centroid latitude of entity
 
 ### data_archipelago
-archipelago_name	name of archipelgo as supplied in Schrader et al 2024
-area	area of archipelago in km2
-dist	distance of islands closest to the nearest mainland (km) in each archipelago
-archipelago_cat	Predominant island categories within each archipelago: oceanic (i.e., volcanic oceanic archipelagos and atolls), continental (continental shelf islands), and continental fragments.
-latitude	centroid longitude of archipelago
-longitude	centroid latitude of archipelago
-native_count	 species richness of species native to the archipelago
-endemic_count	species richness of species endemic to the archipelago
-![image](https://github.com/user-attachments/assets/d383c1de-d615-4924-b222-c540f3ea8c40)
-
++archipelago_name	name of archipelgo as supplied in Schrader et al 2024
++area	area of archipelago in km2
++dist	distance of islands closest to the nearest mainland (km) in each archipelago
++archipelago_cat	Predominant island categories within each archipelago: oceanic (i.e., volcanic oceanic archipelagos and atolls), continental (continental shelf islands), and continental fragments.
++latitude	centroid longitude of archipelago
++longitude	centroid latitude of archipelago
++native_count	 species richness of species native to the archipelago
++endemic_count	species richness of species endemic to the archipelago
 
 
 
