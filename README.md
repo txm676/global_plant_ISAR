@@ -9,6 +9,8 @@ Authors: Thomas J. Matthews, Julian Schrader, François Rigal, Kostas A. Trianti
 
 Data were derived from Schrader et al. (2024), which is based on the Global Inventory of Flora and Traits (GIFT) database. Native species richness reflects the total number of species compiled from all available sources for each island.	
 
+Note that the data presented here have already been filtered following the steps outlined in the methods (e.g., Greenland removed)
+
 ### data_global_SAR
 * geo_entity = Name of islands as given in GIFT
 * entity_class = binary indicating whether geographic entity is an island or continent
