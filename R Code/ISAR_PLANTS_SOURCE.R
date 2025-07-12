@@ -29,6 +29,10 @@ theme_set(theme(panel.grid.major = element_blank(),
 
 dat <- read.csv("Data\\data_global_SAR.csv")
 
+#remove continents but save a version for plot
+dat_cont <- filter(dat, entity_class == "continent")
+dat <- filter(dat, entity_class != "continent")
+
 ##############################################################################
 #####Dataset Filtering################
 ####################################
@@ -47,10 +51,6 @@ dat <- read.csv("Data\\data_global_SAR.csv")
 # #remove the islands with <0.8 in area prop column
 # dat <- filter(dat, area_prop >=0.80)
 ##############################################################
-
-#remove continents but save a version for plot
-dat_cont <- filter(dat, entity_class == "continent")
-dat <- filter(dat, entity_class != "continent")
 
 #create percentage endemic column
 dat$PercEnd <- dat$endemic_count / dat$native_count
