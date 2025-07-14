@@ -7,7 +7,7 @@ Authors: Thomas J. Matthews, Julian Schrader, François Rigal, Kostas A. Trianti
 
 ## Datasets meta-data
 
-Data were derived from Schrader et al. (2024), which is based on the Global Inventory of Flora and Traits (GIFT) database. Native species richness reflects the total number of species compiled from all available sources for each island.	
+Data were derived from Schrader et al. (2024; https://doi.org/10.1038/s41586-024-08036-1), which is based on the Global Inventory of Flora and Traits (GIFT) database. Native species richness reflects the total number of species compiled from all available sources for each island.	
 
 Note that the data presented here have already been filtered following the steps outlined in the methods (e.g., Greenland removed)
 
