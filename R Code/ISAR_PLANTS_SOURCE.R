@@ -1053,8 +1053,8 @@ semi_log_NB <- function(datM, datMEndZer){
 Perc_end <- function(datM){
   
   EndRange1 <- datM[datM$PercEnd == 0,]
-  EndRange2 <- datM[datM$PercEnd > 0 & datM$PercEnd < 0.1,]
-  EndRange3 <- datM[datM$PercEnd > 0.1 & datM$PercEnd < 0.25,]
+  EndRange2 <- datM[datM$PercEnd > 0 & datM$PercEnd <= 0.1,]
+  EndRange3 <- datM[datM$PercEnd > 0.1 & datM$PercEnd <= 0.25,]
   EndRange4 <- datM[datM$PercEnd > 0.25,]
   
   ####################################################################
