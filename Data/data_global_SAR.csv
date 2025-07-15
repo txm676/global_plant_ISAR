@@ -194,7 +194,7 @@ entity_ID,entity_class,area,geo_entity,native_count,endemic_count,category,dist,
 973,Island,55.027106,Ile Amsterdam,27,1,oceanic,3372.64,77.556596,-37.836307,Amsterdam
 974,Island,9.292278,St. Paul,9,0,oceanic,3370.497,77.523034,-38.72216,Amsterdam
 352,Island,22.922938,Antipodes Islands,64,3,oceanic,2661.732,178.773925,-49.686249,Antipodes Islands
-370,Island,99.3573,Ascension,43,12,oceanic,1536.579,-14.367031,-7.943513,Ascesion Island
+370,Island,99.3573,Ascension,43,12,oceanic,1536.579,-14.367031,-7.943513,Ascension Island
 2,Island,0.049938,Cartier Island,1,0,oceanic,290.436,123.554088,-12.531172,Ashmore Reef and Cartier island
 553,Island,599.919353,Auckland Islands,197,8,oceanic,1929.244,166.097263,-50.736484,Auckland & Campbell Islands
 975,Island,113.265955,Campbell Island,120,2,oceanic,2231.241,169.162031,-52.54359,Auckland & Campbell Islands
