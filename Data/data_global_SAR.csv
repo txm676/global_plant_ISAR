@@ -845,11 +845,11 @@ entity_ID,entity_class,area,geo_entity,native_count,endemic_count,category,dist,
 12215,Island,0.002106,Ile aux Crabes,5,0,oceanic,742.004,47.381342,-11.514983,Mozambique Channel Islands,1
 12216,Island,0.314696,Ile du Lys,19,0,oceanic,741.077,47.37688,-11.516361,Mozambique Channel Islands,1
 12217,Island,0.012129,Ile aux Roches Vert,3,0,oceanic,737.337,47.331891,-11.571201,Mozambique Channel Islands,0
-NA,continent,2.83E+13,AFRICA,47418,22774,complex_origin,NA,NA,NA,NA,NA
-NA,continent,4.53E+13,EURASIA,80806,33109,complex_origin,NA,NA,NA,NA,NA
-NA,continent,7.65E+12,AUSTRALASIA,19179,10679,complex_origin,NA,NA,NA,NA,NA
-NA,continent,1.40E+13,NORTH AMERICA,34572,9831,complex_origin,NA,NA,NA,NA,NA
-NA,continent,1.79E+13,SOUTH AMERICA,84039,34687,complex_origin,NA,NA,NA,NA,NA
+NA,continent,2.83E+07,AFRICA,47418,22774,complex_origin,NA,NA,NA,NA,NA
+NA,continent,4.53E+07,EURASIA,80806,33109,complex_origin,NA,NA,NA,NA,NA
+NA,continent,7.65E+06,AUSTRALASIA,19179,10679,complex_origin,NA,NA,NA,NA,NA
+NA,continent,1.40E+07,NORTH AMERICA,34572,9831,complex_origin,NA,NA,NA,NA,NA
+NA,continent,1.79E+07,SOUTH AMERICA,84039,34687,complex_origin,NA,NA,NA,NA,NA
 604,Island,22.150939,Nauru,66,0,oceanic,2857.116,166.934484,-0.52847,Nauru,37
 984,Island,18825.61661,New Caledonia,3343,2493,fragment,814.764,165.700102,-21.306615,New Caledonia,1513
 1056,Island,816017.9409,New Guinea,12647,8793,continental,125.388,140.835176,-5.34743,New Guinea,4872
