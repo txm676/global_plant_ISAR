@@ -29,9 +29,6 @@ theme_set(theme(panel.grid.major = element_blank(),
 
 dat <- read.csv("Data\\data_global_SAR.csv")
 
-#remove continents but save a version for plot
-dat_cont <- filter(dat, entity_class == "continent")
-dat <- filter(dat, entity_class != "continent")
 
 ##############################################################################
 #####Dataset Filtering################
@@ -60,6 +57,14 @@ dat$SqrtDist <- sqrt(dat$dist)
 dat$LogIso <- log10(dat$dist)
 dat$logS <- log10(dat$native_count)
 dat$logES <- log10(dat$endemic_count)
+
+#remove continents but save a version for plot
+dat_cont <- filter(dat, entity_class == "continent")
+#save version with continents for endemic analysis
+dat_cont2 <- dat
+#Remove continents for main analyses
+dat <- filter(dat, entity_class != "continent")
+
 
 datAll <- dat
 datAllEndZer <- filter(datAll, endemic_count > 0)#endemics > 0 richness
