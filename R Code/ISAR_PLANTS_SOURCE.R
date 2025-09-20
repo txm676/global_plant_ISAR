@@ -117,7 +117,8 @@ fit_thr_int <- function(datz, logAxesz = "none",
                      con = conz,
                      logT = logBase,
                      parallel = parallelz,
-                     cores = coresz, ...)
+                     cores = coresz,
+                     nisl = 5, ...)
   return(s)
 }
 
