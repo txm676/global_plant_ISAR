@@ -58,16 +58,19 @@ dev.off()
 if (dd == "Arch"){
   dco <- NULL
   xro <- dd
+  yro <- TRUE
   lo <- FALSE
   pf <- FALSE
 } else if (dd == "All") {
   dco <- dat_cont
   xro <- TRUE
+  yro <- TRUE
   lo <- TRUE
   pf <- FALSE
 } else {
   dco <- dat_cont
   xro <- TRUE
+  yro <- TRUE
   lo <- FALSE
   pf <- TRUE
 }
@@ -84,7 +87,8 @@ RAP3 <- plot_thr(x = ResAll[[2]][[2]],
                  point_size = PS,
                  vir_pal = "inferno",
                  largest = lo,
-                 xRaw = xro)
+                 xRaw = xro,
+                 yRaw = yro)
 
 #RAP3[[2]]
 AC_LL <- RAP3[[2]]  + ggtitle("a)")
@@ -121,10 +125,14 @@ RAEZ3 <- plot_thr(x = ResAllEndZer[[2]][[2]],
                  endemic_cont = TRUE,
                  point_size = PS,
                  vir_pal = "inferno",
-                 largest = FALSE,
-                 xRaw = xro)
+                 largest = lo,
+                 xRaw = xro,
+                 yRaw = xro)
 
-EZC_LL <- RAEZ3[[2]] + ggtitle("b)")
+EZC_LL <- RAEZ3[[2]] + ggtitle("b)") +
+  #extend x-axis to add 10^-2 tick label
+  geom_point(aes(x =  -2, y = 1), 
+             color = "white")
 
 ##Correlation between residuals and percentage endemism
 M7 <- ResAllEndZer[[2]][[2]][[1]][[5]]

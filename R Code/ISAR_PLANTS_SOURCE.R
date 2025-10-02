@@ -228,6 +228,8 @@ fit_thr <- function(datz,
 #xRaw = should the log10 x-axis area values be plotted on the 
 #untransformed scale. Should either be TRUE, FALSE or Arch,
 #if archipelago dataset used.
+#yraw = should the log10 y-axis richness values be plotted on the 
+#untransformed scale. Should either be TRUE, FALSE
 
 plot_thr <- function(x, datz = NULL,
                      type = "area",
@@ -241,6 +243,7 @@ plot_thr <- function(x, datz = NULL,
                      vir_pal = "inferno",
                      largest = FALSE,
                      xRaw = FALSE,
+                     yRaw = FALSE,
                      ...){
 
   #if plotting continents and using endemic richness as response,
@@ -526,18 +529,27 @@ plot_thr <- function(x, datz = NULL,
   
   #if adding on the 9 largest islands
   if (largest){
-    largest <- filter(datz, native_count > 3500)
-    largest$rank <- (max(rank(largest$native_count))+1) -
-      rank(largest$native_count)
+    if (nrow(datz) > 500){
+       sr <- c("native_count","logS")
+    } else {
+      sr <- c("endemic_count","logES")
+    }
+    
+    datz9 <- datz[order(datz[[sr[1]]], decreasing = TRUE),]
+    largest <-  datz9[1:9,]
+    largest$rank <- (max(rank(largest[[sr[1]]]))+1) -
+      rank(largest[[sr[1]]])
+    
     gTh2 <- gTh2 +
       ggrepel::geom_text_repel(data=largest, 
                                mapping=aes(x=LogArea, 
-                                           y=logS, label=rank),
-                               force= 2,
+                                           y=!!sym(sr[2]),
+                                           label=rank),
+                               force= 3,
                                nudge_x = -1.5,
                                hjust= 0,
                                segment.size = 0.2,
-                               box.padding = 0.1,
+                               box.padding = 0.35,
                                size=3)
   }#eo if largest
   
@@ -547,6 +559,11 @@ plot_thr <- function(x, datz = NULL,
     gTh2 <- x2r(gTh2, cont = point_cont,
                 arch = xra)
     gTh2 <- gTh2 + xlab(expression(paste("Area (km"^2,")")))
+  }
+  ##Convert y-axis values to raw scale
+  if (!is.null(yRaw)){
+    gTh2 <- y2r(gTh2)
+    gTh2 <- gTh2 + ylab(expression(paste("Species richness")))
   }
   gTh4 <- list(gTh1, gTh2)
   return(gTh4)
@@ -608,6 +625,23 @@ x2r <- function(gobj, cont = NULL, arch = FALSE){
   }
   return(gobj)
 }
+
+##Equivalent version for y-axis
+y2r <- function(gobj, cont = NULL){
+  
+      gobj <- gobj + scale_y_continuous(breaks = c(-1,0,1,2,3,4,5),
+                                        labels = c(expression(paste("10"^-1)),
+                                                   "0", 
+                                                   expression(paste("10"^1)),
+                                                   expression(paste("10"^2)),
+                                                   expression(paste("10"^3)),
+                                                   expression(paste("10"^4)),
+                                                   expression(paste("10"^5))))
+                                                   
+
+  return(gobj)
+}
+
 
 ######################################################################
 #########PARTIAL REGRESSION: ISOLATION##############
