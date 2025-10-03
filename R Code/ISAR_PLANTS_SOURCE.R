@@ -1090,141 +1090,205 @@ semi_log_NB <- function(datM, datMEndZer){
 ################FIGURE 4##############################
 #######################################################
 
-Perc_end <- function(datM){
-  
-  EndRange1 <- datM[datM$PercEnd == 0,]
-  EndRange2 <- datM[datM$PercEnd > 0 & datM$PercEnd <= 0.1,]
-  EndRange3 <- datM[datM$PercEnd > 0.1 & datM$PercEnd <= 0.25,]
-  EndRange4 <- datM[datM$PercEnd > 0.25,]
-  
-  ####################################################################
-  
-  g1 <- ggplot(EndRange1, aes(x=area, y=native_count, color=category)) + 
-    geom_point(size=2, alpha=0.7) + 
-    scale_y_log10(limits = c(1, 13000)) + 
-    scale_x_log10(limits = c(0.00001, 1000000))  +
-    labs(title = "a) No Endemics", 
-         x=expression(paste("Area (km"^2,")")), 
-         y = "Species richness") + 
-    geom_smooth(method = "lm", se=F, color="darkgreen") +
-    scale_color_manual(name="Island Category",
-                       values=c("#999999", "#E69F00", "#56B4E9")) +
-    theme(plot.title = element_text(size=13),
-          axis.title = element_text(size = 13),
-          legend.text=element_text(size=13.5),
-          legend.title=element_text(size=13.5))
+####Continuous endemism window function##################
+#calculate log-log power z, c, R2 and mean area for moving
+#window based on %endemism. Starts with all islands, then
+#removes islands with < 0.02% endemism, then 0.5%, then 1%,
+#then in units of 1% up to 25%.
 
-  ###################
+end_cont <- function(dat){
   
-  g2 <- ggplot(EndRange2, aes(x=area, y=native_count, color=category)) + 
-    geom_point(size=2, alpha=0.7) + 
-    scale_y_log10(limits = c(1, 13000)) + 
-    scale_x_log10(limits = c(0.00001, 1000000))  +
-    labs(title = "b) Proportion of Endemics ]0;0.1]", 
-         x=expression(paste("Area (km"^2,")")),  
-         y = "Species richness") + 
-    geom_smooth(method = "lm", se=F, color="darkgreen") +
-    scale_color_manual(name="Island Category", 
-                       values=c("#999999", "#E69F00", "#56B4E9")) +
-    theme(plot.title = element_text(size=13),
-          axis.title = element_text(size = 13),
-          legend.text=element_text(size=13.5),
-          legend.title=element_text(size=13.5))
+  dat2 <- dat
+  x0 <- c(0, 0.002, 0.005)
+  x <- c(x0, seq(0.01, 0.25, 0.01))
+  res <- matrix(ncol = 10, nrow = length(x))
+  colnames(res) <- c("end", "n", "c", "z", "R2", 
+                     "p","z_SE", "Median_area", "Mean_area",
+                     "Mean_log_area")
+  
+  for (i in 1:length(x)){
+    if (i == 1){
+      f <- dat2
+    } else {
+      f <- filter(dat2, PercEnd > x[i])
+    } 
+    #   if (nrow(f) < 15) break
+    modDum <- lm(logS ~ LogArea, data = f)
+    res[i,1] <- x[i] * 100
+    res[i,2] <- nrow(f)
+    res[i,3:4] <- round(as.vector(modDum$coefficients),3)
+    res[i,5] <- round(summary(modDum)$r.squared,3)
+    res[i,6] <- summary(modDum)$coefficients[8]
+    res[i,7] <- round(summary(modDum)$coefficients[4],3)
+    res[i,8] <- round(median(f$area), 2)
+    res[i,9] <- round(mean(f$area), 2)
+    res[i,10] <- round(mean(f$LogArea), 2)
+  }
+  
+  #  res <- res[1:(i-1),]
+  res <- as.data.frame(res)
+  
+  #add FDR correct p-value column
+  res$p_fdr <- p.adjust(p = res$p,
+                        method = "fdr")
+  
+  return(res)
+}
 
-  ###############################################
+###Run end_cont (with and without continents), and save
+#results table and build Figure 4. Note that two versions
+#of the figure are produced, the smaller version is used to
+#extract the legends.
+figure4 <- function(dat, dat_cont2){
   
-  g3 <- ggplot(EndRange3, aes(x=area, y=native_count, color=category)) + 
-    geom_point(size=2, alpha=0.7) + 
-    scale_y_log10(limits = c(1, 13000)) + 
-    scale_x_log10(limits = c(0.00001, 1000000))  +
-    labs(title = "c) Proportion of Endemics ]0.1;0.25]", 
-         x=expression(paste("Area (km"^2,")")), 
-         y = "Species richness") +  
-    geom_smooth(method = "lm", se=F, color="darkgreen") +
-    scale_color_manual(name="Island Category", 
-                       values=c("#999999", "#E69F00", "#56B4E9")) +
-    theme(plot.title = element_text(size=13),
-          axis.title = element_text(size = 13),
-          legend.text=element_text(size=13.5),
-          legend.title=element_text(size=13.5))
+  ec1 <- end_cont(dat)
+  #with continents included
+  ec2 <- end_cont(dat_cont2)
+  
+  rr <- bind_rows(ec1, ec2)
 
-  #################################################
+  rr$Type <- c(rep("Without", nrow(ec1)), 
+               rep("With", nrow(ec2)))
   
-  g4 <- ggplot(EndRange4, aes(x=area, y=native_count, color=category)) + 
-    geom_point(size=2, alpha=0.7) + 
-    scale_y_log10(limits = c(1, 13000)) + 
-    scale_x_log10(limits = c(0.00001, 1000000))  +
-    labs(title = "d) Proportion of Endemics > 0.25", 
-         x=expression(paste("Area (km"^2,")")), 
-         y = "Species richness") +  
-    geom_smooth(method = "lm", se=F, color="darkgreen") +
-    scale_color_manual(name="Island Category", 
-                       values=c("#999999", "#E69F00", "#56B4E9"))+
-    theme(plot.title = element_text(size=13),
-          axis.title = element_text(size = 13),
-          legend.text=element_text(size=13.5),
-          legend.title=element_text(size=13.5))
+  # range(ec1$z)
+  # range(ec2$z)
+  
+  ge1 <- ggplot(data = rr) + 
+    geom_point(aes(x = end, y = z, 
+                   col = Type, size = n),
+               alpha = 0.5) +
+    scale_color_manual(values = c("#009E73", "#000000")) +
+    ylim(c(0.29, 0.55)) + 
+    xlab("Endemism % cut-off") +
+    labs(colour="Continents") +
+    labs(size = "No. Isl.") +
+    scale_size_continuous(limits = c(20, 1270), 
+                          breaks = c(20, 50, 100, 
+                                     500, 1000)) +
+    ggtitle("a)") + guides(col="none", size = "none") #+
+  #  geom_errorbar(aes(x = end, ymin=z-z_SE, 
+  #                   ymax=z+z_SE, col = Type))
+  
+  ge2 <- ggplot(data = rr) + 
+    geom_point(aes(x = end, y = R2, 
+                   col = Type, size = n),
+               alpha = 0.5) +
+    scale_color_manual(values = c("#009E73", "#000000")) +
+    xlab("Endemism % cut-off") +
+    labs(colour="Continents") +
+    labs(size = "No. Isl.") +
+    scale_size_continuous(limits = c(20, 1270), 
+                          breaks = c(20, 50, 100, 
+                                     500, 1000)) +
+    ggtitle(bquote('b)')) +
+    ylab(bquote(~R^2)) + guides(col="none", size = "none")
+  
+  #Mean log area
+  ge3 <- ggplot(data = rr) + 
+    geom_point(aes(x = end, y = Mean_log_area, 
+                   col = Type, size = n),
+               alpha = 0.5) +
+    scale_color_manual(values = c("#009E73", "#000000")) +
+    scale_size_continuous(limits = c(20, 1270), 
+                          breaks = c(20, 50, 100, 
+                                     500, 1000)) +
+    xlab("Endemism % cut-off") +
+    ylab("Mean log(Area)") +
+    guides(col="none", size = "none") +
+    ggtitle("c)")
+  
+  ge4 <- ggplot(data = dat_cont2) + 
+    geom_point(aes(x = LogArea, y = logS, 
+                   fill = category),
+               size=1.5,
+               pch = 21) + 
+    scale_fill_manual(values = c("red","#A4A4A4",
+                                 "#E39F11", "#7DBDE4"),
+                      labels = c("Continent",
+                                 "Continental isl.",
+                                 "Fragment isl.",
+                                 "Oceanic isl.")) +
+    stat_smooth(method = "lm",
+                aes(x = LogArea, y = logS),
+                se = FALSE, col = "#299375") +
+    xlab(expression(paste("Area (km"^2,")"))) +
+    ylab("Species richness") +
+    ggtitle('d)') + guides(fill="none")
+    #convert axes to untransformed scale
+    ge4 <- x2r(ge4, cont = TRUE, arch = FALSE)
+    ge4 <- y2r(ge4)
 
-  gT <- ggpubr::ggarrange(g1, g2, g3, g4, ncol=2, 
-                          nrow = 2, common.legend = T, 
-                          legend = "top")
+  dat_cont3 <- filter(dat_cont2, PercEnd > 0.05)
   
-  #ggsave("gT.pdf", gT, height = 6, width = 6)
+  ge5 <- ggplot(data = dat_cont3) + 
+    geom_point(aes(x = LogArea, y = logS, 
+                   fill = category),
+               size=1.5,
+               pch = 21) + 
+    scale_fill_manual(values = c("red","#A4A4A4",
+                                 "#E39F11", "#7DBDE4"),
+                      labels = c("Continent",
+                                 "Continental isl.",
+                                 "Fragment isl.",
+                                 "Oceanic isl.")) +
+    stat_smooth(method = "lm",
+                aes(x = LogArea, y = logS),
+                se = FALSE, col = "#299375") +
+    xlab(expression(paste("Area (km"^2,")"))) +
+    ylab("Species richness") +
+    ggtitle('e)') + guides(fill="none")
+  #convert axes to untransformed scale
+  ge5 <- x2r(ge5, cont = TRUE, arch = FALSE)
+  ge5 <- y2r(ge5)
   
-  mR1 <- lm(log10(native_count)~LogArea, data=EndRange1)
-  mR2 <- lm(log10(native_count)~LogArea, data=EndRange2)
-  mR3 <- lm(log10(native_count)~LogArea, data=EndRange3)
-  mR4 <- lm(log10(native_count)~LogArea, data=EndRange4)
+  bottom_row <- gridExtra::arrangeGrob(ge4, ge5, ncol = 2)
   
-  # piecewiseSEM::rsquared(mR1)
-  # piecewiseSEM::rsquared(mR2)
-  # piecewiseSEM::rsquared(mR3)
-  # piecewiseSEM::rsquared(mR4)
-  # 
-  mRz <- c(coef(mR1)[2], coef(mR2)[2], 
-           coef(mR3)[2], coef(mR4)[2])
+  # Now arrange everything
+ f4a <- gridExtra::grid.arrange(
+    ge1, ge2, ge3,            # Top row
+    bottom_row,                # Bottom row (spanning 3 columns, with 2 equal-width plots)
+    ncol = 3,                  # Overall grid: 3 columns
+    layout_matrix = rbind(c(1, 2, 3), c(4, 4, 4)))  # 4 fills entire bottom row
   
-  dt <- data.frame(PerEnd = c("0%", "]0;0.1]", "]0.1;0.25]", ">0.25"),
-                   coefficients = c(coef(mR1)[2], coef(mR2)[2], coef(mR3)[2], coef(mR4)[2]),
-                   rbind(confint(mR1)[2,], confint(mR2)[2,], confint(mR3)[2,], confint(mR4)[2,]),
-                   R2 = c(piecewiseSEM::rsquared(mR1)$R.squared,
-                          piecewiseSEM::rsquared(mR2)$R.squared,
-                          piecewiseSEM::rsquared(mR3)$R.squared,
-                          piecewiseSEM::rsquared(mR4)$R.squared), 
-                   n = factor(c(nrow(EndRange1),
-                                nrow(EndRange2),
-                                nrow(EndRange3),
-                                nrow(EndRange4))))
-  dt$PerEnd <- factor(dt$PerEnd, 
-                      levels =c("0%", "]0;0.1]", 
-                                "]0.1;0.25]", ">0.25"))
-  
-  
-  g5 <- ggplot(dt, aes(x=PerEnd, y=coefficients, size=R2, label=n)) + geom_point() + 
-    scale_size_binned(range = c(0.6, 2), breaks = c(0.4, 0.6, 0.8, 1), 
-                      name=expression(paste("R"^2))) +
-    labs(title = "e)",
-         x = "Proportion of endemics", 
-         y = expression(paste(italic(z)))) +
-    geom_pointrange(data=dt, mapping=aes(ymin=X2.5.., ymax=X97.5..),
-                    position=position_dodge(.9)) +
-    theme(legend.position="top",
-          legend.key.size = unit(3,"line"),
-          plot.title = element_text(size=13),
-          axis.title = element_text(size = 13)) + coord_flip()  +
-    geom_text(size=3, hjust=0.5, vjust=-2)
-  #g5
-  #ggsave("gZ.jpg", g5, height = 6, width = 6)
+  ##Versions with legends included
+  ge1b <- ggplot(data = rr) + 
+    geom_point(aes(x = end, y = z, 
+                   col = Type, size = n),
+               alpha = 0.5) +
+    scale_color_manual(values = c("#009E73", "#000000")) +
+    ylim(c(0.29, 0.55)) + 
+    xlab("Endemism % cut-off") +
+    labs(colour="Continents") +
+    labs(size = "No. Isl.") +
+    scale_size_continuous(limits = c(20, 1270), 
+                          breaks = c(20, 50, 100, 
+                                     500, 1000)) +
+    ggtitle("a)") 
   
   
-  gT2 <- ggpubr::ggarrange(ggpubr::ggarrange(g1, g2, ncol=2, nrow = 1, 
-                                             common.legend = T, legend = "top"),
-                           ggpubr::ggarrange(g3, g4, ncol=2, nrow = 1, 
-                                             common.legend = T, legend = "none"),
-                           
-                           g5, nrow = 3)
+  ge4b <- ggplot(data = dat_cont2) + 
+    geom_point(aes(x = LogArea, y = logS, 
+                   fill = category),
+               size=1.5,
+               pch = 21) + 
+    scale_fill_manual(values = c("red","#A4A4A4",
+                                 "#E39F11", "#7DBDE4"),
+                      labels = c("Continent",
+                                 "Continental isl.",
+                                 "Fragment isl.",
+                                 "Oceanic isl.")) +
+    stat_smooth(method = "lm",
+                aes(x = LogArea, y = logS),
+                se = FALSE, col = "#299375") +
+    xlab("Log(Area)") + ylab("Log(Richness)") +
+    ggtitle('d)') + labs(fill="")
   
-  return(list(gT2, mRz))
+  # Now arrange everything
+  f4b <- gridExtra::grid.arrange(
+    ge1b, ge4b, ncol = 2)  # 4 fills entire bottom row
+  
+  f4l <- list(f4a, f4b, rr)
+  return(f4l)
 }
 
 #########################################################

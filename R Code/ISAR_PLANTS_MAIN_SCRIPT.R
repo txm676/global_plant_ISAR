@@ -5,7 +5,7 @@ source("R Code\\ISAR_PLANTS_SOURCE.R")
 
 ##SETTINGS FOR THRESHOLD MODELS
 ##set the interval
-intz_set <- 0.1
+intz_set <- 0.01
 ##number of cores; found more than this makes it slower
 Ncore <- 8
 #point size
@@ -250,14 +250,21 @@ if (dd == "Arch"){
 
 if (dd %in% c("All", "Oce")){
 
-PEF <- Perc_end(datM)
-  
-ggsave(paste0("Results/Figure_4_",FN,".jpeg"), 
-       PEF[[1]], height = 12, width = 8)
+F4 <- figure4(dat, dat_cont2) 
 
-#z-values
-write.csv(round(PEF[[2]], 2), 
-          file = paste0("Results/Figure_4_caption",FN,".csv"))
+#Main figure 4
+ggsave(paste0("Results/New_fig4_all_NOSE",FN,".jpeg"), 
+       F4[[1]], height = 20, width = 30,
+       units = "cm", dpi = 300)
+
+
+##Versions with legends included to extract
+ggsave(paste0("Results/New_fig4_legends",FN,".jpeg"), 
+       F4[[2]], height = 10, width = 20,
+       units = "cm", dpi = 300)
+#Results table
+write.csv(F4[[3]], 
+          file = paste0("Results/new_fig4_tables",FN,".csv")) 
 }
 #################################################################
 ########Raw, Spatial and Mixed Effect Models: log-log##################
