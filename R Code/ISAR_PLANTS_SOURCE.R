@@ -1139,7 +1139,8 @@ end_cont <- function(dat){
 #results table and build Figure 4. Note that two versions
 #of the figure are produced, the smaller version is used to
 #extract the legends.
-figure4 <- function(dat, dat_cont2){
+figure4 <- function(dat, dat_cont2,
+                    oce = FALSE){
   
   ec1 <- end_cont(dat)
   #with continents included
@@ -1153,18 +1154,41 @@ figure4 <- function(dat, dat_cont2){
   # range(ec1$z)
   # range(ec2$z)
   
+  if (oce){
+    yl4 <- c(0.25, 0.55)
+    li4 <- c(10, 710)
+    br4 <- c(10, 50, 100, 
+             500)
+    vl4 <- c("red", "#7DBDE4")
+    lb4 <- c("Continent",
+             "Oceanic isl.")
+  } else {
+    yl4 <- c(0.29, 0.55)
+    li4 <- c(20, 1270)
+    br4 <- c(20, 50, 100, 
+             500, 1000)
+    vl4 <- c("red","#A4A4A4",
+             "#E39F11", "#7DBDE4")
+    lb4 <- c("Continent",
+             "Continental isl.",
+             "Fragment isl.",
+             "Oceanic isl.")
+  }
+  
+
+  
   ge1 <- ggplot(data = rr) + 
     geom_point(aes(x = end, y = z, 
                    col = Type, size = n),
                alpha = 0.5) +
-    scale_color_manual(values = c("#009E73", "#000000")) +
-    ylim(c(0.29, 0.55)) + 
+    scale_color_manual(values = c("#009E73", 
+                                  "#000000")) +
+    ylim(yl4) + 
     xlab("Endemism % cut-off") +
     labs(colour="Continents") +
     labs(size = "No. Isl.") +
-    scale_size_continuous(limits = c(20, 1270), 
-                          breaks = c(20, 50, 100, 
-                                     500, 1000)) +
+    scale_size_continuous(limits =  li4, 
+                          breaks = br4) +
     ggtitle("a)") + guides(col="none", size = "none") #+
   #  geom_errorbar(aes(x = end, ymin=z-z_SE, 
   #                   ymax=z+z_SE, col = Type))
@@ -1177,9 +1201,8 @@ figure4 <- function(dat, dat_cont2){
     xlab("Endemism % cut-off") +
     labs(colour="Continents") +
     labs(size = "No. Isl.") +
-    scale_size_continuous(limits = c(20, 1270), 
-                          breaks = c(20, 50, 100, 
-                                     500, 1000)) +
+    scale_size_continuous(limits =  li4, 
+                          breaks = br4) +
     ggtitle(bquote('b)')) +
     ylab(bquote(~R^2)) + guides(col="none", size = "none")
   
@@ -1188,55 +1211,66 @@ figure4 <- function(dat, dat_cont2){
     geom_point(aes(x = end, y = Mean_log_area, 
                    col = Type, size = n),
                alpha = 0.5) +
-    scale_color_manual(values = c("#009E73", "#000000")) +
-    scale_size_continuous(limits = c(20, 1270), 
-                          breaks = c(20, 50, 100, 
-                                     500, 1000)) +
+    scale_color_manual(values = c("#009E73",
+                                  "#000000")) +
+    scale_size_continuous(limits =  li4, 
+                          breaks = br4) +
     xlab("Endemism % cut-off") +
     ylab("Mean log(Area)") +
     guides(col="none", size = "none") +
     ggtitle("c)")
+  
+  
+  #Adding z and R2 to plot. bquote used to make R2 
+  #superscript. Note the is.na() warning can be ignored, just
+  #relates to use of annotate() with bquote expression
+  ge4lm <- lm(logS~LogArea, data = dat_cont2)
+  g4tex <- bquote(
+    z == .(round(ge4lm$coefficients[2], 2)) * "," ~ R^2 == .(round(summary(ge4lm)$r.squared, 2)))
   
   ge4 <- ggplot(data = dat_cont2) + 
     geom_point(aes(x = LogArea, y = logS, 
                    fill = category),
                size=1.5,
                pch = 21) + 
-    scale_fill_manual(values = c("red","#A4A4A4",
-                                 "#E39F11", "#7DBDE4"),
-                      labels = c("Continent",
-                                 "Continental isl.",
-                                 "Fragment isl.",
-                                 "Oceanic isl.")) +
+    scale_fill_manual(values = vl4,
+                      labels = lb4) +
     stat_smooth(method = "lm",
                 aes(x = LogArea, y = logS),
                 se = FALSE, col = "#299375") +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
-    ggtitle('d)') + guides(fill="none")
+    ggtitle('d)') + guides(fill="none")+
+    annotate("text", x=2, y=5, size = 5,
+             label = g4tex)
     #convert axes to untransformed scale
     ge4 <- x2r(ge4, cont = TRUE, arch = FALSE)
     ge4 <- y2r(ge4)
 
   dat_cont3 <- filter(dat_cont2, PercEnd > 0.05)
   
+  #Adding z and R2 to plot. bquote used to make R2 
+  #superscript. Note the is.na() warning can be ignored, just
+  #relates to use of annotate() with bquote expression
+  ge5lm <- lm(logS~LogArea, data = dat_cont3)
+  g5tex <- bquote(
+    z == .(round(ge5lm$coefficients[2], 2)) * "," ~ R^2 == .(round(summary(ge5lm)$r.squared, 2)))
+  
   ge5 <- ggplot(data = dat_cont3) + 
     geom_point(aes(x = LogArea, y = logS, 
                    fill = category),
                size=1.5,
                pch = 21) + 
-    scale_fill_manual(values = c("red","#A4A4A4",
-                                 "#E39F11", "#7DBDE4"),
-                      labels = c("Continent",
-                                 "Continental isl.",
-                                 "Fragment isl.",
-                                 "Oceanic isl.")) +
+    scale_fill_manual(values = vl4,
+                      labels = lb4) +
     stat_smooth(method = "lm",
                 aes(x = LogArea, y = logS),
                 se = FALSE, col = "#299375") +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
-    ggtitle('e)') + guides(fill="none")
+    ggtitle('e)') + guides(fill="none") +
+    annotate("text", x=2, y=4, size = 5,
+             label = g5tex)
   #convert axes to untransformed scale
   ge5 <- x2r(ge5, cont = TRUE, arch = FALSE)
   ge5 <- y2r(ge5)
@@ -1256,13 +1290,12 @@ figure4 <- function(dat, dat_cont2){
                    col = Type, size = n),
                alpha = 0.5) +
     scale_color_manual(values = c("#009E73", "#000000")) +
-    ylim(c(0.29, 0.55)) + 
+    ylim(yl4) + 
     xlab("Endemism % cut-off") +
     labs(colour="Continents") +
     labs(size = "No. Isl.") +
-    scale_size_continuous(limits = c(20, 1270), 
-                          breaks = c(20, 50, 100, 
-                                     500, 1000)) +
+    scale_size_continuous(limits =  li4, 
+                          breaks = br4) +
     ggtitle("a)") 
   
   
@@ -1271,12 +1304,8 @@ figure4 <- function(dat, dat_cont2){
                    fill = category),
                size=1.5,
                pch = 21) + 
-    scale_fill_manual(values = c("red","#A4A4A4",
-                                 "#E39F11", "#7DBDE4"),
-                      labels = c("Continent",
-                                 "Continental isl.",
-                                 "Fragment isl.",
-                                 "Oceanic isl.")) +
+    scale_fill_manual(values = vl4,
+                      labels = lb4) +
     stat_smooth(method = "lm",
                 aes(x = LogArea, y = logS),
                 se = FALSE, col = "#299375") +

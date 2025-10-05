@@ -13,13 +13,15 @@ PS <- 1.6
 
 ##Select dataset: all islands ("All"), oceanic ("Oce"), 
 #archipelago ("Arch")
-dd <- "All"
+dd <- "Arch"
 
 if (dd == "All"){
   datM <- datAll
   FN <- c("All_islands")
 } else if (dd == "Oce"){
   datM <- datO
+  datM_cont2 <- filter(dat_cont2, 
+          category %in% c("oceanic","complex_origin"))
   FN <- c("Oceanic_islands")
 } else {
   datM <- arch
@@ -248,10 +250,19 @@ if (dd == "Arch"){
 ################FIGURE 4##############################
 #######################################################
 
+##ignore is.na() warnings, they relate to use of bquote 
+#expression - to make R2 superscript - and the annotate
+#function in ggplot, but are harmless
+
+#dat = datM
+#dat_cont2 = datM_cont2
+
 if (dd %in% c("All", "Oce")){
 
-F4 <- figure4(dat, dat_cont2) 
-
+ddF4 <- ifelse(dd == "Oce", TRUE, FALSE)
+  
+F4 <- figure4(datM, datM_cont2, ddF4) 
+datM_cont2
 #Main figure 4
 ggsave(paste0("Results/New_fig4_all_NOSE",FN,".jpeg"), 
        F4[[1]], height = 20, width = 30,
