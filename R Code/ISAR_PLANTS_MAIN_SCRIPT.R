@@ -13,7 +13,7 @@ PS <- 1.6
 
 ##Select dataset: all islands ("All"), oceanic ("Oce"), 
 #archipelago ("Arch")
-dd <- "Arch"
+dd <- "All"
 
 if (dd == "All"){
   datM <- datAll
@@ -42,6 +42,12 @@ ResAll <- fit_thr(datz = select(datM, area, native_count),
                       parallelz = TRUE,
                       coresz = Ncore,
                       intz = intz_set)
+
+#Add in extra models for Table 1
+if (dd == "All"){
+  t1Ex <- tab1_extra(dat_cont2)
+  ResAll[[4]] <- t1Ex
+}
 
 saveRDS(ResAll, file = paste0("Results/ResAll_",FN,".RDS"))
 
@@ -532,6 +538,9 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # ResArchEndZer <- readRDS("D:\\documents\\Work\\On-going projects\\Global Plant SAR\\Results\\Archipelago\\ResAllEndZer_Archipelagos.RDS")
 # 
 # Mod1 <- ResAll[[2]][[2]][[1]][[5]]
+# Mod1b <- ResAll[[4]][[1]]
+# Mod1c <- ResAll[[4]][[2]]
+# Mod1d <- ResAll[[4]][[3]]
 # Mod2 <- ResAllEndZer[[2]][[2]][[1]][[5]]
 # Mod3 <- ResOceAll[[2]][[2]][[1]][[5]]
 # Mod4 <- ResOceEndZer[[2]][[2]][[1]][[5]]
@@ -539,6 +548,9 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # Mod6 <- ResArchEndZer[[2]][[2]][[1]][[5]]
 # 
 # zs <- c(Mod1$coefficients[2],
+#         Mod1b$coefficients[2],
+#         Mod1c$coefficients[2],
+#         Mod1d$coefficients[2],
 #         Mod2$coefficients[2],
 #         Mod3$coefficients[2],
 #         Mod4$coefficients[2],
@@ -546,6 +558,9 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 #         Mod6$coefficients[2])
 # 
 # cs <- c(Mod1$coefficients[1],
+#         Mod1b$coefficients[1],
+#         Mod1c$coefficients[1],
+#         Mod1d$coefficients[1],
 #         Mod2$coefficients[1],
 #         Mod3$coefficients[1],
 #         Mod4$coefficients[1],
@@ -553,6 +568,9 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 #         Mod6$coefficients[1])
 # 
 # rs <- c(summary(Mod1)$r.squared,
+#         summary(Mod1b)$r.squared,
+#         summary(Mod1c)$r.squared,
+#         summary(Mod1d)$r.squared,
 #         summary(Mod2)$r.squared,
 #         summary(Mod3)$r.squared,
 #         summary(Mod4)$r.squared,
@@ -560,21 +578,28 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 #         summary(Mod6)$r.squared)
 # 
 # 
-# Ns <- sapply(list(Mod1, Mod2, Mod3, Mod4, Mod5, Mod6),
+# Ns <- sapply(list(Mod1, Mod1b, Mod1c, Mod1d,
+#                   Mod2, Mod3, 
+#                   Mod4, Mod5, Mod6),
 #              function(x){length(x$residuals)})
 # 
 # Tab1 <- data.frame("N" = Ns,
 #                    "z" = round(zs, 2),
 #                    "C" = round(cs, 2),
 #                    "R2" = round(rs, 2))
-# rownames(Tab1) <- c("All_all", "All_end",
+# rownames(Tab1) <- c("All_all", "All_all_cont", 
+#                     "GT5Per_all", "GT5Per_all_cont", 
+#                     "All_end",
 #                     "Oce_all", "Oce_end",
 #                     "Arch_all", "arch_end")
 # 
 # Tab1$IS <- round(c(10^(-cs[1] / zs[1]),
 #                    10^(-cs[2] / zs[2]),
 #                    10^(-cs[3] / zs[3]),
-#                    10^(-cs[4] / zs[4]), NA, NA),2)
+#                    10^(-cs[4] / zs[4]),
+#                    10^(-cs[5] / zs[5]),
+#                    10^(-cs[6] / zs[6]),
+#                    10^(-cs[7] / zs[7]), NA, NA),2)
 # 
 # write.csv(Tab1, file = "Tab1.csv")
 # 

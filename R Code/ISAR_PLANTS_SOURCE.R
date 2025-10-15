@@ -92,6 +92,7 @@ arch$logS <- log10(arch$native_count)
 arch$logES <- log10(arch$endemic_count)
 arch$PercEnd <- arch$endemic_count / arch$native_count
 
+
 ######################################################################
 #########THRESHOLD MODELS and ISAR MODEL COMPARISON##############
 #################################################################
@@ -1476,4 +1477,22 @@ tab_format <- function(rawT, spaT, mixT = NULL){
   tfr <- relocate(tfr, Type, .before = X)
   colnames(tfr)[2] <- "Model"
   return(tfr)
+}
+
+########################################################
+##For all islands, fit the extra models for Table 1:
+#all islands including continents, then just islands
+#with >5% SIEs (both with and without continents)
+############################################################
+tab1_extra <- function(dat_cont2){
+  ge4lm <- lm(logS~LogArea, data = dat_cont2)
+  dat_cont3 <- filter(dat_cont2, PercEnd > 0.05)
+  ge5lm <- lm(logS~LogArea, data = dat_cont3)
+  dat_cont4 <- filter(dat_cont3, 
+                      category != "complex_origin")
+  ge6lm <- lm(logS~LogArea, data = dat_cont3)
+  geL <- list("Cont" = ge4lm, 
+              "NoCont_Gt0.05" = ge6lm,
+              "Cont_Gt0.05" = ge5lm)
+  return(geL)
 }
