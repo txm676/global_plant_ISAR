@@ -13,10 +13,11 @@ PS <- 1.6
 
 ##Select dataset: all islands ("All"), oceanic ("Oce"), 
 #archipelago ("Arch")
-dd <- "All"
+dd <- "Arch"
 
 if (dd == "All"){
   datM <- datAll
+  datM_cont2 <- dat_cont2
   FN <- c("All_islands")
 } else if (dd == "Oce"){
   datM <- datO
@@ -109,6 +110,13 @@ if (!identical(M6d$area, M6$model$x)) stop("Gorgeous")
 C6 <- cor.test(residuals(M6), M6d$PercEnd, 
          method = "spearman")
 
+####Predict Continental richness
+ECC <- extrap_cont(datE = datM, 
+            dat_cont = dat_cont)
+
+write.csv(ECC,
+          file = paste0("Results/Extrap_tab_",FN,".csv"))
+
 ####################################################
 ###All islands, endemic species (>0 richness islands)
 #########################################################
@@ -137,10 +145,13 @@ RAEZ3 <- plot_thr(x = ResAllEndZer[[2]][[2]],
                  xRaw = xro,
                  yRaw = xro)
 
-EZC_LL <- RAEZ3[[2]] + ggtitle("b)") +
+EZC_LL <- RAEZ3[[2]] + ggtitle("b)") 
+
+if (dd == "All"){
   #extend x-axis to add 10^-2 tick label
-  geom_point(aes(x =  -2, y = 1), 
+  EZC_LL <- EZC_LL + geom_point(aes(x =  -2, y = 1), 
              color = "white")
+}
 
 ##Correlation between residuals and percentage endemism
 M7 <- ResAllEndZer[[2]][[2]][[1]][[5]]
@@ -593,13 +604,13 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 #                     "Oce_all", "Oce_end",
 #                     "Arch_all", "arch_end")
 # 
-# Tab1$IS <- round(c(10^(-cs[1] / zs[1]),
+# Tab1$IS <-  c(10^(-cs[1] / zs[1]),
 #                    10^(-cs[2] / zs[2]),
 #                    10^(-cs[3] / zs[3]),
 #                    10^(-cs[4] / zs[4]),
 #                    10^(-cs[5] / zs[5]),
 #                    10^(-cs[6] / zs[6]),
-#                    10^(-cs[7] / zs[7]), NA, NA),2)
+#                    10^(-cs[7] / zs[7]), NA, NA)
 # 
 # write.csv(Tab1, file = "Tab1.csv")
 # 

@@ -1490,9 +1490,58 @@ tab1_extra <- function(dat_cont2){
   ge5lm <- lm(logS~LogArea, data = dat_cont3)
   dat_cont4 <- filter(dat_cont3, 
                       category != "complex_origin")
-  ge6lm <- lm(logS~LogArea, data = dat_cont3)
+  ge6lm <- lm(logS~LogArea, data = dat_cont4)
   geL <- list("Cont" = ge4lm, 
               "NoCont_Gt0.05" = ge6lm,
               "Cont_Gt0.05" = ge5lm)
   return(geL)
+}
+
+#####################################
+###Extrapolate log-power model to predict
+###continental richness########################
+##################################################
+#datE = datM
+extrap_cont <- function(datE, dat_cont){
+  
+  ge7lm <- lm(logS~LogArea, data = datE)
+  ge7pr <- predict(ge7lm, dat_cont)
+  
+  #Version with >5% endemism
+  datE2 <- filter(datE, PercEnd > 0.05)
+  ge8lm <- lm(logS~LogArea, data = datE2)
+  ge8pr <- predict(ge8lm, dat_cont)
+  
+  #Percentage error
+  peA <- (abs((dat_cont$native_count - 
+          as.vector(10^ge7pr))) / 
+      dat_cont$native_count) * 100
+  pe5p <- (abs((dat_cont$native_count - 
+                  as.vector(10^ge8pr))) / 
+             dat_cont$native_count) * 100
+  
+  ge9 <- data.frame("Continent" = 
+                      dat_cont$geo_entity,
+                    "Continent_rich_raw" = 
+                      dat_cont$native_count,
+                    "Continent_rich_log" =
+                      dat_cont$logS,
+                    "AllIsl_pred_raw" = 
+                      as.vector(10^ge7pr),
+                    "AllIsl_raw_PercError" =
+                      peA,
+                    "AllIsl_pred_log" = 
+                      as.vector(ge7pr),
+                    "GT5PerEnd_pred_raw" = 
+                      as.vector(10^ge8pr),
+                    "GT5PerEnd_pred_log" = 
+                      as.vector(ge8pr),
+                    "GT5_raw_PercError" =
+                      pe5p,
+                    "N_AllIsl" = nrow(datE),
+                    "N_GT5PerEnd" = nrow(datE2))
+  
+  ge9[,3:ncol(ge9)] <- apply(ge9[,3:ncol(ge9)],
+                             2, round, 2)
+  return(ge9)
 }
