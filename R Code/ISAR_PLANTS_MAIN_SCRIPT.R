@@ -13,7 +13,7 @@ PS <- 1.6
 
 ##Select dataset: all islands ("All"), oceanic ("Oce"), 
 #archipelago ("Arch")
-dd <- "Arch"
+dd <- "All"
 
 if (dd == "All"){
   datM <- datAll

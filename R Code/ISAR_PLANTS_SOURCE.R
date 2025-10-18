@@ -1227,7 +1227,9 @@ figure4 <- function(dat, dat_cont2,
   #relates to use of annotate() with bquote expression
   ge4lm <- lm(logS~LogArea, data = dat_cont2)
   g4tex <- bquote(
-    z == .(round(ge4lm$coefficients[2], 2)) * "," ~ R^2 == .(round(summary(ge4lm)$r.squared, 2)))
+    z == .(round(ge4lm$coefficients[2], 2)) * "," ~ c ==
+      .(round(ge4lm$coefficients[1], 2))* "," ~ R^2 ==
+      .(round(summary(ge4lm)$r.squared, 2)))
   
   ge4 <- ggplot(data = dat_cont2) + 
     geom_point(aes(x = LogArea, y = logS, 
@@ -1255,7 +1257,9 @@ figure4 <- function(dat, dat_cont2,
   #relates to use of annotate() with bquote expression
   ge5lm <- lm(logS~LogArea, data = dat_cont3)
   g5tex <- bquote(
-    z == .(round(ge5lm$coefficients[2], 2)) * "," ~ R^2 == .(round(summary(ge5lm)$r.squared, 2)))
+    z == .(round(ge5lm$coefficients[2], 2)) * "," ~ c ==
+      .(round(ge5lm$coefficients[1], 2))* "," ~ R^2 ==
+      .(round(summary(ge5lm)$r.squared, 2)))
   
   ge5 <- ggplot(data = dat_cont3) + 
     geom_point(aes(x = LogArea, y = logS, 
