@@ -31,6 +31,13 @@ if (dd == "All"){
 
 datMEndZer <- filter(datM, endemic_count > 0)#endemics > 0 richness
 
+##Size distribution summary
+# length(which(datM$area < 1))
+# length(which(datM$area > 100000))
+# length(which(datM$area >= 1 & datM$area <= 10))
+# table(select(filter(datM, area > 10000), category))
+
+
 ####################################################
 ####MODEL COMPARISON AND THRESHOLD MODELS#########
 ####################################################
