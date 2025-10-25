@@ -1143,14 +1143,20 @@ end_cont <- function(dat){
 figure4 <- function(dat, dat_cont2,
                     oce = FALSE){
   
+  
+  contT <- filter(dat_cont2,
+                  category == "complex_origin")
+  
   ec1 <- end_cont(dat)
   #with continents included
   ec2 <- end_cont(dat_cont2)
   
-  rr <- bind_rows(ec1, ec2)
+  rr2 <- bind_rows(ec1, ec2)
 
-  rr$Type <- c(rep("Without", nrow(ec1)), 
+  rr2$Type <- c(rep("Without", nrow(ec1)), 
                rep("With", nrow(ec2)))
+  
+  rr <- ec1
   
   # range(ec1$z)
   # range(ec2$z)
@@ -1160,78 +1166,77 @@ figure4 <- function(dat, dat_cont2,
     li4 <- c(10, 710)
     br4 <- c(10, 50, 100, 
              500)
-    vl4 <- c("red", "#7DBDE4")
-    lb4 <- c("Continent",
-             "Oceanic isl.")
+    vl4 <- c("#7DBDE4")
+    lb4 <- c("Oceanic isl.")
   } else {
     yl4 <- c(0.29, 0.55)
     li4 <- c(20, 1270)
     br4 <- c(20, 50, 100, 
              500, 1000)
-    vl4 <- c("red","#A4A4A4",
+    vl4 <- c("#A4A4A4",
              "#E39F11", "#7DBDE4")
-    lb4 <- c("Continent",
-             "Continental isl.",
+    lb4 <- c("Continental isl.",
              "Fragment isl.",
              "Oceanic isl.")
   }
   
-
-  
   ge1 <- ggplot(data = rr) + 
     geom_point(aes(x = end, y = z, 
-                   col = Type, size = n),
-               alpha = 0.5) +
-    scale_color_manual(values = c("#009E73", 
-                                  "#000000")) +
+                   size = n),
+               alpha = 0.5, col = c("#009E73")) +
     ylim(yl4) + 
     xlab("Endemism % cut-off") +
-    labs(colour="Continents") +
     labs(size = "No. Isl.") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
-    ggtitle("a)") + guides(col="none", size = "none") #+
+    ggtitle("a)") + guides(size = "none") #+
   #  geom_errorbar(aes(x = end, ymin=z-z_SE, 
   #                   ymax=z+z_SE, col = Type))
   
   ge2 <- ggplot(data = rr) + 
     geom_point(aes(x = end, y = R2, 
-                   col = Type, size = n),
-               alpha = 0.5) +
-    scale_color_manual(values = c("#009E73", "#000000")) +
-    xlab("Endemism % cut-off") +
-    labs(colour="Continents") +
+                   size = n),
+               alpha = 0.5, col = c("#009E73")) +
+ xlab("Endemism % cut-off") +
     labs(size = "No. Isl.") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
     ggtitle(bquote('b)')) +
-    ylab(bquote(~R^2)) + guides(col="none", size = "none")
+    ylab(bquote(~R^2)) + guides(size = "none")
   
   #Mean log area
   ge3 <- ggplot(data = rr) + 
     geom_point(aes(x = end, y = Mean_log_area, 
-                   col = Type, size = n),
-               alpha = 0.5) +
-    scale_color_manual(values = c("#009E73",
-                                  "#000000")) +
+                   size = n),
+               alpha = 0.5, col = c("#009E73")) +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
     xlab("Endemism % cut-off") +
     ylab("Mean log(Area)") +
-    guides(col="none", size = "none") +
+    guides(size = "none") +
     ggtitle("c)")
   
   
   #Adding z and R2 to plot. bquote used to make R2 
   #superscript. Note the is.na() warning can be ignored, just
   #relates to use of annotate() with bquote expression
-  ge4lm <- lm(logS~LogArea, data = dat_cont2)
+  ge4lm <- lm(logS~LogArea, data = dat)
   g4tex <- bquote(
     z == .(round(ge4lm$coefficients[2], 2)) * "," ~ c ==
       .(round(ge4lm$coefficients[1], 2))* "," ~ R^2 ==
       .(round(summary(ge4lm)$r.squared, 2)))
+  #Extrapolating ISAR to continents to add line
+  #segment
+  ge4lc <- stats::predict(ge4lm,
+                          data.frame("LogArea" = 
+                                       c(max(dat$LogArea),max(contT$LogArea))))
   
-  ge4 <- ggplot(data = dat_cont2) + 
+  extrapDF4 <- data.frame("x1" = max(dat$LogArea), 
+                          "x2" = max(contT$LogArea),
+                          "y1" =  ge4lc[1], 
+                          "y2" =  ge4lc[2])
+  
+  ge4 <- ggplot(data = dat) + 
     geom_point(aes(x = LogArea, y = logS, 
                    fill = category),
                size=1.5,
@@ -1240,7 +1245,8 @@ figure4 <- function(dat, dat_cont2,
                       labels = lb4) +
     stat_smooth(method = "lm",
                 aes(x = LogArea, y = logS),
-                se = FALSE, col = "#299375") +
+                se = FALSE, col = "black",
+                linewidth = 1) +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
     ggtitle('d)') + guides(fill="none")+
@@ -1248,9 +1254,23 @@ figure4 <- function(dat, dat_cont2,
              label = g4tex)
     #convert axes to untransformed scale
     ge4 <- x2r(ge4, cont = TRUE, arch = FALSE)
-    ge4 <- y2r(ge4)
-
-  dat_cont3 <- filter(dat_cont2, PercEnd > 0.05)
+    ge4 <- y2r(ge4) 
+    ge4 <- ge4 + 
+      geom_point(data = contT, 
+                 aes(x = LogArea, y = logS),
+                 size=1.5,
+                 pch = 21,
+                 fill = "red")
+      
+    ge4 <- ge4 + geom_segment(data = extrapDF4,
+                                aes(x = x1, xend = x2,
+                                    y = y1, yend = y2),
+                                linetype = "dashed",
+                                colour = "black",
+                              linewidth = 0.9)
+    
+    
+  dat_cont3 <- filter(dat, PercEnd > 0.05)
   
   #Adding z and R2 to plot. bquote used to make R2 
   #superscript. Note the is.na() warning can be ignored, just
@@ -1260,6 +1280,16 @@ figure4 <- function(dat, dat_cont2,
     z == .(round(ge5lm$coefficients[2], 2)) * "," ~ c ==
       .(round(ge5lm$coefficients[1], 2))* "," ~ R^2 ==
       .(round(summary(ge5lm)$r.squared, 2)))
+  #Extrapolating ISAR to continents to add line
+  #segment
+  ge5lc <- stats::predict(ge5lm,
+                          data.frame("LogArea" = 
+                                       c(max(dat_cont3$LogArea),max(contT$LogArea))))
+  
+  extrapDF5 <- data.frame("x1" = max(dat_cont3$LogArea), 
+                          "x2" = max(contT$LogArea),
+                          "y1" =  ge5lc[1], 
+                          "y2" =  ge5lc[2])
   
   ge5 <- ggplot(data = dat_cont3) + 
     geom_point(aes(x = LogArea, y = logS, 
@@ -1270,7 +1300,7 @@ figure4 <- function(dat, dat_cont2,
                       labels = lb4) +
     stat_smooth(method = "lm",
                 aes(x = LogArea, y = logS),
-                se = FALSE, col = "#299375") +
+                se = FALSE, col = "black") +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
     ggtitle('e)') + guides(fill="none") +
@@ -1279,6 +1309,19 @@ figure4 <- function(dat, dat_cont2,
   #convert axes to untransformed scale
   ge5 <- x2r(ge5, cont = TRUE, arch = FALSE)
   ge5 <- y2r(ge5)
+  ge5 <- ge5 + 
+    geom_point(data = contT, 
+               aes(x = LogArea, y = logS),
+               size=1.5,
+               pch = 21,
+               fill = "red")
+  
+  ge5 <- ge5 + geom_segment(data = extrapDF5,
+                            aes(x = x1, xend = x2,
+                                y = y1, yend = y2),
+                            linetype = "dashed",
+                            colour = "black",
+                            linewidth = 0.9)
   
   bottom_row <- gridExtra::arrangeGrob(ge4, ge5, ncol = 2)
   
@@ -1293,18 +1336,16 @@ figure4 <- function(dat, dat_cont2,
   ge1b <- ggplot(data = rr) + 
     geom_point(aes(x = end, y = z, 
                    col = Type, size = n),
-               alpha = 0.5) +
-    scale_color_manual(values = c("#009E73", "#000000")) +
+               alpha = 0.5, col = "#009E73") +
     ylim(yl4) + 
     xlab("Endemism % cut-off") +
-    labs(colour="Continents") +
     labs(size = "No. Isl.") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
     ggtitle("a)") 
   
   
-  ge4b <- ggplot(data = dat_cont2) + 
+  ge4b <- ggplot(data = dat) + 
     geom_point(aes(x = LogArea, y = logS, 
                    fill = category),
                size=1.5,
@@ -1313,7 +1354,7 @@ figure4 <- function(dat, dat_cont2,
                       labels = lb4) +
     stat_smooth(method = "lm",
                 aes(x = LogArea, y = logS),
-                se = FALSE, col = "#299375") +
+                se = FALSE, col = "black") +
     xlab("Log(Area)") + ylab("Log(Richness)") +
     ggtitle('d)') + labs(fill="")
   
@@ -1321,7 +1362,7 @@ figure4 <- function(dat, dat_cont2,
   f4b <- gridExtra::grid.arrange(
     ge1b, ge4b, ncol = 2)  # 4 fills entire bottom row
   
-  f4l <- list(f4a, f4b, rr)
+  f4l <- list(f4a, f4b, rr2)
   return(f4l)
 }
 
