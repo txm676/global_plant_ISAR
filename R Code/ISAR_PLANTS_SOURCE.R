@@ -57,6 +57,8 @@ dat$SqrtDist <- sqrt(dat$dist)
 dat$LogIso <- log10(dat$dist)
 dat$logS <- log10(dat$native_count)
 dat$logES <- log10(dat$endemic_count)
+dat$logElev <- log10(dat$elevation+1)
+dat$absLat <- abs(dat$latitude)
 
 #remove continents but save a version for plot
 dat_cont <- filter(dat, entity_class == "continent")
@@ -91,6 +93,8 @@ arch$LogIso <- log10(arch$dist)
 arch$logS <- log10(arch$native_count)
 arch$logES <- log10(arch$endemic_count)
 arch$PercEnd <- arch$endemic_count / arch$native_count
+arch$logElev <- log10(arch$elevation+1)
+arch$absLat <- abs(arch$latitude)
 
 
 ######################################################################
@@ -707,17 +711,25 @@ parreg <- function(datAll3, Title, S, lcol = "red",
 # function for spatial autoregressive for area #
 
 
-spatial_model <- function(x, y, area, dist=NULL, S)
+spatial_model <- function(x, y, area, dist=NULL,
+                          elevation=NULL, latitude=NULL, S)
 {
   nb_list <- nb_object(x, y)
   
-  if(is.null(dist))
+  if(is.null(dist) & is.null(elevation) & is.null(latitude))
     
-  {mod <- spatialreg::errorsarlm(S ~ area, listw=nb_list, zero.policy=T) }
+  {mod <- spatialreg::errorsarlm(S ~ area, listw=nb_list, 
+                                 zero.policy=T) }
   
-  else 
+  if(!is.null(dist) & is.null(elevation) & is.null(latitude))
     
-  {mod <- spatialreg::errorsarlm(S ~ area + dist, listw=nb_list, zero.policy=T) }
+  {mod <- spatialreg::errorsarlm(S ~ area + dist, listw=nb_list, 
+                                 zero.policy=T) }
+  
+  if(!is.null(dist) & !is.null(elevation) & !is.null(latitude))
+    
+  {mod <- spatialreg::errorsarlm(S ~ area+dist+elevation+latitude, 
+                                 listw=nb_list, zero.policy=T) }
   
   return(list("nb" = nb_list, "model" = mod))
 }
@@ -737,28 +749,32 @@ nb_object <- function(x, y){
 #########MIXED MODELs##############
 #################################################################
 
-mixed_model <- function(data, dist=NULL)
+mixed_model <- function(data, dist=NULL, elevation=NULL, latitude=NULL)
 {
+
+  if(is.null(dist) & is.null(elevation) & is.null(latitude)){
+    
+    m <- lme(S ~ LogArea,
+             random = ~ 1+LogArea|archipelago_name,
+             correlation = corExp(form=~longitude+latitude),
+             data = data)}
   
-  # S9 <- data[,S]
+  if(!is.null(dist) & is.null(elevation) & is.null(latitude))
+    {m <- lme(S ~ LogArea+LogIso,
+              random = ~ 1+LogArea+LogIso|archipelago_name,
+              correlation = corExp(form=~longitude+latitude),
+              control = list("maxIter" = 50000, "msMaxIter" = 50000,
+                             "niterEM" = 50000,"msMaxEval" = 50000),
+              data=data)}
   
-  if(is.null(dist)){
-    m <- lme(S ~ LogArea, 
-            random = ~ 1+LogArea|archipelago_name, 
-            correlation = corExp(form=~longitude+latitude),
-                                 data = data)
-    } else {
-    ##Iterations increased to aid in convergence for the endemics
-    #model
-  m <- lme(S ~ LogArea+LogIso, 
-            random = ~ 1+LogArea+LogIso|archipelago_name, 
+  if(!is.null(dist) & !is.null(elevation) & !is.null(latitude))
+    
+  {m <- lme(S ~ LogArea+LogIso+logElev+absLat, 
+            random = ~ 1+LogArea+LogIso+logElev+absLat|archipelago_name,
             correlation = corExp(form=~longitude+latitude),
             control = list("maxIter" = 50000, "msMaxIter" = 50000,
                            "niterEM" = 50000,
-                           "msMaxEval" = 50000),
-            data=data)
-  }
-  
+                           "msMaxEval" = 50000),data=data)}
   return(m)
 }
 
@@ -769,9 +785,10 @@ mixed_model <- function(data, dist=NULL)
 
 ##This fits standard, spatial error models (log-log), and 
 #mixed effect models (with random intercept and slopes).
-#All three model types are fitted four times, once for all species
-#and once for endemics, and for both models with and without isolation
-#are fitted (i.e., 12 models in total)
+#All three model types are fitted six times, once for all species
+#and once for endemics, and for both models, once with just area,
+#once with area + isolation, and once with area + iso + elev +
+#lat (i.e., 18 models in total)
 #datAll = datM; datAllEndZer = datMEndZer
 spaMM <- function(datAll, datAllEndZer, arch = FALSE){
   
@@ -785,36 +802,60 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
   modArIso <- lm(logS ~ LogArea + LogIso, data=datAll)
   RwS2 <- summary(modArIso)
   
+  mod4pred <- lm(logS ~ LogArea + LogIso + logElev + absLat, 
+                 data=datAll)
+  RwS3 <- summary(mod4pred)
+  
   modAr_end <- lm(logES ~ LogArea, data=datAllEndZer)
-  RwS3 <- summary(modAr_end)
+  RwS4 <- summary(modAr_end)
   
   modArIso_end <- lm(logES ~ LogArea + LogIso, data=datAllEndZer)
-  RwS4 <- summary(modArIso_end)
+  RwS5 <- summary(modArIso_end)
   
-  ##Build Spatial results table
-  RwM <- matrix(as.vector(c(RwS1$coefficients[2,],
-                            rep(NA,4),
-                            RwS1$adj.r.squared,
-                            RwS2$coefficients[2,],
-                            RwS2$coefficients[3,],
-                            RwS2$adj.r.squared,
-                            RwS3$coefficients[2,],
-                            rep(NA,4),
-                            RwS3$adj.r.squared,
-                            RwS4$coefficients[2,],
-                            RwS4$coefficients[3,],
-                            RwS4$adj.r.squared)),
-                ncol = 9, byrow = TRUE)
-  RwM <- as.data.frame(round(RwM, 2))
-  colnames(RwM) <- c("Area_coef.", "Area_SE", 
-                     "Area_t", "Area_p",
-                     "Iso_coef.", "Iso_SE", 
-                     "Iso_t", "Iso_p",
+  mod4pred_end <- lm(logES ~ LogArea + 
+                       LogIso + logElev + absLat, data=datAllEndZer)
+  RwS6 <- summary(mod4pred_end)
+  
+  ##Build results table
+  RwM <- matrix(as.vector(c(paste(round(RwS1$coefficients[2,][1], 3), "±", round(RwS1$coefficients[2,][2], 3)), round(RwS1$coefficients[2,][4], 3),
+                            rep(NA,6),
+                            round(RwS1$adj.r.squared,3),
+                            paste(round(RwS2$coefficients[2,][1], 3), "±", round(RwS2$coefficients[2,][2], 3)),round(RwS2$coefficients[2,][4], 3),
+                            paste(round(RwS2$coefficients[3,][1], 3), "±", round(RwS2$coefficients[3,][2], 3)),round(RwS2$coefficients[3,][4], 3),
+                            rep(NA, 4),
+                            round(RwS2$adj.r.squared, 3),
+                            paste(round(RwS3$coefficients[2,][1], 3), "±", round(RwS3$coefficients[2,][2], 3)),round(RwS3$coefficients[2,][4], 3),
+                            paste(round(RwS3$coefficients[3,][1], 3), "±", round(RwS3$coefficients[3,][2], 3)),round(RwS3$coefficients[3,][4], 3),
+                            paste(round(RwS3$coefficients[4,][1], 3), "±", round(RwS3$coefficients[4,][2], 3)),round(RwS3$coefficients[4,][4], 3),
+                            paste(round(RwS3$coefficients[5,][1], 3), "±", round(RwS3$coefficients[5,][2], 3)),round(RwS3$coefficients[5,][4], 3),
+                            round( RwS3$adj.r.squared, 3),
+                            
+                            paste(round(RwS4$coefficients[2,][1], 3), "±", round(RwS4$coefficients[2,][2], 3)),round(RwS4$coefficients[2,][4], 3),
+                            rep(NA,6),
+                            round(RwS4$adj.r.squared, 3),
+                            paste(round(RwS5$coefficients[2,][1], 3), "±", round(RwS5$coefficients[2,][2], 3)),round(RwS5$coefficients[2,][4], 3),
+                            paste(round(RwS5$coefficients[3,][1], 3), "±", round(RwS5$coefficients[3,][2], 3)),round(RwS5$coefficients[3,][4], 3),
+                            rep(NA, 4),
+                            round(RwS5$adj.r.squared, 3),
+                            paste(round(RwS6$coefficients[2,][1], 3), "±", round(RwS6$coefficients[2,][2], 3)),round(RwS6$coefficients[2,][4], 3),
+                            paste(round(RwS6$coefficients[3,][1], 3), "±", round(RwS6$coefficients[3,][2], 3)),round(RwS6$coefficients[3,][4], 3),
+                            paste(round(RwS6$coefficients[4,][1], 3), "±", round(RwS6$coefficients[4,][2], 3)),round(RwS6$coefficients[4,][4], 3),
+                            paste(round(RwS6$coefficients[5,][1], 3), "±", round(RwS6$coefficients[5,][2], 3)), round(RwS6$coefficients[5,][4], 3),
+                            round(RwS6$adj.r.squared, 3))),
+                byrow = TRUE, ncol=9)
+  
+  
+  colnames(RwM) <- c("Area_coef.", "Parea", 
+                     "Iso_coef", "Piso",
+                     "Ele_coef", "Pele", 
+                     "ALat_coef", "Plat",
                      "Adjusted_R2")
   rownames(RwM) <- c("AllSp._Area",
                      "AllSp._AreaIso",
+                     "AllSp._4pred",
                      "EndSp._Area",
-                     "EndSp._AreaIso")
+                     "EndSp._AreaIso",
+                     "EndSp._4preds")
   
   ##Spatial models
   spatial_loglog_isar <- spatial_model(x=datAll$longitude, 
@@ -832,41 +873,80 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
                                         dist=datAll$LogIso)
   S2 <- summary(spatial_loglog_ArIso$model, Nagelkerke = TRUE)
   
+  # # model area + isolation + elev + lat
+  spatial_loglog_4preds <- spatial_model(x=datAll$longitude,
+                                         y=datAll$latitude,
+                                         area=datAll$LogArea,
+                                         S=datAll$logS,
+                                         dist=datAll$LogIso,
+                                         elevation=datAll$logElev,
+                                         latitude=datAll$absLat)
+  S3 <- summary(spatial_loglog_4preds$model, Nagelkerke = TRUE)
+  
+  
   ##Endemic versions
   spatial_loglog_isar_end <- spatial_model(x=datAllEndZer$longitude, 
                                            y=datAllEndZer$latitude,
                                            area=datAllEndZer$LogArea,
                                            S=datAllEndZer$logES)
   
-  S3 <- summary(spatial_loglog_isar_end$model, Nagelkerke = TRUE)
+  S4 <- summary(spatial_loglog_isar_end$model, Nagelkerke = TRUE)
   
   spatial_loglog_ArIso_end <- spatial_model(x=datAllEndZer$longitude, 
                                             y=datAllEndZer$latitude,
                                             area=datAllEndZer$LogArea,
                                             S=datAllEndZer$logES,
                                             dist=datAllEndZer$LogIso)
-  S4 <- summary(spatial_loglog_ArIso_end$model, Nagelkerke = TRUE)
+  S5 <- summary(spatial_loglog_ArIso_end$model, Nagelkerke = TRUE)
+  
+  spatial_loglog_4pred_end <- spatial_model(x=datAllEndZer$longitude,
+                                            y=datAllEndZer$latitude,
+                                            area=datAllEndZer$LogArea,
+                                            S=datAllEndZer$logES,
+                                            dist=datAllEndZer$LogIso,
+                                            elevation=datAllEndZer$logElev,
+                                            latitude=datAllEndZer$absLat)
+  S6 <- summary(spatial_loglog_4pred_end$model, Nagelkerke = TRUE)
   
   ##Build Spatial results table
-  RSM <- matrix(as.vector(c(S1$Coef[2,],rep(NA,4),
-                            S1$NK,
-                            S2$Coef[2,],S2$Coef[3,],
-                            S2$NK,
-                            S3$Coef[2,],rep(NA,4),
-                            S3$NK,
-                            S4$Coef[2,],S4$Coef[3,],
-                            S4$NK)),
-                ncol = 9, byrow = TRUE)
-  RSM <- as.data.frame(round(RSM, 2))
-  colnames(RSM) <- c("Area_coef.", "Area_SE", 
-                     "Area_z", "Area_p",
-                     "Iso_coef.", "Iso_SE", 
-                     "Iso_z", "Iso_p",
+  RSM <- matrix(as.vector(c(paste(round(S1$Coef[2,][1], 3), "±", round(S1$Coef[2,][2], 3)), round(S1$Coef[2,][4], 3),
+                            rep(NA,6),
+                            round(S1$NK,3),
+                            paste(round(S2$Coef[2,][1], 3), "±", round(S2$Coef[2,][2], 3)),round(S2$Coef[2,][4], 3),
+                            paste(round(S2$Coef[3,][1], 3), "±", round(S2$Coef[3,][2], 3)),round(S2$Coef[3,][4], 3),
+                            rep(NA, 4),
+                            round(S2$NK, 3),
+                            paste(round(S3$Coef[2,][1], 3), "±", round(S3$Coef[2,][2], 3)),round(S3$Coef[2,][4], 3),
+                            paste(round(S3$Coef[3,][1], 3), "±", round(S3$Coef[3,][2], 3)),round(S3$Coef[3,][4], 3),
+                            paste(round(S3$Coef[4,][1], 3), "±", round(S3$Coef[4,][2], 3)),round(S3$Coef[4,][4], 3),
+                            paste(round(S3$Coef[5,][1], 3), "±", round(S3$Coef[5,][2], 3)),round(S3$Coef[5,][4], 3),
+                            round( S3$NK, 3),
+                            
+                            paste(round(S4$Coef[2,][1], 3), "±", round(S4$Coef[2,][2], 3)),round(S4$Coef[2,][4], 3),
+                            rep(NA,6),
+                            round(S4$NK, 3),
+                            paste(round(S5$Coef[2,][1], 3), "±", round(S5$Coef[2,][2], 3)),round(S5$Coef[2,][4], 3),
+                            paste(round(S5$Coef[3,][1], 3), "±", round(S5$Coef[3,][2], 3)),round(S5$Coef[3,][4], 3),
+                            rep(NA, 4),
+                            round(S5$NK, 3),
+                            paste(round(S6$Coef[2,][1], 3), "±", round(S6$Coef[2,][2], 3)),round(S6$Coef[2,][4], 3),
+                            paste(round(S6$Coef[3,][1], 3), "±", round(S6$Coef[3,][2], 3)),round(S6$Coef[3,][4], 3),
+                            paste(round(S6$Coef[4,][1], 3), "±", round(S6$Coef[4,][2], 3)),round(S6$Coef[4,][4], 3),
+                            paste(round(S6$Coef[5,][1], 3), "±", round(S6$Coef[5,][2], 3)), round(S6$Coef[5,][4], 3),
+                            round(S6$NK, 3))),
+                byrow = TRUE, ncol=9)
+  
+  colnames(RSM) <- c("Area_coef.", "Parea", 
+                     "Iso_coef", "Piso",
+                     "Ele_coef", "Pele", 
+                     "ALat_coef", "Plat",
                      "Pseudo_R2")
   rownames(RSM) <- c("AllSp._Area",
                      "AllSp._AreaIso",
+                     "AllSp._4pred",
                      "EndSp._Area",
-                     "EndSp._AreaIso")
+                     "EndSp._AreaIso",
+                     "EndSp._4preds")
   
   if (!arch){
   ##Mixed effect models
@@ -874,52 +954,88 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
   dat_MM$S <- dat_MM$logS
   mixmod_isar <- mixed_model(data=dat_MM, dist=NULL)
   mixmod_ArIso <- mixed_model(data=dat_MM, dist=TRUE)
+  mixmod_4pred <- mixed_model(data=dat_MM, dist=TRUE, 
+                              elevation=TRUE, latitude=TRUE)
 
   dat_MM2 <- datAllEndZer
   dat_MM2$S <- dat_MM2$logES
   mixmod_isar_end <- mixed_model(data=dat_MM2, dist=NULL)
   mixmod_ArIso_end <- mixed_model(data=dat_MM2, dist=TRUE)
+  tryCatch({mixmod_4pred_end <- mixed_model(data=dat_MM2, dist=TRUE, 
+                                            elevation=TRUE, latitude=TRUE)}, 
+           error=function(e) {mixmod_4pred_end <- lme(S ~ LogArea+LogIso+logElev+absLat, 
+                  random = ~ 1+LogArea+LogIso+logElev|archipelago_name, 
+                  correlation = corExp(form=~longitude+latitude),
+                  control = list("maxIter" = 50000, "msMaxIter" = 50000,
+                                 "niterEM" = 50000,
+                                 "msMaxEval" = 50000),data=dat_MM2)})
+  
   
   MM1 <- summary(mixmod_isar)
   MM2 <- summary(mixmod_ArIso)
-  MM3 <- summary(mixmod_isar_end)
-  MM4 <- summary(mixmod_ArIso_end)
+  MM3 <- summary(mixmod_4pred)
+  
+  MM4 <- summary(mixmod_isar_end)
+  MM5 <- summary(mixmod_ArIso_end)
+  MM6 <- summary(mixmod_4pred_end)
   
   MR1 <- piecewiseSEM::rsquared(mixmod_isar)
   MR2 <- piecewiseSEM::rsquared(mixmod_ArIso)
-  MR3 <- piecewiseSEM::rsquared(mixmod_isar_end)
-  MR4 <- piecewiseSEM::rsquared(mixmod_ArIso_end)
+  MR3 <- piecewiseSEM::rsquared(mixmod_4pred)
+  
+  MR4 <- piecewiseSEM::rsquared(mixmod_isar_end)
+  MR5 <- piecewiseSEM::rsquared(mixmod_ArIso_end)
+  MR6 <- piecewiseSEM::rsquared(mixmod_4pred_end)
   
   ##Build MM results table
-  RMM <- matrix(as.vector(unlist(c(MM1$tTable[2,c(1,2,4,5)], 
-                                   rep(NA,4),
-                                   MR1[5:6],
-                                   MM2$tTable[2,c(1,2,4,5)],
-                                   MM2$tTable[3,c(1,2,4,5)],
-                                   MR2[5:6],
-                                   MM3$tTable[2,c(1,2,4,5)], 
-                                   rep(NA,4),
-                                   MR3[5:6],
-                                   MM4$tTable[2,c(1,2,4,5)],
-                                   MM4$tTable[3,c(1,2,4,5)],
-                                   MR4[5:6]))), 
-                ncol = 10, byrow = TRUE)
-  RMM <- as.data.frame(round(RMM, 2))
-  colnames(RMM) <- c("Area_coef.", "Area_SE", 
-                     "Area_t", "Area_p",
-                     "Iso_coef.", "Iso_SE", 
-                     "Iso_t", "Iso_p",
+  RMM <- matrix(as.vector(c(paste(round(MM1$tTable[2,][1], 3), "±", round(MM1$tTable[2,][2], 3)), round(MM1$tTable[2,][5], 3),
+                            rep(NA,6),
+                            round(MR1[5:6],3),
+                            paste(round(MM2$tTable[2,][1], 3), "±", round(MM2$tTable[2,][2], 3)),round(MM2$tTable[2,][5], 3),
+                            paste(round(MM2$tTable[3,][1], 3), "±", round(MM2$tTable[3,][2], 3)),round(MM2$tTable[3,][5], 3),
+                            rep(NA, 4),
+                            round(MR2[5:6], 3),
+                            paste(round(MM3$tTable[2,][1], 3), "±", round(MM3$tTable[2,][2], 3)),round(MM3$tTable[2,][5], 3),
+                            paste(round(MM3$tTable[3,][1], 3), "±", round(MM3$tTable[3,][2], 3)),round(MM3$tTable[3,][5], 3),
+                            paste(round(MM3$tTable[4,][1], 3), "±", round(MM3$tTable[4,][2], 3)),round(MM3$tTable[4,][5], 3),
+                            paste(round(MM3$tTable[5,][1], 3), "±", round(MM3$tTable[5,][2], 3)),round(MM3$tTable[5,][5], 3),
+                            round(MR3[5:6], 3),
+                            
+                            paste(round(MM4$tTable[2,][1], 3), "±", round(MM4$tTable[2,][2], 3)),round(MM4$tTable[2,][5], 3),
+                            rep(NA,6),
+                            round(MR4[5:6], 3),
+                            paste(round(MM5$tTable[2,][1], 3), "±", round(MM5$tTable[2,][2], 3)),round(MM5$tTable[2,][5], 3),
+                            paste(round(MM5$tTable[3,][1], 3), "±", round(MM5$tTable[3,][2], 3)),round(MM5$tTable[3,][5], 3),
+                            rep(NA, 4),
+                            round(MR5[5:6], 3),
+                            paste(round(MM6$tTable[2,][1], 3), "±", round(MM6$tTable[2,][2], 3)),round(MM6$tTable[2,][5], 3),
+                            paste(round(MM6$tTable[3,][1], 3), "±", round(MM6$tTable[3,][2], 3)),round(MM6$tTable[3,][5], 3),
+                            paste(round(MM6$tTable[4,][1], 3), "±", round(MM6$tTable[4,][2], 3)),round(MM6$tTable[4,][5], 3),
+                            paste(round(MM6$tTable[5,][1], 3), "±", round(MM6$tTable[5,][2], 3)), round(MM6$tTable[5,][5], 3),
+                            round(MR6[5:6], 3))),
+                byrow = TRUE, ncol=10)
+  
+  colnames(RMM) <- c("Area_coef.", "Parea", 
+                     "Iso_coef", "Piso",
+                     "Ele_coef", "Pele", 
+                     "ALat_coef", "Plat",
                      "Marginal_R2", "Conditional_R2")
   rownames(RMM) <- c("AllSp._Area",
                      "AllSp._AreaIso",
+                     "AllSp._4pred",
                      "EndSp._Area",
-                     "EndSp._AreaIso")
+                     "EndSp._AreaIso",
+                     "EndSp._4preds")
   
   } else {
     mixmod_isar <- NULL
     mixmod_ArIso <- NULL
+    mixmod_4pred <- NULL
+    
     mixmod_isar_end <- NULL
     mixmod_ArIso_end <-NULL
+    mixmod_4pred_end <-NULL
+    
     RMM <- NULL
   }
   ##Correlograms
@@ -931,16 +1047,25 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
          modSpat = spatial_loglog_ArIso, 
          modMM = mixmod_ArIso, 
          title = "All - area + isolation")
-  CO3 <- correl(dat = datAllEndZer, modLM = modAr_end, 
+  CO3 <- correl(dat = datM, modLM = mod4pred, 
+                modSpat = spatial_loglog_4preds, 
+                modMM = mixmod_4pred, 
+                title = "All - A + I + E + L")
+  
+  CO4 <- correl(dat = datAllEndZer, modLM = modAr_end, 
          modSpat = spatial_loglog_isar_end, 
          modMM = mixmod_isar_end, 
          title = "Endemics - area")
-  CO4 <- correl(dat = datAllEndZer, modLM = modArIso_end, 
+  CO5 <- correl(dat = datAllEndZer, modLM = modArIso_end, 
          modSpat = spatial_loglog_ArIso_end, 
          modMM = mixmod_ArIso_end, 
          title = "Endemics - area + isolation")
+  CO6 <- correl(dat = datAllEndZer, modLM = mod4pred_end, 
+                modSpat = spatial_loglog_4pred_end, 
+                modMM = mixmod_4pred_end, 
+                title = "Endemics - A + I + E + L")
   
-  CO <- list(CO1, CO2, CO3, CO4)
+  CO <- list(CO1, CO2, CO3, CO4, CO5, CO6)
   
   ##Residual plots
   RP1 <- RFP2(modLM = modAr, 
@@ -951,18 +1076,27 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
               modSpat = spatial_loglog_ArIso, 
               modMM = mixmod_ArIso, 
               title = "All - area + isolation")
-  RP3 <- RFP2(modLM = modAr_end, 
+  RP3 <- RFP2(modLM = mod4pred, 
+              modSpat = spatial_loglog_4preds, 
+              modMM = mixmod_4pred, 
+              title = "All - A + I + E + L")
+  
+  RP4 <- RFP2(modLM = modAr_end, 
               modSpat = spatial_loglog_isar_end, 
               modMM = mixmod_isar_end, 
               title = "Endemics - area")
-  RP4 <- RFP2(modLM = modArIso_end, 
+  RP5 <- RFP2(modLM = modArIso_end, 
                modSpat = spatial_loglog_ArIso_end, 
                modMM = mixmod_ArIso_end, 
                title = "Endemics - area + isolation")
+  RP6 <- RFP2(modLM = mod4pred_end, 
+              modSpat = spatial_loglog_4pred_end, 
+              modMM = mixmod_4pred_end, 
+              title = "Endemics - A + I + E + L")
   
-  RPO <- list(RP1, RP2, RP3, RP4)
+  RPO <- list(RP1, RP2, RP3, RP4, RP5, RP6)
   
-    Rres <- list(RwM, RSM, RMM, CO, RPO)
+  Rres <- list(RwM, RSM, RMM, CO, RPO)
     
   return(Rres)
 }#eo function

@@ -13,7 +13,7 @@ PS <- 1.6
 
 ##Select dataset: all islands ("All"), oceanic ("Oce"), 
 #archipelago ("Arch")
-dd <- "Oce"
+dd <- "Arch"
 
 if (dd == "All"){
   datM <- datAll
@@ -327,20 +327,24 @@ write.csv(TT[[3]],
 
 #correlograms
 jpeg(paste0("Results/Correlograms_", FN,".jpeg"),
-     width = 25, height = 25,
+     width = 37.5, height = 25,
      res = 300, units = "cm")
 ggpubr::ggarrange(TT[[4]][[1]], TT[[4]][[2]],
                         TT[[4]][[3]], TT[[4]][[4]], 
-                  ncol = 2, nrow = 2,
+                  TT[[4]][[5]], TT[[4]][[6]], 
+                  ncol = 3, nrow = 2,
                   common.legend = T,
                   legend="top")
 dev.off()
 
 ##Residual plots
 NN <- c("Resid_All_area.jpeg", "Resid_All_areaIso.jpeg",
-        "Resid_End_area.jpeg", "Resid_End_areaIso.jpeg")
+        "Resid_All_AIEL.jpeg",
+        "Resid_End_area.jpeg", "Resid_End_areaIso.jpeg",
+        "Resid_End_AIEL.jpeg")
 for (i in 1:length(TT[[5]])){
-jpeg(paste0("Results/",NN[i], "_", FN,".jpeg"), width = 30, height = 30,
+jpeg(paste0("Results/",NN[i], "_", FN,".jpeg"), 
+     width = 30, height = 30,
      res = 300, units = "cm")
 print(TT[[5]][[i]])
 dev.off()
