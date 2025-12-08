@@ -15,6 +15,7 @@ library(car)
 library(spdep)
 library(tidyr)
 library(maps)
+library(scales)
 
 #set ggplot theme
 theme_set(theme(panel.grid.major = element_blank(), 
@@ -1321,6 +1322,7 @@ figure4 <- function(dat, dat_cont2,
     ylim(yl4) + 
     xlab("Endemism % cut-off") +
     labs(size = "No. Isl.") +
+    ylab("z-value") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
     ggtitle("a)") + guides(size = "none") #+

@@ -13,7 +13,7 @@ PS <- 1.6
 
 ##Select dataset: all islands ("All"), oceanic ("Oce"), 
 #archipelago ("Arch")
-dd <- "Arch"
+dd <- "All"
 
 if (dd == "All"){
   datM <- datAll
@@ -358,13 +358,17 @@ if (dd == "All"){
 
 g1 <- ggplot(datM, aes(x=area, fill=category)) +
   
-  geom_histogram(binwidth=0.3) + scale_x_log10() + theme_classic() +
+  geom_histogram(binwidth=0.3) + scale_x_log10(labels = scales::label_number()) + 
+  theme_classic() +
   
   scale_y_continuous(expand = c(0,0)) + labs(title = "Area distribution",
                                              
-                                             x=expression(paste("Area - log"[10], "(km"^2, ")")), y="Count") +
+                                             x=expression(paste("Area",
+                                                                "(km"^2, ")")),
+                                             y="Count") +
   
-  scale_fill_manual(name="Island Category", values=c("#999999", "#E69F00", "#56B4E9"))
+  scale_fill_manual(name="Island Category", 
+                    values=c("#999999", "#E69F00", "#56B4E9"))
 
 
 
@@ -374,11 +378,12 @@ g2 <- ggplot(datM, aes(x=native_count, fill=category)) +
   
   scale_y_continuous(expand = c(0,0)) + labs(title = "Native richness distribution",
                                              
-                                             x = expression(paste("Species richness - log"[10])),
+                                             x = expression(paste("Species richness")),
                                              
                                              y="Count") +
   
-  scale_fill_manual(name="Island Category", values=c("#999999", "#E69F00", "#56B4E9"))
+  scale_fill_manual(name="Island Category", 
+                    values=c("#999999", "#E69F00", "#56B4E9"))
 
 
 g3 <- ggplot(filter(datM, endemic_count > 0), aes(x=endemic_count, fill=category)) +
@@ -387,7 +392,7 @@ g3 <- ggplot(filter(datM, endemic_count > 0), aes(x=endemic_count, fill=category
   
   scale_y_continuous(expand = c(0,0)) + labs(title = "Endemic richness distribution",
                                              
-                                             x = expression(paste("Species richness - log"[10])),
+                                             x = expression(paste("Species richness")),
                                              
                                              y="Count") +
   
