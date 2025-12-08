@@ -1263,6 +1263,6 @@ entity_ID,entity_class,area,geo_entity,native_count,endemic_count,category,dist,
 12562,Island,3.485439,Mellum,213,0,continental,6.86,8.151246,53.721133,Frisian Islands,4
 NA,continent,2.83E+07,AFRICA,47418,22774,complex_origin,NA,NA,NA,NA,NA
 NA,continent,4.53E+07,EURASIA,80806,33109,complex_origin,NA,NA,NA,NA,NA
-NA,continent,7.65E+06,AUSTRALASIA,19179,10679,complex_origin,NA,NA,NA,NA,NA
+NA,continent,7.65E+06,AUSTRALIA,19179,10679,complex_origin,NA,NA,NA,NA,NA
 NA,continent,1.40E+07,NORTH AMERICA,34572,9831,complex_origin,NA,NA,NA,NA,NA
 NA,continent,1.79E+07,SOUTH AMERICA,84039,34687,complex_origin,NA,NA,NA,NA,NA

@@ -107,7 +107,7 @@ RAP3 <- plot_thr(x = ResAll[[2]][[2]],
                  yRaw = yro)
 
 #RAP3[[2]]
-AC_LL <- RAP3[[2]]  + ggtitle("a)")
+AC_LL <- RAP3[[2]]  + ggtitle("A")
 
 ##Correlation between residuals and percentage endemism
 M6 <- ResAll[[2]][[2]][[1]][[5]]
@@ -152,7 +152,7 @@ RAEZ3 <- plot_thr(x = ResAllEndZer[[2]][[2]],
                  xRaw = xro,
                  yRaw = xro)
 
-EZC_LL <- RAEZ3[[2]] + ggtitle("b)") 
+EZC_LL <- RAEZ3[[2]] + ggtitle("B") 
 
 if (dd == "All"){
   #extend x-axis to add 10^-2 tick label
@@ -223,12 +223,12 @@ if (dd == "All"){
 
 #00C19A
 
-gi1 <- parreg(datAll3 = datM, Title = "a)", 
+gi1 <- parreg(datAll3 = datM, Title = "A", 
               S = "logS", lcol = "red",
               point_size = PS)
 
 gi2 <- parreg(datAll3 = datMEndZer,
-              Title = "b)", S = "logES", lcol = "red",
+              Title = "B", S = "logES", lcol = "red",
               point_size = PS)
 
 gi_distri <- ggpubr::ggarrange(gi1[[1]], gi2[[1]], nrow=1, 
@@ -246,10 +246,10 @@ write.csv(f3c, file = paste0("Results/Figure_3_cap_",FN,".csv"))
 #########Figure 5#################
 ###################################
 if (dd == "Arch"){
-  gi1b <- parreg(datAll3 = datM, Title = "b)", 
+  gi1b <- parreg(datAll3 = datM, Title = "B", 
                 S = "logS", lcol = "red",
                 point_size = PS)
-  AC_LLb <- AC_LL + ggtitle("a)")
+  AC_LLb <- AC_LL + ggtitle("A")
   gi_arch <- ggpubr::ggarrange(AC_LLb, gi1b[[1]],
                                nrow=1, 
                     common.legend = T,

@@ -55,7 +55,7 @@ map <- ggplot() +
   ) +
   scale_size_continuous(breaks = c(1, 10, 100, 1000, 10000)) +
   theme_minimal() +
-  ggtitle("c)") +
+  ggtitle("C") +
   theme(plot.title = element_text(size=22, hjust = 0,
                                           vjust = 2),
         axis.title = element_text(size = 15),

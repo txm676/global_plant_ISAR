@@ -1142,7 +1142,7 @@ semi_log_NB <- function(datM, datMEndZer){
                       labels = c("Continental",
                                  "Fragment",
                                  "Oceanic")) +
-    labs(fill = "Island Type") +
+    labs(fill = "Island type") +
     geom_text(data = datAll3, 
               label = datAll3$geo_entity,
               nudge_x = -1.5,
@@ -1325,7 +1325,7 @@ figure4 <- function(dat, dat_cont2,
     ylab("z-value") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
-    ggtitle("a)") + guides(size = "none") #+
+    ggtitle("A") + guides(size = "none") #+
   #  geom_errorbar(aes(x = end, ymin=z-z_SE, 
   #                   ymax=z+z_SE, col = Type))
   
@@ -1337,7 +1337,7 @@ figure4 <- function(dat, dat_cont2,
     labs(size = "No. Isl.") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
-    ggtitle(bquote('b)')) +
+    ggtitle(bquote('B')) +
     ylab(bquote(~R^2)) + guides(size = "none")
   
   #Mean log area
@@ -1350,7 +1350,7 @@ figure4 <- function(dat, dat_cont2,
     xlab("Endemism % cut-off") +
     ylab("Mean log(Area)") +
     guides(size = "none") +
-    ggtitle("c)")
+    ggtitle("C")
   
   
   #Adding z and R2 to plot. bquote used to make R2 
@@ -1385,7 +1385,7 @@ figure4 <- function(dat, dat_cont2,
                 linewidth = 1) +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
-    ggtitle('d)') + guides(fill="none")+
+    ggtitle('D') + guides(fill="none")+
     annotate("text", x=2, y=5, size = 5,
              label = g4tex)
     #convert axes to untransformed scale
@@ -1439,7 +1439,7 @@ figure4 <- function(dat, dat_cont2,
                 se = FALSE, col = "black") +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
-    ggtitle('e)') + guides(fill="none") +
+    ggtitle('E') + guides(fill="none") +
     annotate("text", x=2, y=4, size = 5,
              label = g5tex)
   #convert axes to untransformed scale
@@ -1478,7 +1478,7 @@ figure4 <- function(dat, dat_cont2,
     labs(size = "No. Isl.") +
     scale_size_continuous(limits =  li4, 
                           breaks = br4) +
-    ggtitle("a)") 
+    ggtitle("A") 
   
   
   ge4b <- ggplot(data = dat) + 
@@ -1492,7 +1492,7 @@ figure4 <- function(dat, dat_cont2,
                 aes(x = LogArea, y = logS),
                 se = FALSE, col = "black") +
     xlab("Log(Area)") + ylab("Log(Richness)") +
-    ggtitle('d)') + labs(fill="")
+    ggtitle('D') + labs(fill="")
   
   # Now arrange everything
   f4b <- gridExtra::grid.arrange(
