@@ -68,7 +68,6 @@ dat_cont2 <- dat
 #Remove continents for main analyses
 dat <- filter(dat, entity_class != "continent")
 
-
 datAll <- dat
 datAllEndZer <- filter(datAll, endemic_count > 0)#endemics > 0 richness
 
@@ -637,7 +636,7 @@ y2r <- function(gobj, cont = NULL){
   
       gobj <- gobj + scale_y_continuous(breaks = c(-1,0,1,2,3,4,5),
                                         labels = c(expression(paste("10"^-1)),
-                                                   "0", 
+                                                   expression(paste("10"^0)), 
                                                    expression(paste("10"^1)),
                                                    expression(paste("10"^2)),
                                                    expression(paste("10"^3)),
@@ -1278,7 +1277,6 @@ end_cont <- function(dat){
 figure4 <- function(dat, dat_cont2,
                     oce = FALSE){
   
-  
   contT <- filter(dat_cont2,
                   category == "complex_origin")
   
@@ -1357,10 +1355,14 @@ figure4 <- function(dat, dat_cont2,
   #superscript. Note the is.na() warning can be ignored, just
   #relates to use of annotate() with bquote expression
   ge4lm <- lm(logS~LogArea, data = dat)
-  g4tex <- bquote(
+  g4tex <- as.expression(bquote(
     z == .(round(ge4lm$coefficients[2], 2)) * "," ~ c ==
       .(round(ge4lm$coefficients[1], 2))* "," ~ R^2 ==
-      .(round(summary(ge4lm)$r.squared, 2)))
+      .(round(summary(ge4lm)$r.squared, 2))))
+  
+  
+  
+  
   #Extrapolating ISAR to continents to add line
   #segment
   ge4lc <- stats::predict(ge4lm,
@@ -1385,7 +1387,7 @@ figure4 <- function(dat, dat_cont2,
                 linewidth = 1) +
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
-    ggtitle('D') + guides(fill="none")+
+    ggtitle('D') + guides(fill="none") +
     annotate("text", x=2, y=5, size = 5,
              label = g4tex)
     #convert axes to untransformed scale
@@ -1412,10 +1414,10 @@ figure4 <- function(dat, dat_cont2,
   #superscript. Note the is.na() warning can be ignored, just
   #relates to use of annotate() with bquote expression
   ge5lm <- lm(logS~LogArea, data = dat_cont3)
-  g5tex <- bquote(
+  g5tex <- as.expression(bquote(
     z == .(round(ge5lm$coefficients[2], 2)) * "," ~ c ==
       .(round(ge5lm$coefficients[1], 2))* "," ~ R^2 ==
-      .(round(summary(ge5lm)$r.squared, 2)))
+      .(round(summary(ge5lm)$r.squared, 2))))
   #Extrapolating ISAR to continents to add line
   #segment
   ge5lc <- stats::predict(ge5lm,
@@ -1440,7 +1442,7 @@ figure4 <- function(dat, dat_cont2,
     xlab(expression(paste("Area (km"^2,")"))) +
     ylab("Species richness") +
     ggtitle('E') + guides(fill="none") +
-    annotate("text", x=2, y=4, size = 5,
+    annotate("text", x=0.5, y=4, size = 5,
              label = g5tex)
   #convert axes to untransformed scale
   ge5 <- x2r(ge5, cont = TRUE, arch = FALSE)
@@ -1458,6 +1460,16 @@ figure4 <- function(dat, dat_cont2,
                             linetype = "dashed",
                             colour = "black",
                             linewidth = 0.9)
+  #to expand the axes ranges, include a blank
+  #point
+  rl <- data.frame("LogArea" = -4.744727,
+                 "logS" = 0)
+  ge5 <- ge5 + 
+    geom_point(data = rl, aes(x = LogArea, y = logS), 
+               col = "white")
+  
+
+  
   
   bottom_row <- gridExtra::arrangeGrob(ge4, ge5, ncol = 2)
   
@@ -1638,8 +1650,8 @@ tab_format <- function(rawT, spaT, mixT = NULL){
   
   spaT[,c("Adjusted_R2", "Marginal_R2",	"Conditional_R2")] <- NA
   spaT <- relocate(spaT, "Adjusted_R2", .before = "Pseudo_R2")
-  spaT <- rename(spaT, Area_t = Area_z,
-                 Iso_t = Iso_z)
+  # spaT <- rename(spaT, Area_t = Area_z,
+  #                Iso_t = Iso_z)
   
   if (!is.null(mixT)){
     mixT[,c("Adjusted_R2", "Pseudo_R2")] <- NA
@@ -1649,10 +1661,10 @@ tab_format <- function(rawT, spaT, mixT = NULL){
   
   tfr <- bind_rows(rawT, spaT, mixT)
   if (!is.null(mixT)){
-  tfr$Type <- c(rep("LM", 4), rep("LM_spatial", 4),
-                rep("Mixed_effects", 4))
+  tfr$Type <- c(rep("LM", 6), rep("LM_spatial", 6),
+                rep("Mixed_effects", 6))
   } else {
-    tfr$Type <- c(rep("LM", 4), rep("LM_spatial", 4))
+    tfr$Type <- c(rep("LM", 6), rep("LM_spatial", 6))
     tfr[, c("Marginal_R2",	"Conditional_R2")] <- NULL
   }
   tfr <- relocate(tfr, Type, .before = X)

@@ -114,6 +114,8 @@ M6 <- ResAll[[2]][[2]][[1]][[5]]
 M6d <- datM[order(datM$area),]
 M6d$area <- log10(M6d$area)
 if (!identical(M6d$area, M6$model$x)) stop("Gorgeous")
+if (!identical(log10(M6d$native_count), 
+               M6$model$y)) stop("Gorgeous2")
 C6 <- cor.test(residuals(M6), M6d$PercEnd, 
          method = "spearman")
 
@@ -165,6 +167,8 @@ M7 <- ResAllEndZer[[2]][[2]][[1]][[5]]
 M7d <- datMEndZer[order(datMEndZer$area),]
 M7d$area <- log10(M7d$area)
 if (!identical(M7d$area, M7$model$x)) stop("Gorgeous")
+if (!identical(log10(M7d$endemic_count), 
+               M7$model$y)) stop("Gorgeous2")
 C7 <- cor.test(residuals(M7), M7d$PercEnd, 
          method = "spearman")
 
@@ -285,8 +289,9 @@ if (dd %in% c("All", "Oce")){
 
 ddF4 <- ifelse(dd == "Oce", TRUE, FALSE)
   
-F4 <- figure4(datM, datM_cont2, ddF4) 
-datM_cont2
+F4 <- figure4(dat = datM, dat_cont2 = datM_cont2, 
+              oce = ddF4) 
+
 #Main figure 4
 ggsave(paste0("Results/New_fig4_all_NOSE",FN,".jpeg"), 
        F4[[1]], height = 20, width = 30,
@@ -414,7 +419,7 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # #############################################################
 # ##########Check against segmented package results#############
 # #########################################################
-# 
+
 # library(segmented)
 # 
 # #semi-log
@@ -426,7 +431,8 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 #                   "a" = log10(datAll$area))
 # 
 # ##For sar_threshold fits, run:
-# ResAll <- fit_thr(datz = datAll,
+# ResAll <- fit_thr(datz = dplyr::select(datM, area, 
+#                                        native_count),
 #                   logBase = log10,
 #                   parallelz = TRUE,
 #                   coresz = Ncore,
@@ -446,7 +452,7 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # ##Segmented
 # #First do a free search of parameter space
 # l <- lm(s ~ a, data = dd1)
-# o <- segmented(l, seg.Z=~a, npsi=2, 
+# o <- segmented(l, seg.Z=~a, npsi=2,
 #                control=seg.control(display=FALSE))
 # plot(o)
 # o
@@ -460,10 +466,10 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # #We can check we get the same results with segmented, by
 # #fixing the parameter values to those from sar_threshold fit,
 # #which are stored in s1
-# o2 <- segmented(l, seg.Z=~a, npsi=2, 
+# o2 <- segmented(l, seg.Z=~a, npsi=2,
 #                control=seg.control(display=FALSE,
 #                                    it.max = 0),
-#                psi = c(3.455, 5.455))
+#                psi = c(2.991362, 5.291362))
 # o2
 # BIC(o2)
 # s1["ContTwo", "BIC"]#BIC from SARs
@@ -488,18 +494,18 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # 
 # ##Segmented
 # l2 <- lm(s ~ a, data = dd2)
-# o3 <- segmented(l2, seg.Z=~a, npsi=2, 
+# o3 <- segmented(l2, seg.Z=~a, npsi=2,
 #                control=seg.control(display=FALSE))
 # o3
 # BIC(o3)
 # s2["ContTwo", "BIC"]#BIC from SARs
 # 
-# #BIC is similar to sar_threshold, but again different 
+# #BIC is similar to sar_threshold, but again different
 # #parameter estimates. So again, we can fix them in segmented:
-# o4 <- segmented(l2, seg.Z=~a, npsi=2, 
+# o4 <- segmented(l2, seg.Z=~a, npsi=2,
 #                 control=seg.control(display=FALSE,
 #                                     it.max = 0),
-#                 psi = c(3.355, 3.655))
+#                 psi = c(3.491362, 3.591362))
 # logLik(o4)
 # logLik(r2)
 # 
@@ -514,17 +520,17 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # ##Segmented
 # #First do a free search of parameter space
 # #l <- lm(s ~ a, data = dd1)
-# o5 <- segmented(l, seg.Z=~a, npsi=1, 
+# o5 <- segmented(l, seg.Z=~a, npsi=1,
 #                control=seg.control(display=FALSE))
 # o5
 # BIC(o5)
 # s1["ContOne", "BIC"]#BIC from SARs
 # 
 # #Fix in segmented
-# o6 <- segmented(l, seg.Z=~a, npsi=1, 
+# o6 <- segmented(l, seg.Z=~a, npsi=1,
 #                 control=seg.control(display=FALSE,
 #                                     it.max = 0),
-#                 psi = c(4.955))
+#                 psi = c(4.991362))
 # logLik(o6)
 # logLik(r3)
 # 
@@ -535,18 +541,18 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # 
 # ##Segmented
 # #l2 <- lm(s ~ a, data = dd2)
-# o7 <- segmented(l2, seg.Z=~a, npsi=1, 
+# o7 <- segmented(l2, seg.Z=~a, npsi=1,
 #                 control=seg.control(display=FALSE))
 # o7
 # BIC(o7)
 # s2["ContOne", "BIC"]#BIC from SARs
 # 
-# #BIC is similar to sar_threshold, but again different 
+# #BIC is v similar to sar_threshold, but again slightly different
 # #parameter estimates. So again, we can fix them in segmented:
-# o7 <- segmented(l2, seg.Z=~a, npsi=1, 
+# o7 <- segmented(l2, seg.Z=~a, npsi=1,
 #                 control=seg.control(display=FALSE,
 #                                     it.max = 0),
-#                 psi = c(5.355))
+#                 psi = c(-1.808638))
 # logLik(o7)
 # logLik(r4)
 
@@ -554,7 +560,7 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # # ###Main Paper Table 1#############################
 # # ###################################################
 # 
-# ##NEEDS TO BE RUN AFTER THE ABOVE HAS BEEN RUN FOR ALL 
+# ##NEEDS TO BE RUN AFTER THE ABOVE HAS BEEN RUN FOR ALL
 # #AND OCEANIC
 # 
 # ResAll <- readRDS("D:\\documents\\Work\\On-going projects\\Global Plant SAR\\Results\\All\\ResAll_All_islands.RDS")
@@ -606,7 +612,7 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # 
 # 
 # Ns <- sapply(list(Mod1, Mod1b, Mod1c, Mod1d,
-#                   Mod2, Mod3, 
+#                   Mod2, Mod3,
 #                   Mod4, Mod5, Mod6),
 #              function(x){length(x$residuals)})
 # 
@@ -614,8 +620,8 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 #                    "z" = round(zs, 2),
 #                    "C" = round(cs, 2),
 #                    "R2" = round(rs, 2))
-# rownames(Tab1) <- c("All_all", "All_all_cont", 
-#                     "GT5Per_all", "GT5Per_all_cont", 
+# rownames(Tab1) <- c("All_all", "All_all_cont",
+#                     "GT5Per_all", "GT5Per_all_cont",
 #                     "All_end",
 #                     "Oce_all", "Oce_end",
 #                     "Arch_all", "arch_end")
@@ -637,7 +643,7 @@ ggsave("Results/histogram_distri.jpg", g_distri, height = 10, width = 5)
 # spaT <- read.csv("D:\\documents\\Work\\On-going projects\\Global Plant SAR\\Results\\All\\Spatial_mod_output_All_islands.csv")
 # mixT <- read.csv("D:\\documents\\Work\\On-going projects\\Global Plant SAR\\Results\\All\\Mixed_mod_output_All_islands.csv")
 # All_tf <- tab_format(rawT, spaT, mixT)
-# write.csv(All_tf, file = "Table_S1_Allislands.csv") 
+# write.csv(All_tf, file = "Table_S1_Allislands.csv")
 # 
 # ##Oceanic
 # rawT <- read.csv("D:\\documents\\Work\\On-going projects\\Global Plant SAR\\Results\\Oceanic\\Raw_mod_output_Oceanic_islands.csv")

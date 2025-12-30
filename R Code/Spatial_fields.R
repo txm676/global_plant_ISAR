@@ -7,6 +7,10 @@ library(maps)
 
 options(mc.cores = 4)
 
+
+##12 knots is arguably quite low for a global dataset, but I have tested increasing to 30
+#and the slope parameter and CIs (which is what we are interested in here) are almost identical
+
 m_spatial <- glmmfields::glmmfields(native_count ~ LogArea,
                                     data = datAll,family=nbinom2(link = "log"),
                                     lat = "latitude", lon = "longitude", 

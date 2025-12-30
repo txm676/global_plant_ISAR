@@ -34,7 +34,7 @@ islands <- dat %>%
 
 # Sort islands by native_count so larger values are plotted last
 islands <- islands %>%
-  arrange("Native richness")  # ascending order
+  arrange(!!sym("Native richness"))  # ascending order
 
 # Plot
 map <- ggplot() +
