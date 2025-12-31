@@ -371,12 +371,12 @@ plot_thr <- function(x, datz = NULL,
                      shape = 21,
                      alpha = 0.8,
                  size = point_size) +
+        #the -2.95 should technically be -3 but it gets cut off the plot
         scale_fill_viridis_c(option = vir_pal,
-                              breaks = c(-0.30, -1, -2, -2.9),
+                              breaks = c(-0.30103, -1, -2, -2.95),
                               labels = c("50", "10",
-                                         "1", "0.001"),
-                              name = "log10(% End.)",
-                              ...)
+                                         "1", "0.1"),
+                              name = "log10(% End.)", ...)
     }
 
     gTh1 <- gTh0 +
@@ -681,8 +681,8 @@ parreg <- function(datAll3, Title, S, lcol = "red",
                                   y = partLogS, 
                                   fill= log10(PercEnd)),
                shape = 21, alpha = 0.8, size = point_size) +
-    scale_fill_viridis_c(option = "inferno", breaks = c(-0.30, -1, -2, -2.9),
-                         labels = c("50", "10","1", "0.001"),
+    scale_fill_viridis_c(option = "inferno", breaks = c(-0.30, -1, -2, -2.95),
+                         labels = c("50", "10","1", "0.1"),
                          name = "log10(% End.)") + 
     labs(title = Title, 
          x=expression(paste("Isolation (km) - log"[10], " | Area")), 
