@@ -342,7 +342,10 @@ ggpubr::ggarrange(TT[[4]][[1]], TT[[4]][[2]],
                   legend="top")
 dev.off()
 
-##Residual plots
+##Residual plots: note, the histograms in our paper were
+#generated using ggplot2 V3.5.1, but with the more recent V4.0.0
+#the functionality for choosing bin widths has changed and so the
+#resultant histograms look slightly different to those in the SI
 NN <- c("Resid_All_area.jpeg", "Resid_All_areaIso.jpeg",
         "Resid_All_AIEL.jpeg",
         "Resid_End_area.jpeg", "Resid_End_areaIso.jpeg",

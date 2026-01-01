@@ -709,12 +709,17 @@ parreg <- function(datAll3, Title, S, lcol = "red",
 #################################################################
 
 # function for spatial autoregressive for area #
-
+# nbList = use approach 1 or 2 (see below)
 
 spatial_model <- function(x, y, area, dist=NULL,
-                          elevation=NULL, latitude=NULL, S)
+                          elevation=NULL, latitude=NULL, S,
+                          nbList = 1)
 {
-  nb_list <- nb_object(x, y)
+  if (nbList == 1){
+    nb_list <- nb_object(x, y)
+  } else {
+    nb_list <- nb_object2(x, y)
+  }
   
   if(is.null(dist) & is.null(elevation) & is.null(latitude))
     
@@ -735,6 +740,13 @@ spatial_model <- function(x, y, area, dist=NULL,
 }
 
 
+##Originally we used nb_object to create our spatial weights but
+#checking through the code at the end we realised that this could be 
+#problematic in that it mixed degree-based and great-circle km distances.
+#As such, we created an alternative function which just uses great-circle
+#distances. Testing indicates the resultant errorsarlm model coefficients
+#and p-values are almost identical, so we have just stuck with nb_object
+#results for ease
 nb_object <- function(x, y){
   coords <- data.frame(x=x, y=y)
   dd <- spdep::dnearneigh(coords, 0, 1000, longlat=T)
@@ -742,12 +754,24 @@ nb_object <- function(x, y){
                         glist = lapply(spdep::nbdists(dd, coords), 
                                        function(x) 1 - x/max(dist(coords))))
   return(nb)
-  
+}
+
+nb_object2 <- function(x, y){
+  coords <- data.frame(x=x, y=y)
+  dd <- spdep::dnearneigh(coords, 0, 1000, longlat=T)
+  gdists <- spdep::nbdists(dd, coords, longlat = TRUE)
+  maxd <- max(unlist(gdists))
+  glist <- lapply(gdists, function(v) 1 - v / maxd)
+  nb <- nb2listw(dd, style = "W", glist = glist, zero.policy = TRUE)
+  return(nb)
 }
 
 ######################################################################
 #########MIXED MODELs##############
 #################################################################
+
+##Tested using nugget = TRUE in corExp() and made little difference
+#to the parameter estimates and p-values etc
 
 mixed_model <- function(data, dist=NULL, elevation=NULL, latitude=NULL)
 {
@@ -857,11 +881,14 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
                      "EndSp._AreaIso",
                      "EndSp._4preds")
   
+  NBL <- 1
+  
   ##Spatial models
   spatial_loglog_isar <- spatial_model(x=datAll$longitude, 
                                        y=datAll$latitude,
                                        area=datAll$LogArea,
-                                       S=datAll$logS)
+                                       S=datAll$logS,
+                                       nbList = NBL)
   
   S1 <- summary(spatial_loglog_isar$model, Nagelkerke = TRUE)
   
@@ -870,7 +897,8 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
                                         y=datAll$latitude,
                                         area=datAll$LogArea,
                                         S=datAll$logS,
-                                        dist=datAll$LogIso)
+                                        dist=datAll$LogIso,
+                                        nbList = NBL)
   S2 <- summary(spatial_loglog_ArIso$model, Nagelkerke = TRUE)
   
   # # model area + isolation + elev + lat
@@ -880,7 +908,8 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
                                          S=datAll$logS,
                                          dist=datAll$LogIso,
                                          elevation=datAll$logElev,
-                                         latitude=datAll$absLat)
+                                         latitude=datAll$absLat,
+                                         nbList = NBL)
   S3 <- summary(spatial_loglog_4preds$model, Nagelkerke = TRUE)
   
   
@@ -888,7 +917,8 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
   spatial_loglog_isar_end <- spatial_model(x=datAllEndZer$longitude, 
                                            y=datAllEndZer$latitude,
                                            area=datAllEndZer$LogArea,
-                                           S=datAllEndZer$logES)
+                                           S=datAllEndZer$logES,
+                                           nbList = NBL)
   
   S4 <- summary(spatial_loglog_isar_end$model, Nagelkerke = TRUE)
   
@@ -896,7 +926,8 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
                                             y=datAllEndZer$latitude,
                                             area=datAllEndZer$LogArea,
                                             S=datAllEndZer$logES,
-                                            dist=datAllEndZer$LogIso)
+                                            dist=datAllEndZer$LogIso,
+                                            nbList = NBL)
   S5 <- summary(spatial_loglog_ArIso_end$model, Nagelkerke = TRUE)
   
   spatial_loglog_4pred_end <- spatial_model(x=datAllEndZer$longitude,
@@ -905,7 +936,8 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
                                             S=datAllEndZer$logES,
                                             dist=datAllEndZer$LogIso,
                                             elevation=datAllEndZer$logElev,
-                                            latitude=datAllEndZer$absLat)
+                                            latitude=datAllEndZer$absLat,
+                                            nbList = NBL)
   S6 <- summary(spatial_loglog_4pred_end$model, Nagelkerke = TRUE)
   
   ##Build Spatial results table
@@ -1039,15 +1071,15 @@ spaMM <- function(datAll, datAllEndZer, arch = FALSE){
     RMM <- NULL
   }
   ##Correlograms
-  CO1 <- correl(dat = datM, modLM = modAr, 
+  CO1 <- correl(dat = datAll, modLM = modAr, 
          modSpat = spatial_loglog_isar, 
          modMM = mixmod_isar, 
          title = "All - area")
-  CO2 <- correl(dat = datM, modLM = modArIso, 
+  CO2 <- correl(dat = datAll, modLM = modArIso, 
          modSpat = spatial_loglog_ArIso, 
          modMM = mixmod_ArIso, 
          title = "All - area + isolation")
-  CO3 <- correl(dat = datM, modLM = mod4pred, 
+  CO3 <- correl(dat = datAll, modLM = mod4pred, 
                 modSpat = spatial_loglog_4preds, 
                 modMM = mixmod_4pred, 
                 title = "All - A + I + E + L")
